@@ -7,15 +7,15 @@ function App() {
       <div>
         <h1>Field Technician</h1>
         <h2>Secondary</h2>
-        <p id="black"><select>
-          <option value="3">0</option>
-          <option value="10">1</option>
-          <option value="20">2</option>
-          <option value="35">3</option>
-          <option value="50">4</option>
-          <option value="75">5</option>
-          <option value="100">6</option>
-        </select> Meters (black) <select>
+        <p id="black">Black Secondary - <select>
+          <option value="3">3</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="35">35</option>
+          <option value="50">50</option>
+          <option value="75">75</option>
+          <option value="100">100</option>
+        </select> Meters,    Count: <select>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -29,12 +29,12 @@ function App() {
           <option value="10">10</option>
         </select></p>
         <br></br>
-        <p id="white"><select>
-          <option value="3">0</option>
-          <option value="10">1</option>
-          <option value="20">2</option>
-          <option value="35">3</option>
-        </select> Meters (White) <select>
+        <p id="white">White Secondary - <select>
+          <option value="3">3</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="35">35</option>
+        </select> Meters,  Count: <select>
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
