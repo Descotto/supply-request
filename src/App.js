@@ -14,7 +14,7 @@ function App() {
   function addLine(item) {
     
     setOrder([...order, `${item.name} x ${item.count}`]);
-   console.log(item.name, item.count,  order)
+   
 
   };
   return (
