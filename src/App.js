@@ -12,7 +12,7 @@ function App() {
   }
 
   function addLine(item) { 
-    setOrder([...order, `${item.name}, count: ${item.count}\n`]);
+    setOrder([...order, `\n${item.name}, count: ${item.count}`]);
   };
 
 
