@@ -11,12 +11,11 @@ function App() {
     addLine(item);
   }
 
-  function addLine(item) {
-    
-    setOrder([...order, `${item.name} x ${item.count}`]);
-   
-
+  function addLine(item) { 
+    setOrder([...order, `${item.name}, count: ${item.count}\n`]);
   };
+
+
   return (
     <div className="App">
       <h1>Supply Request</h1>
@@ -1244,7 +1243,8 @@ function App() {
       </div>
       <button onClick={() => {
          navigator.clipboard.writeText(order);}}>Copy to clipboard</button>
-      <br></br>
+         
+      <br />
       <footer>
         <small>Created by David Escotto</small>
       </footer>
