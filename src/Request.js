@@ -18,7 +18,7 @@ function Request(props) {
     function handleClick() {
         let container = document.createElement('div');
         let table = document.createElement('TABLE');
-        let thead = table.createTHead();
+        // let thead = table.createTHead();
         generateTable(table, props.orderTable);
         generateTableHead(table, props.orderTable);
         navigator.clipboard.writeText(order);
