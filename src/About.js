@@ -17,8 +17,8 @@ function About() {
 
             <h4>Contact</h4>
             <div className="social-links">
-                <a href="https://github.com/Descotto" className="instagram"><i className="bi bi-github">Github</i></a> <br />
-                <a href="https://www.linkedin.com/in/david-escotto/" className="linkedin"><i className="bi bi-linkedin">linkedin</i></a>
+                <a href="https://www.linkedin.com/in/david-escotto/" className="linkedin"><i className="bi bi-linkedin">linkedin</i></a><br />
+                <small>Email: davidescotto05@gmail.com</small>
             </div>
 
             <footer>
