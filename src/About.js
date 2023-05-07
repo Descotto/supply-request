@@ -13,7 +13,7 @@ function About() {
             <h1>About</h1>
 
             <h3>How to use</h3>
-            <p>Select the ammount you want of eavh item, scroll down and press the "copy to clipboard" button. <br /> Now you can paste it anywhere.</p>
+            <p>Select the ammount you want of eavh item, <br />scroll down and press the "copy to clipboard" button. <br /> Now you can paste it anywhere.</p>
 
             <h4>Contact</h4>
             <div className="social-links">
