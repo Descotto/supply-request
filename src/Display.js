@@ -11,7 +11,14 @@ function Display(props) {
 
     function showTable() {
         let div = document.getElementById('show');
+        if (tab){
         div.appendChild(tab);
+        props.setDisplay('');
+        } else {
+            let text = document.createElement('p');
+            text.textContent = 'Nothing selected';
+            div.appendChild(text);
+        }
 
     }
 

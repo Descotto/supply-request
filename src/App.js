@@ -30,7 +30,7 @@ function App() {
         <Routes >
           <Route path='/' element={<Request setDisplay={setDisplay} Link={Link} orderTable={orderTable} setOrderTable={setOrderTable} />} />
           <Route path='/about' element={<About />} />
-          <Route path='/display' element={<Display data={display} />} />
+          <Route path='/display' element={<Display data={display} setDisplay={setDisplay} />} />
 
 
         </Routes>

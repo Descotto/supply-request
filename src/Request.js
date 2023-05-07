@@ -16,6 +16,7 @@ function Request(props) {
     }
 
     function handleClick() {
+        if (props.orderTable.length > 0) { 
         let container = document.createElement('div');
         let table = document.createElement('TABLE');
         // let thead = table.createTHead();
@@ -25,6 +26,9 @@ function Request(props) {
 
         container.appendChild(table);
         props.setDisplay(container);
+        }else {
+            alert('Please make your selection first');
+        }
     }
 
     function generateTableHead(table) {
