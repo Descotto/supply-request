@@ -10,10 +10,13 @@ function Display(props) {
     let tab = props.data;
 
     function showTable() {
+        console.log(props);
         let div = document.getElementById('show');
-        if (tab){
-        div.appendChild(tab);
-        props.setDisplay('');
+        if (tab) {
+            let text = document.createElement('p');
+            text.textContent = tab
+            div.appendChild(text);
+            props.setDisplay('');
         } else {
             let text = document.createElement('p');
             text.textContent = 'Nothing selected';
