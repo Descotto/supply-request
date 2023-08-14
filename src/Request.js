@@ -20,7 +20,7 @@ function Request(props) {
         setOrder([...order, `\n${item.description}, count: ${item.requested}`]);
     }
 
-    function handleClick(e) {
+    function  handleClick(e) {
 
         if (props.orderTable.length > 0) {
             let container = document.createElement('div');
