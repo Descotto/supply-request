@@ -1,0 +1,581 @@
+{
+  "Sheet1": [
+    {
+      "Sonic Telecom, LLC ": "Supply Request Sheet - Field Installation Warehouse"
+    },
+    {
+      "__EMPTY": "Mark with an \"X\" if you want the order shipped"
+    },
+    {
+      "Sonic Telecom, LLC ": "Lead's Name:",
+      "__EMPTY_1": "Shipping\r\nRequest"
+    },
+    {
+      "Sonic Telecom, LLC ": "Tech's Name/Ship-To:"
+    },
+    {
+      "__EMPTY_1": "For shipping to complete",
+      "__EMPTY_4": "   "
+    },
+    {
+      "Sonic Telecom, LLC ": "Today's Date:",
+      "__EMPTY_1": "Box Count",
+      "__EMPTY_2": "Ship Cost"
+    },
+    {
+      "Sonic Telecom, LLC ": "FIBER"
+    },
+    {
+      "Sonic Telecom, LLC ": "Item Code:",
+      "__EMPTY": "Description:",
+      "__EMPTY_1": "Requested:",
+      "__EMPTY_2": "Pulled:"
+    },
+    {
+      "Sonic Telecom, LLC ": "1287787F1",
+      "__EMPTY": "1g ONT 20/case"
+    },
+    {
+      "Sonic Telecom, LLC ": "1287843F1N",
+      "__EMPTY": "10g ONT 10/case"
+    },
+    {
+      "Sonic Telecom, LLC ": "TY-15132B",
+      "__EMPTY": "Fiber Termination (Transition Box) 40/case"
+    },
+    {
+      "Sonic Telecom, LLC ": "FDB-08B",
+      "__EMPTY": "Fiber Dist. Box (8 Port MDU Splitter)"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APC-H02",
+      "__EMPTY": "Fiber Quick Conn (Fiber Ends) 100/box"
+    },
+    {
+      "Sonic Telecom, LLC ": 25321464,
+      "__EMPTY": "ONT Screw (PHSMSS61) 100/box"
+    },
+    {
+      "Sonic Telecom, LLC ": 93174711,
+      "__EMPTY": "Wood Screw (Termination Box Screw) 100/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "MAR1001411",
+      "__EMPTY": "Wall Anchors (Mollys) 100/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "S-5143-FINS",
+      "__EMPTY": "Black Electric Tape"
+    },
+    {
+      "Sonic Telecom, LLC ": "Secondary Jumps"
+    },
+    {
+      "Sonic Telecom, LLC ": 108193,
+      "__EMPTY": "1M White int. Jumper 40/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APCSC-APC-3M",
+      "__EMPTY": "3m Secondary Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APCSC-APC10M",
+      "__EMPTY": "10m Secondary Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APCSC-APC20M",
+      "__EMPTY": "20m Secondary Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "SCAPCSCAPC20M-W",
+      "__EMPTY": "20m Secondary Drop - (White)"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APCSC-APC35M",
+      "__EMPTY": "35m Secondary Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APCSC-APC50M",
+      "__EMPTY": "50m Secondary Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APCSC-APC75M",
+      "__EMPTY": "75m Secondary Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "SC-APCSC-APC100",
+      "__EMPTY": "100m Secondary Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "SCAPCSCAPC-3M-W",
+      "__EMPTY": "3m Secondary Drop (White)"
+    },
+    {
+      "Sonic Telecom, LLC ": "SCAPCSCAPC10M-W",
+      "__EMPTY": "10m Secondary Drop (White)"
+    },
+    {
+      "Sonic Telecom, LLC ": "SCAPCSCAPC20M-W",
+      "__EMPTY": "20m Secondary Drop - (White)"
+    },
+    {
+      "Sonic Telecom, LLC ": "SCAPCSCAPC35M-W",
+      "__EMPTY": "35m Secondary Drop - (White)"
+    },
+    {
+      "Sonic Telecom, LLC ": "Brentwood"
+    },
+    {
+      "Sonic Telecom, LLC ": "FS-AA1-001 0150",
+      "__EMPTY": "150' Brentwood Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "FS-AA1-001 0200",
+      "__EMPTY": "200' Brentwood Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "FS-AA1-001 0300",
+      "__EMPTY": "300' Brentwood Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "FS-AA1-001 0400",
+      "__EMPTY": "400' Brentwood Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "FS-AA1-001 0500",
+      "__EMPTY": "500' Brentwood Drop"
+    },
+    {
+      "Sonic Telecom, LLC ": "Modems"
+    },
+    {
+      "Sonic Telecom, LLC ": "N010011 (w/psu C110011)",
+      "__EMPTY": "Eero 6 (Cupcake) 20/case"
+    },
+    {
+      "Sonic Telecom, LLC ": "S012011 (w/psu C210011)",
+      "__EMPTY": "Eero Pro 6E 12/case"
+    },
+    {
+      "Sonic Telecom, LLC ": "K010011 (w/psu C210011)",
+      "__EMPTY": "Eero 6 Pro 12/case"
+    },
+    {
+      "Sonic Telecom, LLC ": "515 KIT",
+      "__EMPTY": "515 Tested Kit"
+    },
+    {
+      "Sonic Telecom, LLC ": "5268 KIT",
+      "__EMPTY": "5268 Tested Kit"
+    },
+    {
+      "Sonic Telecom, LLC ": "Zip Ties & Flex Clips"
+    },
+    {
+      "Sonic Telecom, LLC ": "CP-8-40-B",
+      "__EMPTY": "8\" Zip Ties Black 100/bag or 1,000/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "CP-8-40-N",
+      "__EMPTY": "8\" Zip Ties Natural 100/bag or 1,000/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "CP-7-50MH-B",
+      "__EMPTY": "8\" Screwdown Zip Ties Black 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "CP-7-50MH-N",
+      "__EMPTY": "8\" Screwdown Zip Ties Natural 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "CP-11-50-B",
+      "__EMPTY": "11\" Zip Tie Black 100/bag or 1,000/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "CP-14-50MH-B",
+      "__EMPTY": "14\" Screwdown Zip Ties Black 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "G4BK-03",
+      "__EMPTY": "Small Flex Clips Black 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "G4BK-05",
+      "__EMPTY": "Large Flex Clips Black 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "G4WH-03",
+      "__EMPTY": "Small Flex Clips White 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "G4WH-05",
+      "__EMPTY": "Large Flex Clips White 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "Wall Plates & Accessories"
+    },
+    {
+      "Sonic Telecom, LLC ": "1901L",
+      "__EMPTY": "Fiber Optic Wall Plate, 1P, White 20/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "DA1WH",
+      "__EMPTY": "1 Port Fiber Angled Wall Plate 25/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "DA2WH",
+      "__EMPTY": "2 Port Fiber Angled Wall Plate 25/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "IC107DA4WH",
+      "__EMPTY": "4 Port Angled Wall Plate 25/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "ACSFTW",
+      "__EMPTY": "White Grommets 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "ACSFTW-B",
+      "__EMPTY": "Black Grommets 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "SBWH06",
+      "__EMPTY": "RG6/Coaxial Split Bushings 7/16 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "ACM-652114",
+      "__EMPTY": "9/16\" Staple for T25/25A"
+    },
+    {
+      "Sonic Telecom, LLC ": "AKI-SCA-WH",
+      "__EMPTY": "Fiber Keystone 25/pack"
+    },
+    {
+      "Sonic Telecom, LLC ": "14J388",
+      "__EMPTY": "Coax Insert 10/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "3M 4026-1X1",
+      "__EMPTY": "DBL Sticky Squares"
+    },
+    {
+      "Sonic Telecom, LLC ": "RED-820",
+      "__EMPTY": "Silicone Handheld Tube"
+    },
+    {
+      "Sonic Telecom, LLC ": 2074064,
+      "__EMPTY": "Surge Protector PStrip 7 Out, 4'"
+    },
+    {
+      "Sonic Telecom, LLC ": 3187939,
+      "__EMPTY": "TL-SG105 5P Gigabit Ethernet Switch"
+    },
+    {
+      "Sonic Telecom, LLC ": "PS36L-K7-2",
+      "__EMPTY": "24 Hr. Battery Backup"
+    },
+    {
+      "Sonic Telecom, LLC ": "PS36L-EX-2"
+    },
+    {
+      "Sonic Telecom, LLC ": "PS7P5521-2"
+    },
+    {
+      "Sonic Telecom, LLC ": "COPPER"
+    },
+    {
+      "Sonic Telecom, LLC ": "Item Code:",
+      "__EMPTY": "Description:",
+      "__EMPTY_1": "Requested:",
+      "__EMPTY_2": "Pulled:"
+    },
+    {
+      "Sonic Telecom, LLC ": "C6E-1000-WHT",
+      "__EMPTY": "1000FT CAT6 Pvc Bulk (White)"
+    },
+    {
+      "Sonic Telecom, LLC ": "C6E-1000-UV",
+      "__EMPTY": "1000FT CAT6 UV (Black)"
+    },
+    {
+      "Sonic Telecom, LLC ": "6-554720-3",
+      "__EMPTY": "RJ-45 Ends 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "7001-6P4C",
+      "__EMPTY": "RJ-11 Ends 100/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "CAT5E-KJ-WHI",
+      "__EMPTY": "Cat5E Copper Keystone Jack 50/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": "66B1-6",
+      "__EMPTY": "6-Pair Freddy"
+    },
+    {
+      "Sonic Telecom, LLC ": "66B1-12",
+      "__EMPTY": "12-Pair Freddy"
+    },
+    {
+      "Sonic Telecom, LLC ": "163-06",
+      "__EMPTY": "Copper Splice Box  "
+    },
+    {
+      "Sonic Telecom, LLC ": "649A1-49",
+      "__EMPTY": "MPOE Filter"
+    },
+    {
+      "Sonic Telecom, LLC ": "95S-1-12",
+      "__EMPTY": "MPOE NID Filter Module"
+    },
+    {
+      "Sonic Telecom, LLC ": "SA1-1000",
+      "__EMPTY": "Bridge Clips 50/bag"
+    },
+    {
+      "Sonic Telecom, LLC ": 98303397,
+      "__EMPTY": "Cross Connect Wire"
+    },
+    {
+      "Sonic Telecom, LLC ": 50029,
+      "__EMPTY": "2Port Jelly Beans (UY-BOX) 100/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "UR2-BOX",
+      "__EMPTY": "3 Port Jelly Beans 100/box"
+    },
+    {
+      "Sonic Telecom, LLC ": "4625A-24I",
+      "__EMPTY": "1 port Leviton RJ-11 Jack"
+    },
+    {
+      "Sonic Telecom, LLC ": "83-056",
+      "__EMPTY": "White Circular Jack"
+    },
+    {
+      "Sonic Telecom, LLC ": "WP-1-WHI",
+      "__EMPTY": "1 Port  Copper Wall Plate"
+    },
+    {
+      "Sonic Telecom, LLC ": "WP-2-WHI",
+      "__EMPTY": "2 Port Copper Wall Plate"
+    },
+    {
+      "Sonic Telecom, LLC ": "SM-1-WHI",
+      "__EMPTY": "1 Port Biscuit Block 20/pack"
+    },
+    {
+      "Sonic Telecom, LLC ": "SM-2-WHI",
+      "__EMPTY": "2 Port Biscuit Block 10/pack"
+    },
+    {
+      "Sonic Telecom, LLC ": "60-0021-S",
+      "__EMPTY": "Mud Ring (1-gang low volt mntg bracket) "
+    },
+    {
+      "Sonic Telecom, LLC ": "900LCC-2F-50",
+      "__EMPTY": "Bonded Filter"
+    },
+    {
+      "Sonic Telecom, LLC ": "1001-301003",
+      "__EMPTY": "Single Line Filter"
+    },
+    {
+      "Sonic Telecom, LLC ": "900LCCS-2F-50",
+      "__EMPTY": "Dual-Line Splitter Filter"
+    },
+    {
+      "Sonic Telecom, LLC ": "LFT-4-1-GB",
+      "__EMPTY": "Single Line Splitter Filter"
+    },
+    {
+      "Sonic Telecom, LLC ": "ENTERPRISE"
+    },
+    {
+      "Sonic Telecom, LLC ": "Item Code:",
+      "__EMPTY": "Description:",
+      "__EMPTY_1": "Requested:",
+      "__EMPTY_2": "Pulled:"
+    },
+    {
+      "Sonic Telecom, LLC ": "C275926N-15F",
+      "__EMPTY": "Hydra Cable, RJ45/CAT 5E 24/4P 6\""
+    },
+    {
+      "Sonic Telecom, LLC ": "C5E-001-BLUE",
+      "__EMPTY": "1' CAT5E Patch Cable Blue"
+    },
+    {
+      "Sonic Telecom, LLC ": "C5E-003-BLUE",
+      "__EMPTY": "3' CAT5E Patch Cable Blue"
+    },
+    {
+      "Sonic Telecom, LLC ": "C5E-005-BLUE",
+      "__EMPTY": "5' CATE Patch Cable Blue"
+    },
+    {
+      "Sonic Telecom, LLC ": "C5E-007-BLUE",
+      "__EMPTY": "7' CAT5E Patch Cable Blue"
+    },
+    {
+      "Sonic Telecom, LLC ": "C5E-010-BLUE",
+      "__EMPTY": "10' CAT5E Patch Cable Blue"
+    },
+    {
+      "Sonic Telecom, LLC ": "C5E-015-BLUE",
+      "__EMPTY": "15' CAT5E Patch Cable Blue"
+    },
+    {
+      "Sonic Telecom, LLC ": "M1-50",
+      "__EMPTY": "66 Block"
+    },
+    {
+      "Sonic Telecom, LLC ": "M2-5W",
+      "__EMPTY": "AMP End 66 Block"
+    },
+    {
+      "Sonic Telecom, LLC ": "MC4LH-9",
+      "__EMPTY": "66 Block Cover"
+    },
+    {
+      "Sonic Telecom, LLC ": "S896",
+      "__EMPTY": "66 Block Feet"
+    },
+    {
+      "Sonic Telecom, LLC ": "MP-5T180MUNNA5",
+      "__EMPTY": "CAT5 25-Pair Amp Telco Cable-5ft"
+    },
+    {
+      "Sonic Telecom, LLC ": "MP-5T180MUNNA15",
+      "__EMPTY": "CAT5 25-Pair Amp Telco Cable-15ft"
+    },
+    {
+      "Sonic Telecom, LLC ": "MP-5T180MUNNA25",
+      "__EMPTY": "CAT5 25-Pair Amp Telco Cable-25ft"
+    },
+    {
+      "Sonic Telecom, LLC ": "PP7-3038-MUSH",
+      "__EMPTY": "Mushroom Post With Screw"
+    },
+    {
+      "Sonic Telecom, LLC ": "TOOLS"
+    },
+    {
+      "Sonic Telecom, LLC ": "Item Code:",
+      "__EMPTY": "Description:",
+      "__EMPTY_1": "Requested:",
+      "__EMPTY_2": "Pulled:"
+    },
+    {
+      "Sonic Telecom, LLC ": "STICKER-DNR",
+      "__EMPTY": "ONT Sticker - Small "
+    },
+    {
+      "Sonic Telecom, LLC ": "STICKER-DNR-ONT",
+      "__EMPTY": "ONT Sticker - Large"
+    },
+    {
+      "Sonic Telecom, LLC ": "STICKER-DNR-10G",
+      "__EMPTY": "ONT Caution Sticker for 10G"
+    },
+    {
+      "Sonic Telecom, LLC ": "ALAA-8J",
+      "__EMPTY": "AA Batteries"
+    },
+    {
+      "Sonic Telecom, LLC ": "ALAAA-8J",
+      "__EMPTY": "AAA Batteries"
+    },
+    {
+      "Sonic Telecom, LLC ": "AL9V-12PPJ",
+      "__EMPTY": "9v Battery"
+    },
+    {
+      "Sonic Telecom, LLC ": "GAL-BFS37554",
+      "__EMPTY": "Flex Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "GAL-BH37512",
+      "__EMPTY": "3/8\" x 12\" Wood Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "GAL-BH37518",
+      "__EMPTY": "3/8\" x 18\" Wood Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "GAL-H37513",
+      "__EMPTY": "3/8\" x 12\" Masonry Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "GAL-H37518",
+      "__EMPTY": "3/8\" x 18\" Masonry Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "GAL-H50013",
+      "__EMPTY": "1/2\" x 12\" Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "GAL-H50024",
+      "__EMPTY": "1/2\" x 24\" Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "A-98980",
+      "__EMPTY": "#2 2\" Phillips bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "49-66-4702",
+      "__EMPTY": "1/4\" Drive Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "LBHX002",
+      "__EMPTY": "5/32\" Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "LBHX0035",
+      "__EMPTY": "3/16\" Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "IMC16",
+      "__EMPTY": "12\" x 6\" Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "DIV-CSB018S",
+      "__EMPTY": "Con-Sert Bit"
+    },
+    {
+      "Sonic Telecom, LLC ": "TZE-231",
+      "__EMPTY": "Label Maker Tape- Big"
+    },
+    {
+      "Sonic Telecom, LLC ": "KEN-5GB",
+      "__EMPTY": "Bucket"
+    },
+    {
+      "Sonic Telecom, LLC ": "YZYAYUJRONSC-01",
+      "__EMPTY": "Booties "
+    },
+    {
+      "Sonic Telecom, LLC ": "B00C2DRVRI",
+      "__EMPTY": "Mini Broom and Dust Pan"
+    },
+    {
+      "Sonic Telecom, LLC ": "SHR-3-AIO",
+      "__EMPTY": "Wall Patch"
+    },
+    {
+      "Sonic Telecom, LLC ": 906,
+      "__EMPTY": "Drop Tensioner"
+    },
+    {
+      "Sonic Telecom, LLC ": "31-00809",
+      "__EMPTY": "P-Hook"
+    },
+    {
+      "Sonic Telecom, LLC ": "Pulled By:__________________ Date:____________   "
+    },
+    {
+      "Sonic Telecom, LLC ": "Picked up By:__________________Signature:______________________Date:____________   "
+    }
+  ]
+}
