@@ -36,7 +36,8 @@ function DisplayOrder(props) {
         const worksheet = workbook.addWorksheet('New Sheet', {
             pageSetup: { paperSize: 9, orientation: 'landscape' }
         });
-
+        console.log(date)
+        let datePart = date.slice(0, date.indexOf('T'));
 
         const preset = [
             ["", "Sonic Telecom, LLC", "", ""],
@@ -45,7 +46,7 @@ function DisplayOrder(props) {
             ["Lead's Name:", lead, "Shipping", ""],
             ["", "", "Request", ""],
             ["Tech's Name/Ship-To:", name, "", ""],
-            ["Today's Date:", date, "Box Count", "Ship Cost"],
+            ["Today's Date:", datePart, "Box Count", "Ship Cost"],
             ["", "", "", ""],
             ["Item Code:", "Description:", "Requested:", "Pulled:"],
             ["", "", "", ""]
@@ -109,7 +110,11 @@ function DisplayOrder(props) {
 
         worksheet.getRow('1').font = { size: 24, bold: true };
         worksheet.getRow('2').font = { size: 16 };
-        worksheet.getRow('8').font = { size: 14, bold: true };
+        worksheet.getRow('9').font = { size: 14, bold: true };
+        worksheet.getCell('C4').font = { bold: true };
+        worksheet.getCell('C5').font = { bold: true };
+        worksheet.getCell('C7').font = { bold: true };
+        worksheet.getCell('D7').font = { bold: true };
 
 //=============aligment
         worksheet.getColumn('A').alignment = { vertical: 'top', horizontal: 'left' };
@@ -155,7 +160,72 @@ worksheet.getColumn('A').border = {
     right: {style:'thin', color: {argb:'00000000'}}
    };
    //====colors
-   
+   let color = 'BBBBBB'
+   worksheet.eachRow((row) =>{
+    row.fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: color},
+      };
+      if (color === 'FFFFFF'){
+        color = 'BBBBBB'
+      }else if (color === 'BBBBBB'){
+        color = 'FFFFFF'
+      }
+
+    //===set row colors
+
+    worksheet.getRow('1').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'FFFFFF'},
+      };
+      worksheet.getRow('3').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'FFFFFF'},
+      };
+      worksheet.getRow('5').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'FFFFFF'},
+      };
+      worksheet.getRow('7').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'FFFFFF'},
+      };
+      worksheet.getRow('9').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'FFFFFF'},
+      };
+
+      //==specific cells
+      worksheet.getCell('C4').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'BBBBBB'},
+      };
+      worksheet.getCell('C5').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'BBBBBB'},
+      };
+      worksheet.getCell('C7').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'BBBBBB'},
+      };
+      worksheet.getCell('D7').fill = {
+        type: 'pattern',
+        pattern:'solid',
+        fgColor:{argb: 'BBBBBB'},
+      };
+
+     
+
+})
 
         //========== STYLES ========
 
