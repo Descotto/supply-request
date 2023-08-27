@@ -33,13 +33,15 @@ function DisplayOrder(props) {
     const handleExport = () => {
 
         const workbook = new ExcelJS.Workbook();
-        const worksheet =  workbook.addWorksheet('New Sheet', {
-            pageSetup:{paperSize: 9, orientation:'landscape'}
-          });
+        const worksheet = workbook.addWorksheet('New Sheet', {
+            pageSetup: { paperSize: 9, orientation: 'landscape' }
+        });
 
 
         const preset = [
+            ["", "Sonic Telecom, LLC", "", ""],
             ["", "Supply Request Sheet - Field Installation Warehouse", "", ""],
+            ["", "", "", ""],
             ["Lead's Name:", lead, "Shipping", ""],
             ["", "", "Request", ""],
             ["Tech's Name/Ship-To:", name, "", ""],
@@ -50,6 +52,11 @@ function DisplayOrder(props) {
 
 
         ];
+        const preset2 = [
+            ["", "", "", ""],
+            ["", "Pulled By:__________________ Date:____________   ", "", ""],
+            ["Picked up By:__________________", "Signature:______________________ Date:_______", "", ""]
+        ];
 
         let pull = items.map((i, idx) => {
             return (
@@ -57,7 +64,8 @@ function DisplayOrder(props) {
             )
         })
 
-        let data = preset.concat(pull)
+        let selection = preset.concat(pull);
+        let data = selection.concat(preset2);
 
 
 
@@ -65,22 +73,91 @@ function DisplayOrder(props) {
             worksheet.addRow(row);
         });
 
-//========== STYLES ========
+        //========== STYLES ========
+
+        //====fonts
+        worksheet.getColumn('A').font = {
+            name: 'Calibri (Body)',
+            color: { argb: '00000000' },
+            family: 2,
+            size: 14,
+            italic: true
+        };
+
         worksheet.getColumn('B').font = {
             name: 'Calibri (Body)',
             color: { argb: '00000000' },
             family: 2,
-            size: 11,
-            bold: true
-           };
+            size: 14,
+            italic: true
+        };
 
-           worksheet.getColumn('A').width = 23;
-           worksheet.getColumn('B').width = 57;
-           worksheet.getColumn('C').width = 15;
-           worksheet.getColumn('D').width = 15;
-           worksheet.getRow('1').height = 35;
-           
-//========== STYLES ========
+        worksheet.getColumn('C').font = {
+            name: 'Calibri (Body)',
+            color: { argb: '00000000' },
+            family: 2,
+            size: 14,
+            italic: true
+        };
+        worksheet.getColumn('D').font = {
+            name: 'Calibri (Body)',
+            color: { argb: '00000000' },
+            family: 2,
+            size: 14,
+            italic: true
+        };
+
+        worksheet.getRow('1').font = { size: 24, bold: true };
+        worksheet.getRow('2').font = { size: 16 };
+        worksheet.getRow('8').font = { size: 14, bold: true };
+
+//=============aligment
+        worksheet.getColumn('A').alignment = { vertical: 'top', horizontal: 'left' };
+        worksheet.getColumn('B').alignment = { vertical: 'top', horizontal: 'left' };
+        worksheet.getColumn('C').alignment = { vertical: 'center', horizontal: 'center' };
+        worksheet.getColumn('D').alignment = { vertical: 'center', horizontal: 'center' };
+        worksheet.getRow('1').alignment = { vertical: 'center', horizontal: 'center' };
+        worksheet.getRow('2').alignment = { vertical: 'center', horizontal: 'center' };
+        worksheet.getRow('8').alignment = { vertical: 'center', horizontal: 'center' };
+
+//===========Re-size
+        worksheet.getColumn('A').width = 27;
+        worksheet.getColumn('B').width = 71;
+        worksheet.getColumn('C').width = 15;
+        worksheet.getColumn('D').width = 15;
+        worksheet.getRow('1').height = 25;
+        worksheet.getRow('2').height = 25;
+        worksheet.getRow('8').height = 20;
+
+//==========Colors and borders
+worksheet.getColumn('A').border = {
+    top: {style:'thin', color: {argb:'00000000'}},
+    left: {style:'thin', color: {argb:'00000000'}},
+    bottom: {style:'thin', color: {argb:'00000000'}},
+    right: {style:'thin', color: {argb:'00000000'}}
+   };
+   worksheet.getColumn('B').border = {
+    top: {style:'thin', color: {argb:'00000000'}},
+    left: {style:'thin', color: {argb:'00000000'}},
+    bottom: {style:'thin', color: {argb:'00000000'}},
+    right: {style:'thin', color: {argb:'00000000'}}
+   };
+   worksheet.getColumn('C').border = {
+    top: {style:'thin', color: {argb:'00000000'}},
+    left: {style:'thin', color: {argb:'00000000'}},
+    bottom: {style:'thin', color: {argb:'00000000'}},
+    right: {style:'thin', color: {argb:'00000000'}}
+   };
+   worksheet.getColumn('D').border = {
+    top: {style:'thin', color: {argb:'00000000'}},
+    left: {style:'thin', color: {argb:'00000000'}},
+    bottom: {style:'thin', color: {argb:'00000000'}},
+    right: {style:'thin', color: {argb:'00000000'}}
+   };
+   //====colors
+   
+
+        //========== STYLES ========
 
         workbook.xlsx.writeBuffer().then((buffer) => {
             const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
