@@ -32,10 +32,10 @@ function Request(props) {
             const order = { name: name, lead: lead, items: ot }
             
             //==AXIOS CALL===
-            console.log('AFTER THE CLICK? ====>', order);
+            
             axios.post(`${REACT_APP_SERVER_URL}/request`, order)
                 .then(response => {
-                    console.log('data sent ===>>', response.data.order)
+                    
                     props.setDisplay(response.data.order);
                     let data = response.data.order;
                     navigator.clipboard.writeText(data);
@@ -1711,7 +1711,7 @@ function Request(props) {
                     <option value="10">10</option>
                 </select></p>
             </div>
-            <props.Link to="/display"><button type='submit' onClick={handleClick}>Copy to clipboard</button></props.Link>
+            <props.Link to="/display"><button type='submit' className='btn btn-primary' onClick={handleClick}>Complete Order</button></props.Link>
 
 
         </div>

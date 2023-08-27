@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -28,11 +29,35 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.sidebar {
+  text-align: left;
+  width: max-content;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+/* App.css */
+.app-container {
+  display: flex;
+}
+
+.left-component {
+  background-color: #f0f0f0;
+  width: max-content;
+  padding: 20px;
+  margin-right: 2%;
+}
+
+.right-components {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.right-component {
+  background-color: #e0e0e0;
+  padding: 20px;
+  margin: 10px;
 }

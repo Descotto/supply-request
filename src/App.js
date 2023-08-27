@@ -11,7 +11,13 @@ import Request from './Request';
 import About from './About';
 import Display from './Display';
 import DisplayOrder from './DisplayOrder';
+import Home from './Home';
 import Order from './Order';
+import LeftSidebarNavbar from './Sidebar';
+
+
+
+
 
 function App() {
   const [display, setDisplay] = useState();
@@ -20,9 +26,17 @@ function App() {
 
 
   return (
-    <div>
-      <Router>
-        <nav id="navbar" className="navbar">
+    <div className='App app-container'>
+      <header className="left-component">
+      <div className='sidebar'>
+        <LeftSidebarNavbar />
+        </div>
+      </header>
+      <br />
+      
+      
+      <Router className="right-components">
+        {/* <nav id="navbar" className="navbar">
           <ul>
             <li><Link className="nav-link active" to="/">Home</Link></li>
             <li><Link className="nav-link" to="/lookup">Order Lookup</Link></li>
@@ -30,13 +44,14 @@ function App() {
             
           </ul>
           <i className="bi bi-list mobile-nav-toggle"></i>
-        </nav>
+        </nav> */}
 
         <Routes >
-          <Route path='/' element={<Request setDisplay={setDisplay} Link={Link} orderTable={orderTable} setOrderTable={setOrderTable} />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/request' element={<Request setDisplay={setDisplay} Link={Link} orderTable={orderTable} setOrderTable={setOrderTable} />} />
           <Route path='/about' element={<About />} />
           <Route path='/lookup' element={<Order setOrder={setOrder} />} />
-          <Route path='/display' element={<Display data={display} setDisplay={setDisplay} />} />
+          <Route path='/display' element={<Display data={display} setOrder={setOrder} setDisplay={setDisplay} />} />
           <Route path='/displayorder' element={<DisplayOrder order={order} />} />
         </Routes>
       </Router>

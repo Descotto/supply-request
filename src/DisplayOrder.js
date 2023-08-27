@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css'
-import * as XLSX from 'xlsx';
 import ExcelJS from 'exceljs';
 import { saveAs } from 'file-saver';
 
@@ -14,16 +13,11 @@ function DisplayOrder(props) {
 
     let name = props.order.order.name;
     let lead = props.order.order.lead;
-    let date = props.order.order.date;
+    let date = props.order.order.date.slice(0, props.order.order.date.indexOf('T'));
     let items = props.order.order.items;
     let orderId = props.order.order._id;
 
-    function changeColor(e) {
-        e.preventDefault();
-        e.target.className = 'btn btn-success'
-        e.target.innerText = 'Filled';
-
-    }
+  
     //============================FULL
 
 
@@ -36,8 +30,8 @@ function DisplayOrder(props) {
         const worksheet = workbook.addWorksheet('New Sheet', {
             pageSetup: { paperSize: 9, orientation: 'landscape' }
         });
-        console.log(date)
-        let datePart = date.slice(0, date.indexOf('T'));
+        
+        
 
         const preset = [
             ["", "Sonic Telecom, LLC", "", ""],
@@ -46,7 +40,7 @@ function DisplayOrder(props) {
             ["Lead's Name:", lead, "Shipping", ""],
             ["", "", "Request", ""],
             ["Tech's Name/Ship-To:", name, "", ""],
-            ["Today's Date:", datePart, "Box Count", "Ship Cost"],
+            ["Today's Date:", date, "Box Count", "Ship Cost"],
             ["", "", "", ""],
             ["Item Code:", "Description:", "Requested:", "Pulled:"],
             ["", "", "", ""]
@@ -252,9 +246,7 @@ worksheet.getColumn('A').border = {
                 <td className='th'>
                     {i.requested}
                 </td>
-                <td>
-                    <button onClick={changeColor} type="button" className="btn btn-warning">Pending</button>
-                </td>
+                
 
             </tr>
         )
@@ -265,26 +257,28 @@ worksheet.getColumn('A').border = {
 
     return (
         <div className='App'>
-            <h2>Order number : <small className='ornum'>{orderId}</small></h2>
+            <h4>Order number : <small className='ornum'>{orderId}</small></h4>
             <p>Name: <strong>{name}</strong></p>
             <p>Lead: <strong>{lead}</strong></p>
             <p>Date: <strong>{date}</strong></p>
+            <span></span>
+            <button type="button" id='dlbtn' className="btn btn-success align-self-start" onClick={handleExport}>Download Excel</button>
+            <span></span>
+
             <table>
                 <thead>
                     <tr>
                         <th width='30%'>Item Code</th>
                         <th width='30%'>Description</th>
                         <th className='th' width='30%'>Requested</th>
-                        <th width='30%'>Pulled</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     {orderBoard}
                 </tbody>
             </table>
-            <span></span>
-            <button onClick={handleExport}>check</button>
-            {/* <button type='button' onClick={handleDownload} className="btn btn-primary">Export to Excel</button> */}
+            
         </div>
     )
 }

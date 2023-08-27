@@ -1,36 +1,40 @@
-import React from 'react';
+import { useState } from 'react';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import { Navigate } from 'react-router-dom';
+import React from 'react';
+import axios from 'axios';
 
+const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 
 
 function Display(props) {
+    const [redirect, setRedirect] = useState(false);
+
 
     let tab = props.data;
 
     function showTable() {
-        console.log(props);
-        let div = document.getElementById('show');
-        if (tab) {
-            let text = document.createElement('p');
-            text.textContent = tab
-            div.appendChild(text);
-            props.setDisplay('');
-        } else {
-            let text = document.createElement('p');
-            text.textContent = 'Nothing selected';
-            div.appendChild(text);
-        }
-
+            axios.get(`${REACT_APP_SERVER_URL}/order/${tab}`)
+            .then((response) => {
+              
+              props.setOrder(response.data);
+              setRedirect(true);
+            }).catch((error) => {
+              console.log("ERROR", error);
+            });
+          
     }
+    if (redirect) return <Navigate to="/displayorder" />
 
     return (
         <div className='App'>
-            <p>copied to clipboard</p>
+            <p>Request sent</p>
+            <p>Request ID saved to the clipboard</p>
 
             <div id="show"></div>
-            <button onClick={showTable}>Show</button>
+            <button className='btn btn-secondary' onClick={showTable}>Show Order</button>
         </div>
     )
 }
