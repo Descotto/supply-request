@@ -33,7 +33,10 @@ function App() {
         </div>
       </header>
       <br />
+
+
       <Router className="right-components">
+
         <Routes >
           <Route path='/' element={<Home />} />
           <Route path='/request' element={<Request setDisplay={setDisplay} Link={Link} orderTable={orderTable} setOrderTable={setOrderTable} />} />
