@@ -13,11 +13,17 @@ function Home() {
             <h1>Supply Request</h1>
 
             <h4>News</h4>
-            <p>All rquests will now be stored for 2 weeks before deletion.</p>
-            <p>You are now able to download an excel sheet with your selection upon making a request.</p>
-            <p>Added a Find option to look up past orders.</p>
-            <p>Updated list of items to relect the newest list.</p>
-            <p><strong>Coming updates:</strong> UI and design changes, search orders by name or lead's name.</p>
+            <div className='News'>
+                <ul>
+                    <li>All rquests will now be stored for 2 weeks before deletion.</li> <br />
+                    <li>You are now able to download an excel sheet with your selection upon making a request.</li><br />
+                    <li>Added a Find option to look up past orders.</li><br />
+                    <li>Updated list of items to relect the newest list.</li><br />
+                    <li><strong>Notice:</strong> If there are any bugs, please reach out.</li><br />
+
+                </ul>
+
+            </div>
 
 
 
