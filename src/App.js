@@ -27,17 +27,18 @@ function App() {
 
   return (
     <div className='App app-container'>
+
+    
+
+
+      <Router >
       <header className="left-component">
         <div className='sidebar'>
-          <LeftSidebarNavbar />
+          <LeftSidebarNavbar Link={Link}/>
         </div>
       </header>
-      <br />
 
-
-      <Router className="right-components">
-
-        <Routes >
+        <Routes className="right-components">
           <Route path='/' element={<Home />} />
           <Route path='/request' element={<Request setDisplay={setDisplay} Link={Link} orderTable={orderTable} setOrderTable={setOrderTable} />} />
           <Route path='/about' element={<About />} />

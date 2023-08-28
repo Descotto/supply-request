@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 
 
-const LeftSidebarNavbar = () => {
+const LeftSidebarNavbar = (props) => {
   return (
     <Navbar bg="light" variant="light" expand="lg" className="flex-column">
       <Navbar.Brand href="/">Home</Navbar.Brand>
@@ -12,7 +12,7 @@ const LeftSidebarNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="flex-column">
 
-          <Nav.Link to="/request">New Request</Nav.Link>
+          <props.Link to="/request">New Request</props.Link>
           <Nav.Link href="/lookup">Find by ID</Nav.Link>
           <Nav.Link href="/about">About</Nav.Link>
 
