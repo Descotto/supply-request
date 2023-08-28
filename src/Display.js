@@ -16,7 +16,7 @@ function Display(props) {
   let tab = props.data;
 
   function showTable() {
-    axios.get(`${REACT_APP_SERVER_URL}/order/${tab}`)
+    axios.get(`${REACT_APP_SERVER_URL}order/${tab}`)
       .then((response) => {
 
         props.setOrder(response.data);

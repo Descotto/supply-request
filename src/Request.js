@@ -31,7 +31,7 @@ function Request(props) {
 
             //==AXIOS CALL===
 
-            axios.post(`${REACT_APP_SERVER_URL}/request`, order)
+            axios.post(`${REACT_APP_SERVER_URL}request`, order)
                 .then(response => {
 
                     props.setDisplay(response.data.order);
