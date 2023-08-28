@@ -10,33 +10,33 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 
 function Display(props) {
-    const [redirect, setRedirect] = useState(false);
+  const [redirect, setRedirect] = useState(false);
 
 
-    let tab = props.data;
+  let tab = props.data;
 
-    function showTable() {
-            axios.get(`${REACT_APP_SERVER_URL}/order/${tab}`)
-            .then((response) => {
-              
-              props.setOrder(response.data);
-              setRedirect(true);
-            }).catch((error) => {
-              console.log("ERROR", error);
-            });
-          
-    }
-    if (redirect) return <Navigate to="/displayorder" />
+  function showTable() {
+    axios.get(`${REACT_APP_SERVER_URL}/order/${tab}`)
+      .then((response) => {
 
-    return (
-        <div className='App'>
-            <p>Request sent</p>
-            <p>Request ID saved to the clipboard</p>
+        props.setOrder(response.data);
+        setRedirect(true);
+      }).catch((error) => {
+        console.log("ERROR", error);
+      });
 
-            <div id="show"></div>
-            <button className='btn btn-secondary' onClick={showTable}>Show Order</button>
-        </div>
-    )
+  }
+  if (redirect) return <Navigate to="/displayorder" />
+
+  return (
+    <div className='App'>
+      <p>Request sent</p>
+      <p>Request ID saved to the clipboard</p>
+
+      <div id="show"></div>
+      <button className='btn btn-secondary' onClick={showTable}>Show Order</button>
+    </div>
+  )
 }
 
 

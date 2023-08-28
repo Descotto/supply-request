@@ -17,7 +17,7 @@ function DisplayOrder(props) {
     let items = props.order.order.items;
     let orderId = props.order.order._id;
 
-  
+
     //============================FULL
 
 
@@ -30,8 +30,8 @@ function DisplayOrder(props) {
         const worksheet = workbook.addWorksheet('New Sheet', {
             pageSetup: { paperSize: 9, orientation: 'landscape' }
         });
-        
-        
+
+
 
         const preset = [
             ["", "Sonic Telecom, LLC", "", ""],
@@ -110,7 +110,7 @@ function DisplayOrder(props) {
         worksheet.getCell('C7').font = { bold: true };
         worksheet.getCell('D7').font = { bold: true };
 
-//=============aligment
+        //=============aligment
         worksheet.getColumn('A').alignment = { vertical: 'top', horizontal: 'left' };
         worksheet.getColumn('B').alignment = { vertical: 'top', horizontal: 'left' };
         worksheet.getColumn('C').alignment = { vertical: 'center', horizontal: 'center' };
@@ -119,7 +119,7 @@ function DisplayOrder(props) {
         worksheet.getRow('2').alignment = { vertical: 'center', horizontal: 'center' };
         worksheet.getRow('8').alignment = { vertical: 'center', horizontal: 'center' };
 
-//===========Re-size
+        //===========Re-size
         worksheet.getColumn('A').width = 27;
         worksheet.getColumn('B').width = 71;
         worksheet.getColumn('C').width = 15;
@@ -128,98 +128,98 @@ function DisplayOrder(props) {
         worksheet.getRow('2').height = 25;
         worksheet.getRow('8').height = 20;
 
-//==========Colors and borders
-worksheet.getColumn('A').border = {
-    top: {style:'thin', color: {argb:'00000000'}},
-    left: {style:'thin', color: {argb:'00000000'}},
-    bottom: {style:'thin', color: {argb:'00000000'}},
-    right: {style:'thin', color: {argb:'00000000'}}
-   };
-   worksheet.getColumn('B').border = {
-    top: {style:'thin', color: {argb:'00000000'}},
-    left: {style:'thin', color: {argb:'00000000'}},
-    bottom: {style:'thin', color: {argb:'00000000'}},
-    right: {style:'thin', color: {argb:'00000000'}}
-   };
-   worksheet.getColumn('C').border = {
-    top: {style:'thin', color: {argb:'00000000'}},
-    left: {style:'thin', color: {argb:'00000000'}},
-    bottom: {style:'thin', color: {argb:'00000000'}},
-    right: {style:'thin', color: {argb:'00000000'}}
-   };
-   worksheet.getColumn('D').border = {
-    top: {style:'thin', color: {argb:'00000000'}},
-    left: {style:'thin', color: {argb:'00000000'}},
-    bottom: {style:'thin', color: {argb:'00000000'}},
-    right: {style:'thin', color: {argb:'00000000'}}
-   };
-   //====colors
-   let color = 'BBBBBB'
-   worksheet.eachRow((row) =>{
-    row.fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: color},
-      };
-      if (color === 'FFFFFF'){
-        color = 'BBBBBB'
-      }else if (color === 'BBBBBB'){
-        color = 'FFFFFF'
-      }
+        //==========Colors and borders
+        worksheet.getColumn('A').border = {
+            top: { style: 'thin', color: { argb: '00000000' } },
+            left: { style: 'thin', color: { argb: '00000000' } },
+            bottom: { style: 'thin', color: { argb: '00000000' } },
+            right: { style: 'thin', color: { argb: '00000000' } }
+        };
+        worksheet.getColumn('B').border = {
+            top: { style: 'thin', color: { argb: '00000000' } },
+            left: { style: 'thin', color: { argb: '00000000' } },
+            bottom: { style: 'thin', color: { argb: '00000000' } },
+            right: { style: 'thin', color: { argb: '00000000' } }
+        };
+        worksheet.getColumn('C').border = {
+            top: { style: 'thin', color: { argb: '00000000' } },
+            left: { style: 'thin', color: { argb: '00000000' } },
+            bottom: { style: 'thin', color: { argb: '00000000' } },
+            right: { style: 'thin', color: { argb: '00000000' } }
+        };
+        worksheet.getColumn('D').border = {
+            top: { style: 'thin', color: { argb: '00000000' } },
+            left: { style: 'thin', color: { argb: '00000000' } },
+            bottom: { style: 'thin', color: { argb: '00000000' } },
+            right: { style: 'thin', color: { argb: '00000000' } }
+        };
+        //====colors
+        let color = 'BBBBBB'
+        worksheet.eachRow((row) => {
+            row.fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: color },
+            };
+            if (color === 'FFFFFF') {
+                color = 'BBBBBB'
+            } else if (color === 'BBBBBB') {
+                color = 'FFFFFF'
+            }
 
-    //===set row colors
+            //===set row colors
 
-    worksheet.getRow('1').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'FFFFFF'},
-      };
-      worksheet.getRow('3').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'FFFFFF'},
-      };
-      worksheet.getRow('5').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'FFFFFF'},
-      };
-      worksheet.getRow('7').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'FFFFFF'},
-      };
-      worksheet.getRow('9').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'FFFFFF'},
-      };
+            worksheet.getRow('1').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFFFFF' },
+            };
+            worksheet.getRow('3').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFFFFF' },
+            };
+            worksheet.getRow('5').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFFFFF' },
+            };
+            worksheet.getRow('7').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFFFFF' },
+            };
+            worksheet.getRow('9').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'FFFFFF' },
+            };
 
-      //==specific cells
-      worksheet.getCell('C4').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'BBBBBB'},
-      };
-      worksheet.getCell('C5').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'BBBBBB'},
-      };
-      worksheet.getCell('C7').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'BBBBBB'},
-      };
-      worksheet.getCell('D7').fill = {
-        type: 'pattern',
-        pattern:'solid',
-        fgColor:{argb: 'BBBBBB'},
-      };
+            //==specific cells
+            worksheet.getCell('C4').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'BBBBBB' },
+            };
+            worksheet.getCell('C5').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'BBBBBB' },
+            };
+            worksheet.getCell('C7').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'BBBBBB' },
+            };
+            worksheet.getCell('D7').fill = {
+                type: 'pattern',
+                pattern: 'solid',
+                fgColor: { argb: 'BBBBBB' },
+            };
 
-     
 
-})
+
+        })
 
         //========== STYLES ========
 
@@ -246,7 +246,7 @@ worksheet.getColumn('A').border = {
                 <td className='th'>
                     {i.requested}
                 </td>
-                
+
 
             </tr>
         )
@@ -271,14 +271,14 @@ worksheet.getColumn('A').border = {
                         <th width='30%'>Item Code</th>
                         <th width='30%'>Description</th>
                         <th className='th' width='30%'>Requested</th>
-                        
+
                     </tr>
                 </thead>
                 <tbody>
                     {orderBoard}
                 </tbody>
             </table>
-            
+
         </div>
     )
 }

@@ -14,13 +14,11 @@ function Request(props) {
         item.itemCode = e.target.id;
         item.description = e.target.name;
         item.requested = e.target.value;
-        // addLine(item);
-        // props.setOrderTable([...props.orderTable, { name: item.name, count: item.count }])
         props.setOrderTable([...props.orderTable, { itemCode: item.itemCode, description: item.description, requested: item.requested }])
         setOrder([...order, `\n${item.description}, count: ${item.requested}`]);
     }
 
-    function  handleClick(e) {
+    function handleClick(e) {
 
         if (props.orderTable.length > 0) {
             let container = document.createElement('div');
@@ -30,12 +28,12 @@ function Request(props) {
             let lead = info.lead.value;
             let ot = props.orderTable;
             const order = { name: name, lead: lead, items: ot }
-            
+
             //==AXIOS CALL===
-            
+
             axios.post(`${REACT_APP_SERVER_URL}/request`, order)
                 .then(response => {
-                    
+
                     props.setDisplay(response.data.order);
                     let data = response.data.order;
                     navigator.clipboard.writeText(data);
@@ -48,7 +46,6 @@ function Request(props) {
 
             generateTable(table, props.orderTable);
             generateTableHead(table, props.orderTable);
-            // navigator.clipboard.writeText(oid);
 
             container.appendChild(table);
             props.setDisplay(container);

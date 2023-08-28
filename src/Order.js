@@ -11,10 +11,10 @@ function Order(props) {
   function handleSubmit(e) {
     e.preventDefault();
     let id = e.target.order.value;
-    
+
     axios.get(`${REACT_APP_SERVER_URL}/order/${id}`)
       .then((response) => {
-        
+
         props.setOrder(response.data);
         setRedirect(true);
       }).catch((error) => {

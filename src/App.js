@@ -28,24 +28,12 @@ function App() {
   return (
     <div className='App app-container'>
       <header className="left-component">
-      <div className='sidebar'>
-        <LeftSidebarNavbar />
+        <div className='sidebar'>
+          <LeftSidebarNavbar />
         </div>
       </header>
       <br />
-      
-      
       <Router className="right-components">
-        {/* <nav id="navbar" className="navbar">
-          <ul>
-            <li><Link className="nav-link active" to="/">Home</Link></li>
-            <li><Link className="nav-link" to="/lookup">Order Lookup</Link></li>
-            <li><Link className="nav-link" to="/about">About</Link></li>
-            
-          </ul>
-          <i className="bi bi-list mobile-nav-toggle"></i>
-        </nav> */}
-
         <Routes >
           <Route path='/' element={<Home />} />
           <Route path='/request' element={<Request setDisplay={setDisplay} Link={Link} orderTable={orderTable} setOrderTable={setOrderTable} />} />
