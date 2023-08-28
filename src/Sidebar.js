@@ -1,12 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar, Nav } from 'react-bootstrap';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Routes
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const LeftSidebarNavbar = () => {
@@ -16,7 +11,6 @@ const LeftSidebarNavbar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="flex-column">
-
           <Link to="/request">New Request</Link>
           <Link to="/lookup">Find by ID</Link>
           <Link to="/about">About</Link>
