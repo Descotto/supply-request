@@ -225,7 +225,7 @@ function DisplayOrder(props) {
 
         workbook.xlsx.writeBuffer().then((buffer) => {
             const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-            saveAs(blob, 'supply_request_sheet.xlsx');
+            saveAs(blob, `supply_request_${date}.xlsx`);
         });
     };
 

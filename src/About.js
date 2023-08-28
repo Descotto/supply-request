@@ -17,7 +17,7 @@ function About() {
                 <ul>
                     <li><strong>New Request:</strong>Enter you name and lead's name and click the "Complete" button at the bottom. <br /> Your Request ID will be saved to the clipboard and the "Show Order" button will take to the Order tab.</li><br />
                     <li><strong>Find by ID:</strong>Enter the order ID in the entry field and click "Search". <br /> This will take you to the Order tab.</li><br />
-                    <li><strong>Order Tab:</strong>Here you can view and confirm the request made, as well as downloading an excel sheet with the information. <br /> To download the excel click the "Download Excel". <br /> Orders will remain in the database for up to 2 weeks so that this can remain free.</li><br />
+                    <li><strong>Order Tab:</strong>Here you can view and confirm the request made, as well as downloading an excel sheet with the information. <br /> To download the excel click the "Download Excel". <br /> The excel sheet will save as "Supply_Request_(date it was created).xlsx". <br /> Orders will remain in the database for up to 2 weeks so that this can remain free.</li><br />
                 </ul>
             </p>
 
