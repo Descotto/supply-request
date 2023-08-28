@@ -12,9 +12,9 @@ const LeftSidebarNavbar = (props) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="flex-column">
 
-          <props.Link to="/request">New Request</props.Link>
-          <Nav.Link href="/lookup">Find by ID</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
+          <props.Link to="/request" className="dropdown">New Request</props.Link>
+          <props.Link to="/lookup" className="dropdown">Find by ID</props.Link>
+          <props.Link to="/about" className="dropdown">About</props.Link>
 
 
         </Nav>

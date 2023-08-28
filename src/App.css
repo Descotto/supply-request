@@ -65,3 +65,9 @@
 .home {
   text-align: left;
 }
+
+.dropdown {
+  text-decoration: none;
+    color: darkslategray;
+    margin-top: 10%;
+}
