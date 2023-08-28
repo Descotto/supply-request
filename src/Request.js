@@ -24,8 +24,8 @@ function Request(props) {
             let container = document.createElement('div');
             let table = document.createElement('TABLE');
             let info = document.getElementById('info');
-            let name = info.name.value;
-            let lead = info.lead.value;
+            let name = info.name.value.toUpperCase();
+            let lead = info.lead.value.toUpperCase();
             let ot = props.orderTable;
             const order = { name: name, lead: lead, items: ot }
 
