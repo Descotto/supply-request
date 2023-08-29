@@ -77,3 +77,9 @@
 .howto {
   text-align: left;
 }
+.custom-width {
+  width: -webkit-fill-available;
+}
+.new {
+  color: crimson;
+}

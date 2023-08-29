@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
+import Accessories from './Accessories';
+import Brentwood from './Brentwood';
+import Copper from './Copper';
+import Enterprise from './Enterprise';
+import Essentials from './Essentials';
+import Modems from './Modems';
+import Secondary from './Secondary';
+import Tools from './Tools';
+import Zips from './Zips';
+
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -85,6 +95,30 @@ function Request(props) {
     return (
         <div className="App">
             <h1>Supply Request</h1>
+            <div>
+                <form id='info'>
+                    <label>Name</label>
+                    <input type='text' name='name' />
+                    <label>Lead</label>
+                    <input type='text' name='lead' />
+                </form>
+            </div><br />
+            <Essentials handleChange={handleChange} /><br />
+            <Secondary handleChange={handleChange} /><br />
+            <Brentwood handleChange={handleChange} /><br />
+            <Modems handleChange={handleChange} /><br />
+            <Zips handleChange={handleChange} /><br />
+            <Accessories handleChange={handleChange} /><br />
+            <Copper handleChange={handleChange} /><br />
+            <Enterprise handleChange={handleChange} /><br />
+            <Tools handleChange={handleChange} /><br />
+
+
+
+
+
+
+            {/* <h1>Supply Request</h1>
             <div>
                 <form id='info'>
                     <label>Name</label>
@@ -1707,7 +1741,7 @@ function Request(props) {
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </select></p>
-            </div>
+            </div> */}
             <props.Link to="/display"><button type='submit' className='btn btn-primary' onClick={handleClick}>Complete Order</button></props.Link>
 
 
