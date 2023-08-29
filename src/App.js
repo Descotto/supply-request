@@ -29,15 +29,15 @@ function App() {
   return (
     <div className='App app-container'>
 
-    
+
 
 
       <Router >
-      <header className="left-component">
-        <div className='sidebar'>
-          <LeftSidebarNavbar Link={Link}/>
-        </div>
-      </header>
+        <header className="left-component">
+          <div className='sidebar'>
+            <LeftSidebarNavbar Link={Link} />
+          </div>
+        </header>
 
         <Routes className="right-components">
           <Route path='/' element={<Home />} />

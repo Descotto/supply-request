@@ -68,18 +68,22 @@
 
 .dropdown {
   text-decoration: none;
-    color: darkslategray;
-    margin-top: 10%;
+  color: darkslategray;
+  margin-top: 10%;
 }
+
 .News {
   background-color: rgb(215, 211, 211);
 }
+
 .howto {
   text-align: left;
 }
+
 .custom-width {
   width: -webkit-fill-available;
 }
+
 .new {
   color: crimson;
 }
