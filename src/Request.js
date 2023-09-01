@@ -20,6 +20,7 @@ function Request(props) {
     const [order, setOrder] = useState([]);
 
     function handleChange(e) {
+        console.log(order);
         let item = { itemCode: '', description: '', requested: 0 }
         item.itemCode = e.target.id;
         item.description = e.target.name;
