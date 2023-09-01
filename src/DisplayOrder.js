@@ -256,29 +256,24 @@ function DisplayOrder(props) {
 
 
     return (
-        <div className='App'>
-            <h4>Order number : <small className='ornum'>{orderId}</small></h4>
+        <div className='display-order-container'>
+            <h4>Order number: <small className='order-number'>{orderId}</small></h4>
             <p>Name: <strong>{name}</strong></p>
             <p>Lead: <strong>{lead}</strong></p>
             <p>Date: <strong>{date}</strong></p>
-            <span></span>
-            <button type="button" id='dlbtn' className="btn btn-success align-self-start" onClick={handleExport}>Download Excel</button>
-            <span></span>
-
-            <table>
+            <button type="button" id='download-btn' className="btn btn-success download-btn" onClick={handleExport}>Download Excel</button>
+            <table className='order-table'>
                 <thead>
                     <tr>
                         <th width='30%'>Item Code</th>
                         <th width='30%'>Description</th>
-                        <th className='th' width='30%'>Requested</th>
-
+                        <th className='table-header' width='30%'>Requested</th>
                     </tr>
                 </thead>
                 <tbody>
                     {orderBoard}
                 </tbody>
             </table>
-
         </div>
     )
 }

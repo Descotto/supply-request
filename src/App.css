@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: auto;
 }
 
 
@@ -97,6 +98,9 @@
   justify-content: space-between;
 }
 
+.left-component {
+  background-color: transparent;
+}
 .custom-navbar.expanded .expanded-home-link {
   color: #007bff;
 }
@@ -184,6 +188,12 @@
 .about-container {
   text-align: center;
   padding: 20px;
+  background-color: #ffffffce;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+
 }
 
 .about-container h1 {
@@ -241,4 +251,86 @@
   margin-top: 20px;
   font-size: 0.8rem;
   color: #777;
+}
+
+/* Order section */
+
+.order-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.order-container h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.order-container input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.order-container button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button.complete-order {
+  position: fixed;
+  bottom: 20px;
+  width: 100px;
+  left: 20px;
+}
+
+/* DisplayOrder.css */
+
+.display-order-container {
+  text-align: center;
+  margin: 20px;
+  background-color: white;
+  border: 2px solid rgb(93, 26, 26);
+}
+
+.order-number {
+  font-size: 18px;
+  color: #333;
+}
+
+.download-btn {
+  margin-top: 10px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.order-table th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.order-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.table-header {
+  background-color: #555;
+  color: #fff;
 }

@@ -24,11 +24,17 @@ const LeftSidebarNavbar = (props) => {
       <div className="navbar-top">
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleNavbar} />
         <Navbar.Brand href="/" className={expanded ? 'expanded-home-link' : ''}>
-          Home
         </Navbar.Brand>
       </div>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="custom-nav">
+        <props.Link
+            to="/"
+            className="custom-nav-link"
+            onClick={handleLinkClick} // Close the navbar when this link is clicked
+          >
+            Home
+          </props.Link>
           <props.Link
             to="/request"
             className="custom-nav-link"

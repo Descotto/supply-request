@@ -98,10 +98,16 @@ function Request(props) {
             <h1>Supply Request</h1>
             <div>
                 <form id='info'>
-                    <label>Name</label>
-                    <input type='text' name='name' />
-                    <label>Lead</label>
-                    <input type='text' name='lead' />
+                    <div>
+                        <label>Name</label>
+                        <br/>
+                        <input type='text' name='name' />
+                    </div>
+                    <div>
+                        <label>Lead</label>
+                        <br/>
+                        <input type='text' name='lead' />
+                    </div>
                 </form>
             </div><br />
             <Essentials handleChange={handleChange} /><br />
@@ -115,7 +121,7 @@ function Request(props) {
             <Tools handleChange={handleChange} /><br />
 
 
-            <props.Link to="/display"><button type='submit' className='btn btn-primary' onClick={handleClick}>Complete Order</button></props.Link>
+            <props.Link to="/display"><button type='submit' className='btn btn-primary complete-order' onClick={handleClick}>Complete Order</button></props.Link>
 
 
         </div>
