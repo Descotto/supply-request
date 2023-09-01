@@ -88,44 +88,157 @@
   color: crimson;
 }
 
-
 /* Default styles for large screens */
 .custom-navbar {
-  background-color: lightgray;
-  color: black;
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-navbar.expanded .expanded-home-link {
+  color: #007bff;
+}
+
+.custom-navbar a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.custom-navbar a:hover {
+  color: #007bff;
+}
+
+/* Navbar Toggler styles */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  background-color: #333;
+  border-radius: 2px;
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.125rem;
+}
+
+/* Navbar Collapse styles */
+.collapse {
+  flex-basis: 100%;
 }
 
 .custom-nav {
-  flex-direction: column;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .custom-nav-link {
-  margin-bottom: 10px;
+  margin-left: 1rem;
 }
 
+.custom-nav-link a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.custom-nav-link a:hover {
+  color: #007bff;
+}
+
+/* Medium screens (e.g., iPads) */
 @media (max-width: 992px) {
   .custom-navbar {
-    background-color: lightblue;
+    padding: 0.5rem 1rem;
+    max-width: 160px;
+  }
+
+  .custom-navbar a {
+    margin-right: 0.5rem;
   }
 }
 
 /* Small screens (e.g., iPhones) */
 @media (max-width: 576px) {
   .custom-navbar {
-    background-color: lightcoral;
-    padding: 10px;
+    padding: 0.5rem;
+    max-width: 138px;
   }
 
-  .custom-navbar .navbar-collapse {
-    justify-content: flex-start; 
+  .custom-navbar a {
+    margin-right: 0.3rem;
   }
 
-  .custom-nav {
-    flex-direction: column;
-    align-items: flex-start;
+  .navbar-toggler {
+    margin-right: 0.5rem;
   }
+}
 
-  .custom-nav-link {
-    margin-bottom: 5px; 
-  }
+/* about section */
+
+.about-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-container .howto {
+  font-size: 1rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-container ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.about-container li {
+  margin-bottom: 10px;
+}
+
+.about-container h4 {
+  font-size: 1.5rem;
+  margin: 30px 0 10px;
+}
+
+.about-container .social-links {
+  margin-top: 20px;
+}
+
+.about-container a.linkedin {
+  text-decoration: none;
+  color: #0077b5;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.about-container a.linkedin:hover {
+  text-decoration: underline;
+}
+
+.about-container small {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.about-container footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #777;
 }
