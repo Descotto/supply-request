@@ -162,17 +162,6 @@ function Request(props) {
                 </button>
             </props.Link>
 
-            <br />
-            <Essentials handleChange={handleChange} order={order} /><br />
-            <Secondary handleChange={handleChange} /><br />
-            <Brentwood handleChange={handleChange} /><br />
-            <Modems handleChange={handleChange} /><br />
-            <Zips handleChange={handleChange} /><br />
-            <Accessories handleChange={handleChange} /><br />
-            <Copper handleChange={handleChange} /><br />
-            <Enterprise handleChange={handleChange} /><br />
-            <Tools handleChange={handleChange} /><br />
-
 
             <props.Link to="/display"><button type='submit' className='btn btn-primary' onClick={handleClick}>Complete Order</button></props.Link>
             </div>
