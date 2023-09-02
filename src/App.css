@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin: auto;
+  margin-right: auto;
 }
 
 
@@ -109,6 +109,7 @@
   color: #333;
   text-decoration: none;
   font-weight: 500;
+  margin-top: 10px;
 }
 
 .custom-navbar a:hover {
@@ -181,6 +182,7 @@
   .navbar-toggler {
     margin-right: 0.5rem;
   }
+
 }
 
 /* about section */
@@ -189,7 +191,6 @@
   text-align: center;
   padding: 20px;
   background-color: #ffffffce;
-  margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
   border-radius: 10px;
@@ -289,9 +290,9 @@
 
 button.complete-order {
   position: fixed;
-  bottom: 20px;
-  width: 100px;
-  left: 20px;
+  bottom: 100px;
+  width: 90px;
+  left: 10px;
 }
 
 /* DisplayOrder.css */
@@ -333,4 +334,64 @@ button.complete-order {
 .table-header {
   background-color: #555;
   color: #fff;
+}
+
+/*  not found page 404 */
+
+.Notfound__container {
+  text-align: center;
+  margin-top: 100px;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: bounce 5s infinite; 
+  border: 2px solid black;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.BouncingImage {
+  width: 400px;
+  height: 400px;
+  background-image: url('../public/Lost.png');
+  background-size: cover;
+  animation: bounce 1s infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes showHideText {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+.PopupText {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  animation: showHideText 3s infinite, showHideTextDelay 15s infinite;
+  opacity: 0;
+}
+
+@keyframes showHideTextDelay {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
