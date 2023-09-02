@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-right: auto;
 }
 
 
@@ -86,4 +87,311 @@
 
 .new {
   color: crimson;
+}
+
+/* Default styles for large screens */
+.custom-navbar {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-component {
+  background-color: transparent;
+}
+.custom-navbar.expanded .expanded-home-link {
+  color: #007bff;
+}
+
+.custom-navbar a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.custom-navbar a:hover {
+  color: #007bff;
+}
+
+/* Navbar Toggler styles */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  background-color: #333;
+  border-radius: 2px;
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.125rem;
+}
+
+/* Navbar Collapse styles */
+.collapse {
+  flex-basis: 100%;
+}
+
+.custom-nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.custom-nav-link {
+  margin-left: 1rem;
+}
+
+.custom-nav-link a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.custom-nav-link a:hover {
+  color: #007bff;
+}
+
+/* Medium screens (e.g., iPads) */
+@media (max-width: 992px) {
+  .custom-navbar {
+    padding: 0.5rem 1rem;
+    max-width: 160px;
+  }
+
+  .custom-navbar a {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Small screens (e.g., iPhones) */
+@media (max-width: 576px) {
+  .custom-navbar {
+    padding: 0.5rem;
+    max-width: 138px;
+  }
+
+  .custom-navbar a {
+    margin-right: 0.3rem;
+  }
+
+  .navbar-toggler {
+    margin-right: 0.5rem;
+  }
+
+}
+
+/* about section */
+
+.about-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffffce;
+  margin-right: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-container .howto {
+  font-size: 1rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-container ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.about-container li {
+  margin-bottom: 10px;
+}
+
+.about-container h4 {
+  font-size: 1.5rem;
+  margin: 30px 0 10px;
+}
+
+.about-container .social-links {
+  margin-top: 20px;
+}
+
+.about-container a.linkedin {
+  text-decoration: none;
+  color: #0077b5;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.about-container a.linkedin:hover {
+  text-decoration: underline;
+}
+
+.about-container small {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.about-container footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Order section */
+
+.order-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.order-container h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.order-container input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.order-container button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button.complete-order {
+  position: fixed;
+  bottom: 100px;
+  width: 90px;
+  left: 10px;
+}
+
+/* DisplayOrder.css */
+
+.display-order-container {
+  text-align: center;
+  margin: 20px;
+  background-color: white;
+  border: 2px solid rgb(93, 26, 26);
+}
+
+.order-number {
+  font-size: 18px;
+  color: #333;
+}
+
+.download-btn {
+  margin-top: 10px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.order-table th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.order-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.table-header {
+  background-color: #555;
+  color: #fff;
+}
+
+/*  not found page 404 */
+
+.Notfound__container {
+  text-align: center;
+  margin-top: 100px;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: bounce 5s infinite; 
+  border: 2px solid black;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.BouncingImage {
+  width: 400px;
+  height: 400px;
+  background-image: url('../public/Lost.png');
+  background-size: cover;
+  animation: bounce 1s infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes showHideText {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+.PopupText {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  animation: showHideText 3s infinite, showHideTextDelay 15s infinite;
+  opacity: 0;
+}
+
+@keyframes showHideTextDelay {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }

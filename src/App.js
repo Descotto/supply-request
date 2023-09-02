@@ -14,6 +14,7 @@ import DisplayOrder from './DisplayOrder';
 import Home from './Home';
 import Order from './Order';
 import LeftSidebarNavbar from './Sidebar';
+import NotFound from './NotFound';
 
 
 
@@ -46,6 +47,7 @@ function App() {
           <Route path='/lookup' element={<Order setOrder={setOrder} />} />
           <Route path='/display' element={<Display data={display} setOrder={setOrder} setDisplay={setDisplay} />} />
           <Route path='/displayorder' element={<DisplayOrder order={order} />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
     </div>
