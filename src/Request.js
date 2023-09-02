@@ -129,7 +129,7 @@ function Request(props) {
                         <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} />
                     </div>
                 </form>
-//=== main
+
             </div>
             <br />
             <Essentials handleChange={handleChange} />
@@ -161,8 +161,8 @@ function Request(props) {
                     Complete Order
                 </button>
             </props.Link>
-=======
-            </div><br />
+
+            <br />
             <Essentials handleChange={handleChange} order={order} /><br />
             <Secondary handleChange={handleChange} /><br />
             <Brentwood handleChange={handleChange} /><br />
@@ -175,11 +175,10 @@ function Request(props) {
 
 
             <props.Link to="/display"><button type='submit' className='btn btn-primary' onClick={handleClick}>Complete Order</button></props.Link>
+            </div>
 
-
-//=== main
-        </div>
-    );
+       
+    )
 }
 
 export default Request;

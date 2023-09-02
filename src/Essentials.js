@@ -7,7 +7,7 @@ function Essentials(props) {
 
 
   //====Set Group
-  const [check, setCheck] = useState(false);
+  // const [check, setCheck] = useState(false);
 
   // function groupCheck(order){
   //     if (check) {
