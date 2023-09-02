@@ -16,7 +16,7 @@ function Enterprise(props) {
 
     return (
         <div>
-            <button class="btn btn-secondary custom-width" onClick={toggleCollapse}>
+            <button className="btn btn-secondary custom-width" onClick={toggleCollapse}>
                 {isCollapsed ? 'Enterprise' : 'Collapse'}
             </button>
             {!isCollapsed && (

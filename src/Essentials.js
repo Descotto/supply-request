@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 
 
-
-
-
-
 function Essentials(props) {
   const { handleChange } = props;
-
   const [isCollapsed, setIsCollapsed] = useState(true);
+
+
+  //====Set Group
+  const [check, setCheck] = useState(false);
+
+  // function groupCheck(order){
+  //     if (check) {
+  //       console.log(props.order)
+  //     }
+  
+  //   }
+  // groupCheck();
+  
+  //=====================
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
@@ -16,7 +25,7 @@ function Essentials(props) {
 
   return (
     <div>
-      <button class="btn btn-secondary custom-width" onClick={toggleCollapse}>
+      <button className="btn btn-secondary custom-width" onClick={toggleCollapse}>
         {isCollapsed ? 'Essentials' : 'Collapse'}
       </button>
       {!isCollapsed && (

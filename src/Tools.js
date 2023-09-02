@@ -16,7 +16,7 @@ function Tools(props) {
 
     return (
         <div>
-            <button class="btn btn-secondary custom-width" onClick={toggleCollapse}>
+            <button className="btn btn-secondary custom-width" onClick={toggleCollapse}>
                 {isCollapsed ? 'Tools' : 'Collapse'}
             </button>
             {!isCollapsed && (

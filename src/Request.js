@@ -19,6 +19,7 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 function Request(props) {
     const [order, setOrder] = useState([]);
 
+
     function handleChange(e) {
         let item = { itemCode: '', description: '', requested: 0 }
         item.itemCode = e.target.id;
@@ -103,7 +104,7 @@ function Request(props) {
                     <input type='text' name='lead' />
                 </form>
             </div><br />
-            <Essentials handleChange={handleChange} /><br />
+            <Essentials handleChange={handleChange} order={order} /><br />
             <Secondary handleChange={handleChange} /><br />
             <Brentwood handleChange={handleChange} /><br />
             <Modems handleChange={handleChange} /><br />
