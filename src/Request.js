@@ -163,7 +163,6 @@ function Request(props) {
             </props.Link>
 
 
-            <props.Link to="/display"><button type='submit' className='btn btn-primary' onClick={handleClick}>Complete Order</button></props.Link>
             </div>
 
        
