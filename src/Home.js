@@ -15,7 +15,7 @@ function Home() {
             <h4>News</h4>
             <div className='News'>
                 <ul>
-                    <li>All rquests will now be stored for 2 weeks before deletion.</li> <br />
+                    <li>All requests will now be stored for 2 weeks before deletion.</li> <br />
                     <li>You are now able to download an excel sheet with your selection upon making a request.</li><br />
                     <li>Added a Find option to look up past orders.</li><br />
                     <li>Updated list of items to relect the newest list.</li><br />
