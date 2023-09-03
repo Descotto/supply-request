@@ -395,3 +395,11 @@ button.complete-order {
     opacity: 0;
   }
 }
+
+.btn-color1{
+  background-color: darkred;
+}
+
+.btn-color2{
+  background-color: darkgreen;
+}

@@ -16,7 +16,7 @@ function Zips(props) {
 
   return (
     <div>
-      <button class="btn btn-secondary custom-width" onClick={toggleCollapse}>
+      <button class="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
         {isCollapsed ? 'Zip Ties & Flex Clips' : 'Collapse'}
       </button>
       {!isCollapsed && (

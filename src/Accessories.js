@@ -16,7 +16,7 @@ function Accessories(props) {
 
     return (
         <div>
-            <button class="btn btn-secondary custom-width" onClick={toggleCollapse}>
+            <button class="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
                 {isCollapsed ? 'Wallplates & Accessories' : 'Collapse'}
             </button>
             {!isCollapsed && (

@@ -10,7 +10,7 @@ function Modems(props) {
 
   return (
     <div>
-      <button className="btn btn-secondary custom-width" onClick={toggleCollapse}>
+      <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
         {isCollapsed ? 'Modems' : 'Collapse'}
       </button>
       {!isCollapsed && (
