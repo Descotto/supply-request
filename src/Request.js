@@ -38,7 +38,17 @@ function Request(props) {
             clearInterval(interval);
         };
     }, [isButtonDisabled]);
+
+
+    const renderDropdownOptions = (count) => {
+        const options = [];
+        for (let i = 0; i <= count; i++) {
+          options.push(<option value={i} key={i}>{i}</option>);
+        }
+        return options;
+      };
     
+
 
     function handleChange(e) {
         let item = { itemCode: '', description: '', requested: 0 };
@@ -128,25 +138,28 @@ function Request(props) {
                         <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} />
                     </div>
                 </form>
+
+
             </div>
             <br />
-            <Essentials handleChange={handleChange} />
+            <Essentials handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Secondary handleChange={handleChange} />
+            <Secondary handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Brentwood handleChange={handleChange} />
+            <Brentwood handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Modems handleChange={handleChange} />
+            <Modems handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Zips handleChange={handleChange} />
+            <Zips handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Accessories handleChange={handleChange} />
+            <Accessories handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Copper handleChange={handleChange} />
+            <Copper handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Enterprise handleChange={handleChange} />
+            <Enterprise handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Tools handleChange={handleChange} />
+            <Tools handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+
             <br />
 
             <props.Link to="/display">
@@ -159,8 +172,14 @@ function Request(props) {
                     Complete Order
                 </button>
             </props.Link>
-        </div>
-    );
+
+
+
+            </div>
+
+       
+    )
+
 }
 
 export default Request;

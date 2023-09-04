@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 
+
+
 function Essentials(props) {
-  const { handleChange } = props;
+  const { handleChange, renderDropdownOptions } = props;
+
   const [isCollapsed, setIsCollapsed] = useState(true);
+
+
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const renderDropdownOptions = (count) => {
-    const options = [];
-    for (let i = 0; i <= count; i++) {
-      options.push(<option value={i} key={i}>{i}</option>);
-    }
-    return options;
-  };
+
+
 
   return (
     <div>
       <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
+
         {isCollapsed ? 'Essentials' : 'Collapse'}
       </button>
       {!isCollapsed && (
