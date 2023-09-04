@@ -18,7 +18,7 @@ function About() {
       <div className="social-links">
         <a href="https://www.linkedin.com/in/david-escotto/" className="linkedin"><i className="bi bi-linkedin">linkedin</i></a><br />
         <small>David's Email: Davidescotto05@gmail.com</small>
-        <br/>
+        <br />
         <small>Calvin's Email: Calvickauer@gmail.com</small>
       </div>
 

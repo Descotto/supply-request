@@ -21,6 +21,9 @@ function Order(props) {
         console.log("ERROR", error);
       });
   }
+
+
+
   if (redirect) return <Navigate to="/displayorder" />;
 
   return (
@@ -30,6 +33,7 @@ function Order(props) {
         <input autoComplete='off' name='order' type="text" placeholder="Order Number" />
         <button type='button submit' className='btn btn-primary'>Search</button>
       </form>
+      
     </div>
   );
 }
