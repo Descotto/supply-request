@@ -1,27 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 
 function Results(props) {
+    const [redirect, setRedirect] = useState(false);
 
+    function handlePick(e) {
+        e.preventDefault();
+
+        console.log('INDEX', e.target.id);
+        console.log('FROM ORDER', data[e.target.id]);
+        let order = data[e.target.id]
+        let order1 = {order}
+        props.setOrder(order1);
+        setRedirect(true);
+    }
+    if (redirect) return <Navigate to="/displayorder" />;
 
 
     let data = props.order.order;
-    console.log(data)
+   
 
     let arr = data.map((i, idx) => {
-        console.log(i);
+  
         return (
-            <li id={i._id}>
-                {i.name}, {i._id}. <strong>Created:</strong>{i.date.slice(0, i.date.indexOf('T'))}
-            </li>
+            <div>
+                    
+                    <h4>
+                    <button  id={idx}type="button" className="btn btn-success download-btn" onClick={handlePick} >Select</button>  <span />
+                        {i.name}, <strong>Created:</strong>{i.date.slice(0, i.date.indexOf('T'))}
+                    </h4>
+                    
+                
+
+            </div>
+
         )
 
     })
 
     return (
         <div className='about-container'>
-            <h1>Results</h1>
-            <ul>{arr}</ul>
+            <h1>Results for </h1>
+            <h2>{data[0].name}</h2>
+            <div className='resultsTable'>{arr}</div>
 
 
         </div>

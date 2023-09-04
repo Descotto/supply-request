@@ -8,6 +8,7 @@ import { saveAs } from 'file-saver';
 
 
 function DisplayOrder(props) {
+    console.log('DISPLAYORDER', props.order);
 
 
 

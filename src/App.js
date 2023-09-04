@@ -52,7 +52,7 @@ function App() {
           <Route path='/byname' element={<ByName setOrder={setOrder} />} />
           <Route path='/display' element={<Display data={display} setOrder={setOrder} setDisplay={setDisplay} />} />
           <Route path='/displayorder' element={<DisplayOrder order={order} />} />
-          <Route path='/results' element={<Results order={order} />} />
+          <Route path='/results' element={<Results order={order} setOrder={setOrder} />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
