@@ -17,8 +17,9 @@ function Tools(props) {
       {!isCollapsed && (
         <div>
           <div>
-            <div className='tools'>
-              <h2>Tools</h2>
+            <div className='tools items-container'>
+              <h2 className='items-title'>Tools</h2>
+              <div className='items-list'> 
               <p onChange={handleChange}>ONT Sticker - Small - 
                 <select id='STICKER-DNR' name='ONT Sticker - Small'>
                   {[...Array(11).keys()].map((value) => (
@@ -33,7 +34,7 @@ function Tools(props) {
                   ))}
                 </select>
               </p>
-              <p onChange={handleChange}>ONT Caution Sticker for 10G - 
+              <p onChange={handleChange}>ONT Caution Sticker for 10G -  
                 <select id='STICKER-DNR-10G' name='ONT Caution Sticker for 10G'>
                   {[...Array(11).keys()].map((value) => (
                     <option key={value} value={value}>{value}</option>
@@ -201,6 +202,7 @@ function Tools(props) {
                   ))}
                 </select>
               </p>
+              </div>
             </div>
           </div>
         </div>

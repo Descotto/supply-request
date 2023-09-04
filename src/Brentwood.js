@@ -23,8 +23,8 @@ function Brentwood(props) {
       </button>
       {!isCollapsed && (
         <div>
-          <div className='brentwood'>
-            <h2>Brentwood</h2>
+          <div className='brentwood items-container'>
+            <h2 className='items-title'>Brentwood</h2>
             <p onChange={handleChange}>
               150' Brentwood Drop -{' '}
               <select id='FS-AA1-001-0150' name="150' Brentwood Drop">

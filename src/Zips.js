@@ -22,8 +22,8 @@ function Zips(props) {
       {!isCollapsed && (
         <div>
           <div>
-            <div className='zips'>
-              <h2>Zip Ties & Flex Clips</h2>
+            <div className='zips items-container'>
+              <h2 className='items-title'>Zip Ties & Flex Clips</h2>
               <p onChange={handleChange}>8" Zip Ties Black 100/bag or 1,000/bag - <select id='CP-8-40-B' name='8" Zip Ties Black 100/bag or 1,000/bag'>
                 <option value="0">0</option>
                 <option value="1">1</option>

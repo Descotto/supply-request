@@ -23,8 +23,8 @@ function Copper(props) {
       </button>
       {!isCollapsed && (
         <div>
-          <div className='copper'>
-            <h2>Copper</h2>
+          <div className='copper items-container'>
+            <h2 className='items-title'>Copper</h2>
             <p onChange={handleChange}>
               1000FT CAT6 PVC Bulk (White) -{' '}
               <select id='C6E-1000-WHT' name='1000FT CAT6 PVC Bulk (White)'>

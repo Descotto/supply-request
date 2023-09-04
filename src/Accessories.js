@@ -22,8 +22,8 @@ function Accessories(props) {
             {!isCollapsed && (
                 <div>
                     <div>
-                        <div className='accessories'>
-                            <h2>Wall Plates & Accessories</h2>
+                        <div className='accessories items-container'>
+                            <h2 className='items-title'>Wall Plates & Accessories</h2>
                             <p onChange={handleChange}>Fiber Optic Wall Plate, 1P, White 20/box - <select id='1901L' name='Fiber Optic Wall Plate, 1P, White 20/box'>
                                 <option value="0">0</option>
                                 <option value="1">1</option>

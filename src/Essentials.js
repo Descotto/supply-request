@@ -24,8 +24,9 @@ function Essentials(props) {
       {!isCollapsed && (
         <div>
           <div>
-            <div className='Essentials'>
-              <h2>Fiber Essentials</h2>
+            <div className='Essentials items-container'>
+              <h2 className='items-title'>Fiber Essentials</h2>
+              <div className='items-list'> 
               <p onChange={handleChange}>1g ONT 20/case - <select id='1287787F1' name='1g ONT 20/case'>
                 {renderDropdownOptions(10)}
               </select></p>
@@ -53,6 +54,7 @@ function Essentials(props) {
               <p onChange={handleChange}>Black Electric Tape - <select id='S-5143-FINS' name='Black Electric Tape'>
                 {renderDropdownOptions(10)}
               </select></p>
+              </div>
             </div>
           </div>
         </div>

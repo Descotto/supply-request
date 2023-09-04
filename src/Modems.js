@@ -16,8 +16,8 @@ function Modems(props) {
       {!isCollapsed && (
         <div>
           <div>
-            <div className='modems'>
-              <h2>Modems</h2>
+            <div className='modems items-container'>
+              <h2 className='items-title'>Modems</h2>
               <p onChange={handleChange}>Eero 6 (cupcake) 20/case - 
                 <select id='N010011 (w/psu C110011)' name='Eero 6 (cupcake) 20/case'>
                   {[...Array(11).keys()].map((value) => (
