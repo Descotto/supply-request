@@ -443,6 +443,7 @@ button.complete-order {
 
 .items-list {
   text-decoration: underline;
+  font-size: smaller;
 }
 
 h2 {

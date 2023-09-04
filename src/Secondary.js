@@ -19,6 +19,7 @@ function Secondary(props) {
           <div>
             <div className='Secondary items-container'>
               <h2 className='items-title'>Secondary Jumps</h2>
+              <div className='items-list'>
               <p onChange={handleChange}>1M White int. Jumper 40/bag - 
                 <select id='108193' name='1M White int. Jumper 40/bag'>
                   {[...Array(11).keys()].map((value) => (
@@ -103,6 +104,7 @@ function Secondary(props) {
                   ))}
                 </select>
               </p>
+              </div>
             </div>
           </div>
         </div>

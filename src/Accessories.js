@@ -26,6 +26,7 @@ function Accessories(props) {
           <div>
             <div className='accessories items-container'>
               <h2 className='items-title'>Wall Plates & Accessories</h2>
+              <div className='items-list'>
               <p onChange={handleChange}>Fiber Optic Wall Plate, 1P, White 20/box - <select id='1901L' name='Fiber Optic Wall Plate, 1P, White 20/box'>
                 {renderDropdownOptions(10)}
               </select></p>
@@ -71,6 +72,7 @@ function Accessories(props) {
               <p onChange={handleChange}>24 Hr. Battery Backup - <select id='PS36L-K7-2' name='24 Hr. Battery Backup'>
                 {renderDropdownOptions(10)}
               </select></p>
+              </div>
             </div>
           </div>
         </div>

@@ -26,6 +26,7 @@ function Zips(props) {
           <div>
             <div className='zips items-container'>
               <h2 className='items-title'>Zip Ties & Flex Clips</h2>
+              <div className='items-list'>
               <p onChange={handleChange}>8" Zip Ties Black 100/bag or 1,000/bag - <select id='CP-8-40-B' name='8" Zip Ties Black 100/bag or 1,000/bag'>
                 {renderDropdownOptions(10)}
               </select></p>
@@ -56,6 +57,7 @@ function Zips(props) {
               <p onChange={handleChange}>Large Flex Clips White 100/bag - <select id='G4WH-05' name='Large Flex Clips White 100/bag'>
                 {renderDropdownOptions(10)}
               </select></p>
+              </div>
             </div>
           </div>
         </div>

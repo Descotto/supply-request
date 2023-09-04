@@ -25,6 +25,7 @@ function Brentwood(props) {
         <div>
           <div className='brentwood items-container'>
             <h2 className='items-title'>Brentwood</h2>
+            <div className='items-list'>
             <p onChange={handleChange}>
               150' Brentwood Drop -{' '}
               <select id='FS-AA1-001-0150' name="150' Brentwood Drop">
@@ -55,6 +56,7 @@ function Brentwood(props) {
                 {renderDropdownOptions(10)}
               </select>
             </p>
+            </div>
           </div>
         </div>
       )}
