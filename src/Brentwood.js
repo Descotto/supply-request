@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
 
 function Brentwood(props) {
-  const { handleChange } = props;
+  const { handleChange, renderDropdownOptions } = props;
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const renderDropdownOptions = (count) => {
-    const options = [];
-    for (let i = 0; i <= count; i++) {
-      options.push(<option key={i} value={i}>{i}</option>);
-    }
-    return options;
-  };
+
 
   return (
     <div>

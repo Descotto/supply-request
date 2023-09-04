@@ -2,34 +2,16 @@ import React, { useState } from 'react';
 
 
 function Essentials(props) {
-  const { handleChange } = props;
+  const { handleChange, renderDropdownOptions } = props;
   const [isCollapsed, setIsCollapsed] = useState(true);
 
 
-  //====Set Group
-  // const [check, setCheck] = useState(false);
-
-  // function groupCheck(order){
-  //     if (check) {
-  //       console.log(props.order)
-  //     }
-  
-  //   }
-  // groupCheck();
-  
-  //=====================
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const renderDropdownOptions = (count) => {
-    const options = [];
-    for (let i = 0; i <= count; i++) {
-      options.push(<option value={i} key={i}>{i}</option>);
-    }
-    return options;
-  };
+
 
   return (
     <div>
