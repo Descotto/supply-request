@@ -39,6 +39,7 @@ function Request(props) {
         };
     }, [isButtonDisabled]);
 
+
     const renderDropdownOptions = (count) => {
         const options = [];
         for (let i = 0; i <= count; i++) {
@@ -138,6 +139,7 @@ function Request(props) {
                     </div>
                 </form>
 
+
             </div>
             <br />
             <Essentials handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
@@ -157,6 +159,7 @@ function Request(props) {
             <Enterprise handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
             <Tools handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+
             <br />
 
             <props.Link to="/display">
@@ -171,10 +174,12 @@ function Request(props) {
             </props.Link>
 
 
+
             </div>
 
        
     )
+
 }
 
 export default Request;

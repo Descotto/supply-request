@@ -16,14 +16,15 @@ function Zips(props) {
 
   return (
     <div>
-      <button className="btn btn-secondary custom-width" onClick={toggleCollapse}>
+
+      <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
         {isCollapsed ? 'Zip Ties & Flex Clips' : 'Collapse'}
       </button>
       {!isCollapsed && (
         <div>
           <div>
-            <div className='zips'>
-              <h2>Zip Ties & Flex Clips</h2>
+            <div className='zips items-container'>
+              <h2 className='items-title'>Zip Ties & Flex Clips</h2>
               <p onChange={handleChange}>8" Zip Ties Black 100/bag or 1,000/bag - <select id='CP-8-40-B' name='8" Zip Ties Black 100/bag or 1,000/bag'>
               {renderDropdownOptions(10)}
               </select></p>

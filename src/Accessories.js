@@ -16,14 +16,16 @@ function Accessories(props) {
 
     return (
         <div>
-            <button className="btn btn-secondary custom-width" onClick={toggleCollapse}>
+
+            <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
+
                 {isCollapsed ? 'Wallplates & Accessories' : 'Collapse'}
             </button>
             {!isCollapsed && (
                 <div>
                     <div>
-                        <div className='accessories'>
-                            <h2>Wall Plates & Accessories</h2>
+                        <div className='accessories items-container'>
+                            <h2 className='items-title'>Wall Plates & Accessories</h2>
                             <p onChange={handleChange}>Fiber Optic Wall Plate, 1P, White 20/box - <select id='1901L' name='Fiber Optic Wall Plate, 1P, White 20/box'>
                             {renderDropdownOptions(10)}
                             </select></p>

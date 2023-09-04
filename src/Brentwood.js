@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
 function Brentwood(props) {
+
   const { handleChange, renderDropdownOptions } = props;
+
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
@@ -10,15 +12,19 @@ function Brentwood(props) {
 
 
 
+
   return (
     <div>
-      <button className="btn btn-secondary custom-width" onClick={toggleCollapse}>
+      <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
+
         {isCollapsed ? 'Brentwood' : 'Collapse'}
       </button>
       {!isCollapsed && (
         <div>
-          <div className='brentwood'>
-            <h2>Brentwood</h2>
+
+          <div className='brentwood items-container'>
+            <h2 className='items-title'>Brentwood</h2>
+
             <p onChange={handleChange}>
               150' Brentwood Drop -{' '}
               <select id='FS-AA1-001-0150' name="150' Brentwood Drop">
