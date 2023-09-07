@@ -23,8 +23,8 @@ function ByName(props) {
       if (redirect) return <Navigate to="/results" />;
 
   return (
-    <div className='about-container'>
-      <h1>By Name</h1>
+    <div className="order-container">
+      
 
       <form onSubmit={handleSubmitName}>
         <h4>Search by Name</h4>
