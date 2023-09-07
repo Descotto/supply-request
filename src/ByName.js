@@ -14,7 +14,6 @@ function ByName(props) {
     
         axios.get(`${REACT_APP_SERVER_URL}byname/${name}`)
           .then((response) => {
-            console.log('RESPONSE BY NAME =======>>>', response.data);
             props.setOrder(response.data);
             setRedirect(true);
           }).catch((error) => {

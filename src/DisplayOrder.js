@@ -8,9 +8,6 @@ import { saveAs } from 'file-saver';
 
 
 function DisplayOrder(props) {
-    console.log('DISPLAYORDER', props.order);
-
-
 
     let name = props.order.order.name;
     let lead = props.order.order.lead;

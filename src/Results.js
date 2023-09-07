@@ -8,8 +8,6 @@ function Results(props) {
     function handlePick(e) {
         e.preventDefault();
 
-        console.log('INDEX', e.target.id);
-        console.log('FROM ORDER', data[e.target.id]);
         let order = data[e.target.id]
         let order1 = {order}
         props.setOrder(order1);
@@ -24,7 +22,7 @@ function Results(props) {
     let arr = data.map((i, idx) => {
   
         return (
-            <div>
+            <div key={idx}>
                     
                     <h4>
                     <button  id={idx}type="button" className="btn btn-success download-btn" onClick={handlePick} >Select</button>  <span />

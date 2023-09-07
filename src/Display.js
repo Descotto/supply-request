@@ -26,6 +26,7 @@ function Display(props) {
       });
 
   }
+  setTimeout(showTable, 2000);
   if (redirect) return <Navigate to="/displayorder" />
 
   return (
