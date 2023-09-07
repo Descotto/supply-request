@@ -62,19 +62,85 @@
   padding: 20px;
   margin: 10px;
 }
+/* Home.css */
 
-.home {
+.home-container {
   text-align: left;
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@keyframes backgroundChange {
+  0% {
+    background-color: rgb(215, 211, 211);
+  }
+  25% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: rgb(215, 211, 211);
+  }
+  75% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: rgb(215, 211, 211);
+  }
+}
+
+.news-container {
+  background-color: rgb(215, 211, 211);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  animation: backgroundChange 10s linear infinite;
+}
+
+.news-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.news-item {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+  transition: transform 0.2s ease-in-out;
+}
+
+.new-item {
+  color: green;
+}
+
+.news-item::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: green;
+}
+
+.news-item:hover {
+  transform: scale(1.05);
 }
 
 .dropdown {
   text-decoration: none;
   color: darkslategray;
   margin-top: 10%;
-}
-
-.News {
-  background-color: rgb(215, 211, 211);
 }
 
 .howto {
