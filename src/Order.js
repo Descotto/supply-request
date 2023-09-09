@@ -6,6 +6,7 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function Order(props) {
   const [redirect, setRedirect] = useState(false);
+  const [match, setMatch] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -13,17 +14,21 @@ function Order(props) {
 
     axios.get(`${REACT_APP_SERVER_URL}order/${id}`)
       .then((response) => {
+          props.setOrder(response.data);
+        setRedirect(true); 
 
-        props.setOrder(response.data);
-        setRedirect(true);
       }).catch((error) => {
         console.log("ERROR", error);
       });
+      if (redirect === false) {
+        setMatch('No Matches Found');
+      }
   }
 
 
 
   if (redirect) return <Navigate to="/displayorder" />;
+  
 
   return (
     <div className="order-container">
@@ -32,6 +37,9 @@ function Order(props) {
         <input autoComplete='off' name='order' type="text" placeholder="Order Number" />
         <button type='button submit' className='btn btn-primary'>Search</button>
       </form>
+      <div>
+        {match}
+      </div>
       
     </div>
   );
