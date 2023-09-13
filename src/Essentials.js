@@ -15,13 +15,7 @@ function Essentials(props) {
   };
 
 
-  const renderDropdownOptions = (count) => {
-    const options = [];
-    for (let i = 0; i <= count; i++) {
-      options.push(<option value={i} key={i}>{i}</option>);
-    }
-    return options;
-  };
+
 
 
   return (

@@ -13,13 +13,7 @@ function Copper(props) {
   };
 
 
-  const renderDropdownOptions = (count) => {
-    const options = [];
-    for (let i = 0; i <= count; i++) {
-      options.push(<option key={i} value={i}>{i}</option>);
-    }
-    return options;
-  };
+
 
 
   return (

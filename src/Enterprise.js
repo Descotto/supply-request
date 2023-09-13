@@ -106,6 +106,8 @@ function Enterprise(props) {
 
 
         </div>
+        </div>
+        
       )}
     </div>
   );

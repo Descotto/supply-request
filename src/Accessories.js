@@ -10,13 +10,7 @@ function Accessories(props) {
     setIsCollapsed(!isCollapsed);
   };
 
-  const renderDropdownOptions = (maxOptions) => {
-    const options = [];
-    for (let i = 0; i <= maxOptions; i++) {
-      options.push(<option key={i} value={i}>{i}</option>);
-    }
-    return options;
-  };
+
 
   return (
     <div>
@@ -27,10 +21,7 @@ function Accessories(props) {
         <div>
 
 
-            <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
-
-                {isCollapsed ? 'Wallplates & Accessories' : 'Collapse'}
-            </button>
+            
             {!isCollapsed && (
                 <div>
                     <div>
