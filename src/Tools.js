@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function Tools(props) {
 
+
   const { handleChange, renderDropdownOptions } = props;
 
 
@@ -23,7 +24,8 @@ function Tools(props) {
 
           <div>
             <div className='tools items-container'>
-              <h2>Tools</h2>
+              <h2 className='items-title'>Tools</h2>
+              <div className='items-list'>
               <p onChange={handleChange}>ONT Sticker - Small -
                 <select id='STICKER-DNR' name='ONT Sticker - Small'>
                   {renderDropdownOptions(10)}
@@ -156,6 +158,7 @@ function Tools(props) {
               </p>
             </div>
           </div>
+
 
         </div>
       )}

@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
 
-
-
-
-
-
 function Accessories(props) {
-    const { handleChange, renderDropdownOptions } = props;
 
-    const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const { handleChange, renderDropdownOptions } = props;
 
-    const toggleCollapse = () => {
-        setIsCollapsed(!isCollapsed);
-    };
 
-    return (
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const renderDropdownOptions = (maxOptions) => {
+    const options = [];
+    for (let i = 0; i <= maxOptions; i++) {
+      options.push(<option key={i} value={i}>{i}</option>);
+    }
+    return options;
+  };
+
+  return (
+    <div>
+      <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
+        {isCollapsed ? 'Wallplates & Accessories' : 'Collapse'}
+      </button>
+      {!isCollapsed && (
         <div>
+
 
             <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
 
@@ -75,8 +85,11 @@ function Accessories(props) {
                     </div>
                 </div>
             )}
+
         </div>
-    );
+      )}
+    </div>
+  );
 }
 
 export default Accessories;

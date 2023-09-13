@@ -50,6 +50,7 @@ function Request(props) {
 
 
 
+
     function handleChange(e) {
         let item = { itemCode: '', description: '', requested: 0 };
         item.itemCode = e.target.id;
@@ -140,6 +141,7 @@ function Request(props) {
                 </form>
 
 
+
             </div>
             <br />
             <Essentials handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
@@ -160,6 +162,7 @@ function Request(props) {
             <br />
             <Tools handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
 
+
             <br />
 
             <props.Link to="/display">
@@ -172,8 +175,6 @@ function Request(props) {
                     Complete Order
                 </button>
             </props.Link>
-
-
 
         </div>
 

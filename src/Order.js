@@ -26,21 +26,22 @@ function Order(props) {
   }
 
 
-
   if (redirect) return <Navigate to="/displayorder" />;
   
+
 
   return (
     <div className="order-container">
       <form onSubmit={handleSubmit}>
-        <h4>Search by Order Number</h4>
-        <input autoComplete='off' name='order' type="text" placeholder="Order Number" />
-        <button type='button submit' className='btn btn-primary'>Search</button>
+
+        <h4 className='order-search-title'>Search by Order Number</h4>
+        <input autoComplete='off' name='order' type="text" placeholder="Order Number"  className='order-input'/>
+        <button type='button submit' className='btn btn-primary order-btn'>Search</button>
       </form>
       <div>
         {match}
       </div>
-      
+
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function Enterprise(props) {
 
+
   const { handleChange, renderDropdownOptions } = props;
 
 
@@ -21,10 +22,10 @@ function Enterprise(props) {
       {!isCollapsed && (
         <div>
 
-
           <div>
             <div className='enterprise items-container'>
-              <h2>Enterprise</h2>
+              <h2 className='items-title'>Enterprise</h2>
+              <div className='items-list'>
               <p onChange={handleChange}>Hydra Cable, RJ45/CAT 5E 24/4P 6" -
                 <select id='C275926N-15F' name='Hydra Cable, RJ45/CAT 5E 24/4P 6"'>
                   {renderDropdownOptions(10)}
@@ -102,6 +103,7 @@ function Enterprise(props) {
               </p>
             </div>
           </div>
+
 
         </div>
       )}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function Secondary(props) {
 
+
   const { handleChange, renderDropdownOptions } = props;
 
 
@@ -16,15 +17,18 @@ function Secondary(props) {
 
       <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
 
+
         {isCollapsed ? 'Secondary Jumpers' : 'Collapse'}
       </button>
       {!isCollapsed && (
         <div>
 
 
+
           <div>
-            <div className='Secondary  items-container'>
-              <h2>Secondary Jumps</h2>
+            <div className='Secondary items-container'>
+              <h2 className='items-title'>Secondary Jumps</h2>
+              <div className='items-list'>
               <p onChange={handleChange}>1M White int. Jumper 40/bag -
                 <select id='108193' name='1M White int. Jumper 40/bag'>
                   {renderDropdownOptions(10)}
@@ -85,6 +89,7 @@ function Secondary(props) {
                   {renderDropdownOptions(10)}
                 </select>
               </p>
+
             </div>
           </div>
         </div>

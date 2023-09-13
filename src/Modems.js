@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 
 function Modems(props) {
 
+
   const { handleChange, renderDropdownOptions } = props;
+
 
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -13,6 +15,7 @@ function Modems(props) {
   return (
     <div>
 
+
       <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
 
         {isCollapsed ? 'Modems' : 'Collapse'}
@@ -22,7 +25,8 @@ function Modems(props) {
           <div>
 
             <div className='modems items-container'>
-              <h2>Modems</h2>
+              <h2 className='items-title'>Modems</h2>
+              <div className='items-list'>
               <p onChange={handleChange}>Eero 6 (cupcake) 20/case -
                 <select id='N010011 (w/psu C110011)' name='Eero 6 (cupcake) 20/case'>
                   {renderDropdownOptions(10)}
@@ -48,6 +52,8 @@ function Modems(props) {
                   {renderDropdownOptions(10)}
                 </select>
               </p>
+              </div>
+
             </div>
           </div>
         </div>

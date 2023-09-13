@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 
 function Copper(props) {
 
+
   const { handleChange, renderDropdownOptions } = props;
+
 
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -10,6 +12,14 @@ function Copper(props) {
     setIsCollapsed(!isCollapsed);
   };
 
+
+  const renderDropdownOptions = (count) => {
+    const options = [];
+    for (let i = 0; i <= count; i++) {
+      options.push(<option key={i} value={i}>{i}</option>);
+    }
+    return options;
+  };
 
 
   return (
@@ -21,6 +31,9 @@ function Copper(props) {
         <div>
           <div className='copper items-container'>
             <h2 className='items-title'>Copper</h2>
+
+            <div className='items-list'>
+
             <p onChange={handleChange}>
               1000FT CAT6 PVC Bulk (White) -{' '}
               <select id='C6E-1000-WHT' name='1000FT CAT6 PVC Bulk (White)'>
@@ -171,6 +184,9 @@ function Copper(props) {
                 {renderDropdownOptions(10)}
               </select>
             </p>
+
+            </div>
+
           </div>
         </div>
       )}
