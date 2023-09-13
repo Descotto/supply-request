@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Home() {
     return (
+
         <div className='home-container'>
             <h1 className='home-title'>Supply Request</h1>
 
@@ -16,6 +17,7 @@ function Home() {
                     <li className='news-item'>Updated list of items to reflect the newest list.</li>
                     <li className='news-item new-item'><strong>New:</strong> All categories are now collapsable for easier access.</li>
                     <li className='news-item'><strong>Notice:</strong> If there are any bugs, please reach out.</li>
+
                 </ul>
             </div>
         </div>

@@ -47,7 +47,16 @@ const LeftSidebarNavbar = (props) => {
             className="custom-nav-link"
             onClick={handleLinkClick} // Close the navbar when this link is clicked
           >
-            Find by ID
+
+            Search ID
+          </props.Link>
+          <props.Link
+            to="/byname"
+            className="custom-nav-link"
+            onClick={handleLinkClick} // Close the navbar when this link is clicked
+          >
+            Search Name
+
           </props.Link>
           <props.Link
             to="/about"

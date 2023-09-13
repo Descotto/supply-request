@@ -9,8 +9,6 @@ import { saveAs } from 'file-saver';
 
 function DisplayOrder(props) {
 
-
-
     let name = props.order.order.name;
     let lead = props.order.order.lead;
     let date = props.order.order.date.slice(0, props.order.order.date.indexOf('T'));

@@ -15,6 +15,9 @@ import Home from './Home';
 import Order from './Order';
 import LeftSidebarNavbar from './Sidebar';
 import NotFound from './NotFound';
+import Results from './Results';
+import ByName from './ByName';
+
 
 
 
@@ -25,6 +28,8 @@ function App() {
   const [display, setDisplay] = useState();
   const [orderTable, setOrderTable] = useState([]);
   const [order, setOrder] = useState([]);
+
+  
 
 
   return (
@@ -45,8 +50,12 @@ function App() {
           <Route path='/request' element={<Request setDisplay={setDisplay} Link={Link} orderTable={orderTable} setOrderTable={setOrderTable} />} />
           <Route path='/about' element={<About />} />
           <Route path='/lookup' element={<Order setOrder={setOrder} />} />
+          <Route path='/byname' element={<ByName setOrder={setOrder} />} />
           <Route path='/display' element={<Display data={display} setOrder={setOrder} setDisplay={setDisplay} />} />
           <Route path='/displayorder' element={<DisplayOrder order={order} />} />
+
+          <Route path='/results' element={<Results order={order} setOrder={setOrder} />} />
+
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>

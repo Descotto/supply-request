@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 
 function Zips(props) {
-  const { handleChange } = props;
+
+  const { handleChange, renderDropdownOptions } = props;
+
+
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const renderDropdownOptions = (maxOptions) => {
-    const options = [];
-    for (let i = 0; i <= maxOptions; i++) {
-      options.push(<option key={i} value={i}>{i}</option>);
-    }
-    return options;
-  };
+
 
   return (
     <div>
+
       <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
         {isCollapsed ? 'Zip Ties & Flex Clips' : 'Collapse'}
       </button>
@@ -26,7 +24,9 @@ function Zips(props) {
           <div>
             <div className='zips items-container'>
               <h2 className='items-title'>Zip Ties & Flex Clips</h2>
+
               <div className='items-list'>
+
               <p onChange={handleChange}>8" Zip Ties Black 100/bag or 1,000/bag - <select id='CP-8-40-B' name='8" Zip Ties Black 100/bag or 1,000/bag'>
                 {renderDropdownOptions(10)}
               </select></p>

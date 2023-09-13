@@ -261,6 +261,7 @@
   margin-top: 80px;
   border-radius: 10px;
   box-shadow: -10px 5px 20px rgba(0, 131, 50, 0.624);
+
 }
 
 .about-container h1 {
@@ -325,6 +326,7 @@
 .order-container {
   text-align: center;
   margin-top: 50px;
+
   background-color: #7ecffbba;
   padding: 30px;
   border: 1px solid black;
@@ -346,6 +348,7 @@
 .order-search-title{
   font-family:fantasy;
   font-weight: bolder;
+
 }
 
 .order-container h4 {
@@ -481,6 +484,7 @@ button.complete-order {
   50% {
     opacity: 0;
   }
+
 }
 
 .btn-color1 {
@@ -509,9 +513,12 @@ button.complete-order {
 
 .items-list {
   text-decoration: underline;
+
   font-size: smaller;
+
 }
 
 h2 {
   text-decoration: none !important;
 }
+

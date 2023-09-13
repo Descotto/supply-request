@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 
+
+
+
 function Essentials(props) {
-  const { handleChange } = props;
+  const { handleChange, renderDropdownOptions } = props;
+
   const [isCollapsed, setIsCollapsed] = useState(true);
+
+
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
+
 
   const renderDropdownOptions = (count) => {
     const options = [];
@@ -16,9 +23,11 @@ function Essentials(props) {
     return options;
   };
 
+
   return (
     <div>
       <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
+
         {isCollapsed ? 'Essentials' : 'Collapse'}
       </button>
       {!isCollapsed && (
@@ -26,6 +35,7 @@ function Essentials(props) {
           <div>
             <div className='Essentials items-container'>
               <h2 className='items-title'>Fiber Essentials</h2>
+
               <div className='items-list'> 
               <p onChange={handleChange}>1g ONT 20/case - <select id='1287787F1' name='1g ONT 20/case'>
                 {renderDropdownOptions(10)}
@@ -54,6 +64,7 @@ function Essentials(props) {
               <p onChange={handleChange}>Black Electric Tape - <select id='S-5143-FINS' name='Black Electric Tape'>
                 {renderDropdownOptions(10)}
               </select></p>
+
               </div>
             </div>
           </div>
