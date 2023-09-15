@@ -14,6 +14,16 @@ function Copper(props) {
 
 
 
+  const displayData = props.copperData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
 
 
   return (
@@ -28,7 +38,7 @@ function Copper(props) {
 
             <div className='items-list'>
 
-            <p onChange={handleChange}>
+            {/* <p onChange={handleChange}>
               1000FT CAT6 PVC Bulk (White) -{' '}
               <select id='C6E-1000-WHT' name='1000FT CAT6 PVC Bulk (White)'>
                 {renderDropdownOptions(10)}
@@ -177,7 +187,8 @@ function Copper(props) {
               <select id='LFT-4-1-GB' name='Single Line Splitter Filter'>
                 {renderDropdownOptions(10)}
               </select>
-            </p>
+            </p> */}
+            {displayData}
 
             </div>
 

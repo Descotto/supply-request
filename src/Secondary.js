@@ -12,6 +12,17 @@ function Secondary(props) {
     setIsCollapsed(!isCollapsed);
   };
 
+  const displayData = props.secondaryData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
+
   return (
     <div>
 
@@ -29,7 +40,7 @@ function Secondary(props) {
             <div className='Secondary items-container'>
               <h2 className='items-title'>Secondary Jumps</h2>
               <div className='items-list'>
-              <p onChange={handleChange}>1M White int. Jumper 40/bag -
+              {/* <p onChange={handleChange}>1M White int. Jumper 40/bag -
                 <select id='108193' name='1M White int. Jumper 40/bag'>
                   {renderDropdownOptions(10)}
                 </select>
@@ -88,7 +99,9 @@ function Secondary(props) {
                 <select id='SCAPCSCAPC35M-W' name='35m secondary drop (White)'>
                   {renderDropdownOptions(10)}
                 </select>
-              </p>
+              </p> */}
+
+              {displayData}
 
             </div>
           </div>

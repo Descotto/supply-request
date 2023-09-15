@@ -12,6 +12,18 @@ function Tools(props) {
     setIsCollapsed(!isCollapsed);
   };
 
+
+  const displayData = props.toolsData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
+
   return (
     <div>
 
@@ -26,7 +38,7 @@ function Tools(props) {
             <div className='tools items-container'>
               <h2 className='items-title'>Tools</h2>
               <div className='items-list'>
-              <p onChange={handleChange}>ONT Sticker - Small -
+              {/* <p onChange={handleChange}>ONT Sticker - Small -
                 <select id='STICKER-DNR' name='ONT Sticker - Small'>
                   {renderDropdownOptions(10)}
                 </select>
@@ -155,7 +167,10 @@ function Tools(props) {
                 <select id='31-00809' name='P-Hook'>
                   {renderDropdownOptions(10)}
                 </select>
-              </p>
+              </p> */}
+
+              {displayData}
+
             </div>
           </div>
 

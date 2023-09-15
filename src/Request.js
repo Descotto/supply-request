@@ -20,12 +20,26 @@ function Request(props) {
     const [lead, setLead] = useState('');
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isButtonGlowing, setIsButtonGlowing] = useState(false);
+    
+
+    const {
+        essentialData,
+        secondaryData,
+        brentwoodData,
+        modemsData,
+        ziptiesData,
+        wallplatesData,
+        copperData,
+        enterpriseData,
+        toolsData } = props.siteData;
 
     useEffect(() => {
         // Enable the button only when both name and lead have values
         setIsButtonDisabled(!(name && lead));
     }, [name, lead]);
 
+
+    
     useEffect(() => {
         // Start the button glowing effect every 5 seconds
         const interval = setInterval(() => {
@@ -38,6 +52,11 @@ function Request(props) {
             clearInterval(interval);
         };
     }, [isButtonDisabled]);
+
+
+    
+
+      
 
 
     const renderDropdownOptions = (count) => {
@@ -144,23 +163,23 @@ function Request(props) {
 
             </div>
             <br />
-            <Essentials handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Essentials essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Secondary handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Secondary secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Brentwood handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Brentwood brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Modems handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Modems modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Zips handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Zips ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Accessories handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Accessories wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Copper handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Copper copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Enterprise handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Enterprise enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Tools handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Tools toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
 
 
             <br />

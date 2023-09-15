@@ -10,6 +10,16 @@ function Accessories(props) {
     setIsCollapsed(!isCollapsed);
   };
 
+  const displayData = props.wallplatesData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
 
 
   return (
@@ -27,7 +37,9 @@ function Accessories(props) {
                     <div>
                         <div className='accessories items-container'>
                             <h2 className='items-title'>Wall Plates & Accessories</h2>
-                            <p onChange={handleChange}>Fiber Optic Wall Plate, 1P, White 20/box - <select id='1901L' name='Fiber Optic Wall Plate, 1P, White 20/box'>
+                            <div className='items-list'>
+
+                            {/* <p onChange={handleChange}>Fiber Optic Wall Plate, 1P, White 20/box - <select id='1901L' name='Fiber Optic Wall Plate, 1P, White 20/box'>
                             {renderDropdownOptions(10)}
                             </select></p>
                             <p onChange={handleChange}>1 Port Fiber Angled Wall Plate 25/box - <select id='DA1WH' name='1 Port Fiber Angled Wall Plate 25/box'>
@@ -71,7 +83,10 @@ function Accessories(props) {
                             </select></p>
                             <p onChange={handleChange}>24 Hr. Battery Backup - <select id='PS36L-K7-2' name='24 Hr. Battery Backup'>
                             {renderDropdownOptions(10)}
-                            </select></p>
+                            </select></p> */}
+                            {displayData}
+
+                            </div>
                         </div>
                     </div>
                 </div>

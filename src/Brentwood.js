@@ -11,6 +11,16 @@ function Brentwood(props) {
   };
 
 
+  const displayData = props.brentwoodData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
 
 
   return (
@@ -26,7 +36,7 @@ function Brentwood(props) {
             <h2 className='items-title'>Brentwood</h2>
             <div className='items-list'>
 
-            <p onChange={handleChange}>
+            {/* <p onChange={handleChange}>
               150' Brentwood Drop -{' '}
               <select id='FS-AA1-001-0150' name="150' Brentwood Drop">
                 {renderDropdownOptions(10)}
@@ -55,7 +65,9 @@ function Brentwood(props) {
               <select id='FS-AA1-001-0500' name="500' Brentwood Drop">
                 {renderDropdownOptions(10)}
               </select>
-            </p>
+            </p> */}
+
+            {displayData}
 
             </div>
 

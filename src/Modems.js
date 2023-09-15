@@ -12,6 +12,18 @@ function Modems(props) {
     setIsCollapsed(!isCollapsed);
   };
 
+
+  const displayData = props.modemsData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
+
   return (
     <div>
 
@@ -27,7 +39,7 @@ function Modems(props) {
             <div className='modems items-container'>
               <h2 className='items-title'>Modems</h2>
               <div className='items-list'>
-              <p onChange={handleChange}>Eero 6 (cupcake) 20/case -
+              {/* <p onChange={handleChange}>Eero 6 (cupcake) 20/case -
                 <select id='N010011 (w/psu C110011)' name='Eero 6 (cupcake) 20/case'>
                   {renderDropdownOptions(10)}
                 </select>
@@ -51,7 +63,10 @@ function Modems(props) {
                 <select id='5268 KIT' name='5268 Tested kit'>
                   {renderDropdownOptions(10)}
                 </select>
-              </p>
+              </p> */}
+
+              {displayData}
+
               </div>
 
             </div>

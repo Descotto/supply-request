@@ -11,6 +11,17 @@ function Zips(props) {
     setIsCollapsed(!isCollapsed);
   };
 
+  const displayData = props.ziptiesData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
+
 
 
   return (
@@ -27,7 +38,7 @@ function Zips(props) {
 
               <div className='items-list'>
 
-              <p onChange={handleChange}>8" Zip Ties Black 100/bag or 1,000/bag - <select id='CP-8-40-B' name='8" Zip Ties Black 100/bag or 1,000/bag'>
+              {/* <p onChange={handleChange}>8" Zip Ties Black 100/bag or 1,000/bag - <select id='CP-8-40-B' name='8" Zip Ties Black 100/bag or 1,000/bag'>
                 {renderDropdownOptions(10)}
               </select></p>
               <p onChange={handleChange}>8" Zip Ties Natural 100/bag or 1,000/bag - <select id='CP-8-40-N' name='8" Zip Ties Natural 100/bag or 1,000/bag'>
@@ -56,7 +67,10 @@ function Zips(props) {
               </select></p>
               <p onChange={handleChange}>Large Flex Clips White 100/bag - <select id='G4WH-05' name='Large Flex Clips White 100/bag'>
                 {renderDropdownOptions(10)}
-              </select></p>
+              </select></p> */}
+
+              {displayData}
+
               </div>
             </div>
           </div>

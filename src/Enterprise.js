@@ -12,6 +12,17 @@ function Enterprise(props) {
     setIsCollapsed(!isCollapsed);
   };
 
+  const displayData = props.enterpriseData.map((i, idx) => {
+    return (
+        <div key={idx} >
+            <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
+                {renderDropdownOptions(10)}
+            </select></p>
+
+        </div>
+    )
+})
+
   return (
     <div>
 
@@ -26,7 +37,8 @@ function Enterprise(props) {
             <div className='enterprise items-container'>
               <h2 className='items-title'>Enterprise</h2>
               <div className='items-list'>
-              <p onChange={handleChange}>Hydra Cable, RJ45/CAT 5E 24/4P 6" -
+
+              {/* <p onChange={handleChange}>Hydra Cable, RJ45/CAT 5E 24/4P 6" -
                 <select id='C275926N-15F' name='Hydra Cable, RJ45/CAT 5E 24/4P 6"'>
                   {renderDropdownOptions(10)}
                 </select>
@@ -100,7 +112,9 @@ function Enterprise(props) {
                 <select id='PP7-3038-MUSH' name='Mushroom Post With Screw'>
                   {renderDropdownOptions(10)}
                 </select>
-              </p>
+              </p> */}
+
+              {displayData}
             </div>
           </div>
 
