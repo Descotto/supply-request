@@ -20,7 +20,7 @@ function Request(props) {
     const [lead, setLead] = useState('');
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isButtonGlowing, setIsButtonGlowing] = useState(false);
-    
+
 
     const {
         essentialData,
@@ -33,13 +33,15 @@ function Request(props) {
         enterpriseData,
         toolsData } = props.siteData;
 
+
+
     useEffect(() => {
         // Enable the button only when both name and lead have values
         setIsButtonDisabled(!(name && lead));
     }, [name, lead]);
 
 
-    
+
     useEffect(() => {
         // Start the button glowing effect every 5 seconds
         const interval = setInterval(() => {
@@ -54,9 +56,15 @@ function Request(props) {
     }, [isButtonDisabled]);
 
 
-    
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-      
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
 
     const renderDropdownOptions = (count) => {
@@ -158,12 +166,12 @@ function Request(props) {
                         <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} />
                     </div>
                 </form>
+                
 
 
-
-            </div>
+            </div >
             <br />
-            <Essentials essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Essentials isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
             <Secondary secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
@@ -196,7 +204,7 @@ function Request(props) {
 
             </props.Link>
 
-        </div>
+        </div >
 
 
     )

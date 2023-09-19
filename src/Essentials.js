@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Modal from 'react-modal';
+
+
+Modal.setAppElement('#root');
+
 
 
 
 
 function Essentials(props) {
-  const { handleChange, renderDropdownOptions } = props;
+  const { handleChange,
+    renderDropdownOptions,
+    openModal,
+    closeModal,
+    isModalOpen } = props;
 
-  const [isCollapsed, setIsCollapsed] = useState(true);
 
 
 
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
 
   const displayData = props.essentialData.map((i, idx) => {
     return (
@@ -29,26 +34,26 @@ function Essentials(props) {
 
 
   return (
-    <div>
-      <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
+    
 
-        {isCollapsed ? 'Essentials' : 'Collapse'}
-      </button>
-      {!isCollapsed && (
-        <div>
-          <div>
-            <div className='Essentials items-container'>
+    <div>
+      <button className="btn btn-secondary custom-width btn-color1"  onClick={openModal}>Essentials</button>
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+      >
+        <div className='Essentials items-container'>
               <h2 className='items-title'>Fiber Essentials</h2>
 
-              <div className='items-list'>
+             <div className='items-list'>
 
-                {displayData}
+               {displayData}
 
               </div>
-            </div>
-          </div>
-        </div>
-      )}
+           </div>
+        <button onClick={closeModal}>Close</button>
+      </Modal>
     </div>
   );
 }
