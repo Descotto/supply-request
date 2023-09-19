@@ -13,10 +13,10 @@ function Display(props) {
   const [redirect, setRedirect] = useState(false);
 
 
-  let tab = props.data;
+  const targetId = props.data;
 
   function showTable() {
-    axios.get(`${REACT_APP_SERVER_URL}order/${tab}`)
+    axios.get(`${REACT_APP_SERVER_URL}order/${targetId}`)
       .then((response) => {
 
         props.setOrder(response.data);

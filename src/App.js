@@ -20,9 +20,7 @@ import Results from './Results';
 import ByName from './ByName';
 
 
-//==test
-import EssentialsTest from './test';
-//====
+
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -36,9 +34,8 @@ function App() {
   
   //====siteData
   useEffect(() => {
-    axios.get(REACT_APP_SERVER_URL)
+    axios.get(`${REACT_APP_SERVER_URL}data`)
       .then((response) => {
-        console.log(response.data);
         setSiteData(response.data);
       })
       .catch((error) => {
@@ -69,7 +66,6 @@ function App() {
           <Route path='/display' element={<Display data={display} setOrder={setOrder} setDisplay={setDisplay} />} />
           <Route path='/displayorder' element={<DisplayOrder order={order} />} />
           <Route path='/results' element={<Results order={order} setOrder={setOrder} />} />
-          <Route path='/test' element={<EssentialsTest />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>

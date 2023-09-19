@@ -10,9 +10,9 @@ function ByName(props) {
 
   function handleSubmitName(e) {
     e.preventDefault();
-    let name = e.target.order.value.toUpperCase();
+    let targetName = e.target.order.value.toUpperCase();
 
-    axios.get(`${REACT_APP_SERVER_URL}byname/${name}`)
+    axios.get(`${REACT_APP_SERVER_URL}byname/${targetName}`)
       .then((response) => {
         if (response.data.order.length > 0) {
           props.setOrder(response.data);

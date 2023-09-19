@@ -8,18 +8,18 @@ function Results(props) {
     function handlePick(e) {
         e.preventDefault();
 
-        let order = data[e.target.id]
-        let order1 = {order}
+        const order = data[e.target.id]
+        const order1 = {order}
         props.setOrder(order1);
         setRedirect(true);
     }
     if (redirect) return <Navigate to="/displayorder" />;
 
 
-    let data = props.order.order;
+    const data = props.order.order.sort((a, b) => new Date(b.date) - new Date(a.date));
    
 
-    let arr = data.map((i, idx) => {
+    const arr = data.map((i, idx) => {
   
         return (
             <div key={idx}>
