@@ -173,21 +173,21 @@ function Request(props) {
             <br />
             <Essentials isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Secondary secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Secondary isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Brentwood brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Brentwood isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Modems modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Modems isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Zips ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Zips isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Accessories wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Accessories isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Copper copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Copper isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Enterprise enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Enterprise isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Tools toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Tools isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
 
 
             <br />
