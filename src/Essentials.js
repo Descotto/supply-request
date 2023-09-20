@@ -4,18 +4,11 @@ Modal.setAppElement('#root');
 
 
 
-
-
 function Essentials(props) {
   const { handleChange,
     renderDropdownOptions,
     openModal,
-    closeModal,
-    isModalOpen } = props;
-
-
-
-
+    setModalDisplay } = props;
 
   const displayData = props.essentialData.map((i, idx) => {
     return (
@@ -28,30 +21,27 @@ function Essentials(props) {
     )
   })
 
+  function setDisplay() {
+    setModalDisplay(<div className='Essentials items-container'>
+      <h2 className='items-title'>Fiber Essentials</h2>
+
+      <div className='items-list'>
+
+        {displayData}
+
+      </div>
+    </div>)
+    openModal()
+  }
 
 
 
   return (
-    
+
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color1"  onClick={openModal}>Essentials</button>
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-      >
-        <div className='Essentials items-container'>
-              <h2 className='items-title'>Fiber Essentials</h2>
+      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Essentials</button>
 
-             <div className='items-list'>
-
-               {displayData}
-
-              </div>
-           </div>
-        <button onClick={closeModal}>Close</button>
-      </Modal>
     </div>
   );
 }

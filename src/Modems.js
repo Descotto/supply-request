@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Modal from 'react-modal';
+Modal.setAppElement('#root');
+
+
 
 function Modems(props) {
-
-
-  const { handleChange, renderDropdownOptions } = props;
-
-
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
+  const { handleChange,
+    renderDropdownOptions,
+    openModal,
+    setModalDisplay } = props;
 
   const displayData = props.modemsData.map((i, idx) => {
     return (
@@ -24,29 +21,26 @@ function Modems(props) {
     )
   })
 
+  function setDisplay() {
+    setModalDisplay(<div className='modems items-container'>
+    <h2 className='items-title'>Modems</h2>
+    <div className='items-list'>
+
+      {displayData}
+
+    </div>
+
+  </div>)
+    openModal()
+  }
+
   return (
     <div>
 
 
-      <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
+      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Modems</button>
 
-        {isCollapsed ? 'Modems' : 'Collapse'}
-      </button>
-      {!isCollapsed && (
-        <div>
-          <div>
-            <div className='modems items-container'>
-              <h2 className='items-title'>Modems</h2>
-              <div className='items-list'>
-
-                {displayData}
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-      )}
+      
     </div>
   );
 }

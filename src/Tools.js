@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Modal from 'react-modal';
+Modal.setAppElement('#root');
+
+
 
 function Tools(props) {
-
-
-  const { handleChange, renderDropdownOptions } = props;
-
-
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
+  const { handleChange,
+    renderDropdownOptions,
+    openModal,
+    setModalDisplay } = props;
 
   const displayData = props.toolsData.map((i, idx) => {
     return (
@@ -24,30 +21,22 @@ function Tools(props) {
     )
   })
 
+  function setDisplay() {
+    setModalDisplay(<div className='tools items-container'>
+    <h2 className='items-title'>Tools</h2>
+    <div className='items-list'>
+
+      {displayData}
+
+    </div>
+  </div>)
+    openModal()
+  }
+
   return (
     <div>
 
-      <button className="btn btn-secondary custom-width btn-color2" onClick={toggleCollapse}>
-        {isCollapsed ? 'Tools' : 'Collapse'}
-      </button>
-      {!isCollapsed && (
-        <div>
-
-
-          <div>
-            <div className='tools items-container'>
-              <h2 className='items-title'>Tools</h2>
-              <div className='items-list'>
-
-                {displayData}
-
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      )}
+      <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>Tools</button>
     </div>
   );
 }

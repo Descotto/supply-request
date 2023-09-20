@@ -11,6 +11,8 @@ import Modems from './Modems';
 import Secondary from './Secondary';
 import Tools from './Tools';
 import Zips from './Zips';
+import Modal from 'react-modal';
+Modal.setAppElement('#root');
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -20,6 +22,7 @@ function Request(props) {
     const [lead, setLead] = useState('');
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isButtonGlowing, setIsButtonGlowing] = useState(false);
+    const [modalDisplay, setModalDisplay] = useState('')
 
 
     const {
@@ -166,28 +169,43 @@ function Request(props) {
                         <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} />
                     </div>
                 </form>
+                <div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+      >
+        
+
+            {modalDisplay}
+
+             
+        <button onClick={closeModal}>Close</button>
+      </Modal>
+    </div>
                 
 
 
             </div >
             <br />
-            <Essentials isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Secondary isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Secondary setModalDisplay={setModalDisplay} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Brentwood isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Brentwood setModalDisplay={setModalDisplay} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Modems isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Modems setModalDisplay={setModalDisplay} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Zips isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Zips setModalDisplay={setModalDisplay} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Accessories isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Accessories setModalDisplay={setModalDisplay} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Copper isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Copper setModalDisplay={setModalDisplay} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Enterprise isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
-            <Tools isModalOpen={isModalOpen} closeModal={closeModal} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
 
 
             <br />

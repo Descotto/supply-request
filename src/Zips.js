@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Modal from 'react-modal';
+Modal.setAppElement('#root');
+
+
 
 function Zips(props) {
-
-  const { handleChange, renderDropdownOptions } = props;
-
-
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
+  const { handleChange,
+    renderDropdownOptions,
+    openModal,
+    setModalDisplay } = props;
 
   const displayData = props.ziptiesData.map((i, idx) => {
     return (
@@ -22,29 +21,25 @@ function Zips(props) {
     )
   })
 
+  function setDisplay() {
+    setModalDisplay(<div className='zips items-container'>
+    <h2 className='items-title'>Zip Ties & Flex Clips</h2>
+
+    <div className='items-list'>
+
+      {displayData}
+
+    </div>
+  </div>)
+    openModal()
+  }
+
 
 
   return (
     <div>
 
-      <button className="btn btn-secondary custom-width btn-color1" onClick={toggleCollapse}>
-        {isCollapsed ? 'Zip Ties & Flex Clips' : 'Collapse'}
-      </button>
-      {!isCollapsed && (
-        <div>
-          <div>
-            <div className='zips items-container'>
-              <h2 className='items-title'>Zip Ties & Flex Clips</h2>
-
-              <div className='items-list'>
-
-                {displayData}
-
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Zip Ties & Accessories</button>
     </div>
   );
 }

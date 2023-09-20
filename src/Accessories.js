@@ -3,12 +3,10 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 function Accessories(props) {
-
   const { handleChange,
     renderDropdownOptions,
     openModal,
-    closeModal,
-    isModalOpen } = props;
+    setModalDisplay } = props;
 
 
 
@@ -22,26 +20,24 @@ function Accessories(props) {
       </div>
     )
   })
+  function setDisplay() {
+    setModalDisplay(<div className='accessories items-container'>
+    <h2 className='items-title'>Wall Plates & Accessories</h2>
+    <div className='items-list'>
+
+      {displayData}
+
+    </div>
+  </div>)
+    openModal()
+  }
 
 
   return (
+    
     <div>
-      <button className="btn btn-secondary custom-width btn-color1" onClick={openModal}>Wall Plates & Accessories</button>
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-      >
-        <div className='accessories items-container'>
-          <h2 className='items-title'>Wall Plates & Accessories</h2>
-          <div className='items-list'>
-
-            {displayData}
-
-          </div>
-        </div>
-        <button onClick={closeModal}>Close</button>
-      </Modal>
+      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Wall Plates & Accessories</button>
+    
     </div>
   );
 }
