@@ -189,28 +189,54 @@ function Request(props) {
 
             </div >
             <div className='request-options'>
-            <br />
-            <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Secondary setModalDisplay={setModalDisplay} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Brentwood setModalDisplay={setModalDisplay} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Modems setModalDisplay={setModalDisplay} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Zips setModalDisplay={setModalDisplay} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Accessories setModalDisplay={setModalDisplay} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Copper setModalDisplay={setModalDisplay} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            </div>
+  <div className='option1'>
+    <br />
+    <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
 
+  <div className='option2'>
+    <br />
+    <Secondary setModalDisplay={setModalDisplay} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
 
-            <br />
+  <div className='option3'>
+    <br />
+    <Brentwood setModalDisplay={setModalDisplay} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='option4'>
+    <br />
+    <Modems setModalDisplay={setModalDisplay} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='option5'>
+    <br />
+    <Zips setModalDisplay={setModalDisplay} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='option6'>
+    <br />
+    <Accessories setModalDisplay={setModalDisplay} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='option7'>
+    <br />
+    <Copper setModalDisplay={setModalDisplay} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='option8'>
+    <br />
+    <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='option9'>
+    <br />
+    <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+</div>
+
+<br />
+
 
             <props.Link to="/display">
                 <button

@@ -506,6 +506,7 @@ h2 {
   text-decoration: none !important;
 }
 
+
 /* 
 .modal {
   display: block;
@@ -534,7 +535,7 @@ h2 {
   }
 
   .btn-color2 {
-    background-color: rgba(0, 68, 255, 0);
+    background-color: rgba(0, 68, 255, 0.278);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
     width: fit-content;
     border-radius: 30px;
@@ -542,7 +543,47 @@ h2 {
   }
 
   .request-options{
-    background-color: rgba(255, 0, 0, 0.186);
+    display: grid;
+    grid-template-areas:
+      "btn-color1 btn-color2 btn-color3 btn-color4"
+      "btn-color5 btn-color5 btn-color6 btn-color6"
+      "btn-color7 btn-color7 btn-color8 btn-color9";
+  }
+
+  .option1{
+    grid-area: btn-color1;
+  }
+
+  .option2{
+    grid-area: btn-color2;
+  }
+
+  .option3{
+    grid-area: btn-color3;
+  }
+
+  .option4{
+    grid-area: btn-color4;
+  }
+
+  .option5{
+    grid-area: btn-color5;
+  }
+
+  .option6{
+    grid-area: btn-color6;
+  }
+
+  .option7{
+    grid-area: btn-color7;
+  }
+
+  .option8{
+    grid-area: btn-color8;
   }
   
+  .option9{
+    grid-area: btn-color9;
+  }
+
 }
