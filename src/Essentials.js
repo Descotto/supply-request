@@ -40,8 +40,9 @@ function Essentials(props) {
 
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Essentials</button>
-
+  <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Essentials <span className="plus-sign">+</span>
+      </button> 
     </div>
   );
 }

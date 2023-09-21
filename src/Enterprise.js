@@ -36,8 +36,9 @@ function Enterprise(props) {
   return (
     <div>
 
-      <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>Enterprise</button>
-    </div>
+<button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Enterprise <span className="plus-sign">+</span>
+      </button>     </div>
 
   );
 }

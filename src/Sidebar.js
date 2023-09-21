@@ -14,12 +14,12 @@ const LeftSidebarNavbar = (props) => {
 
   return (
     <Navbar
-      className={`custom-navbar ${expanded ? 'expanded' : ''}`}
-      bg="light"
-      expand="lg"
-      expanded={expanded}
-      onSelect={() => {}} // This is required for collapseOnSelect to work
-      collapseOnSelect // Automatically close the Navbar on link selection
+      // className={`custom-navbar ${expanded ? 'expanded' : ''}`}
+      // bg="light"
+      // expand="lg"
+      // expanded={expanded}
+      // onSelect={() => {}} // This is required for collapseOnSelect to work
+      // collapseOnSelect // Automatically close the Navbar on link selection
     >
       <div className="navbar-top">
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleNavbar} />

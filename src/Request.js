@@ -189,47 +189,47 @@ function Request(props) {
 
             </div >
             <div className='request-options'>
-  <div className='option1'>
+  <div className='essentials'>
     <br />
     <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option2'>
+  <div className='secondary'>
     <br />
     <Secondary setModalDisplay={setModalDisplay} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option3'>
+  <div className='brentwood'>
     <br />
     <Brentwood setModalDisplay={setModalDisplay} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option4'>
+  <div className='modems'>
     <br />
     <Modems setModalDisplay={setModalDisplay} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option5'>
+  <div className='zips'>
     <br />
     <Zips setModalDisplay={setModalDisplay} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option6'>
+  <div className='accessories'>
     <br />
     <Accessories setModalDisplay={setModalDisplay} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option7'>
+  <div className='copper'>
     <br />
     <Copper setModalDisplay={setModalDisplay} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option8'>
+  <div className='enterprise'>
     <br />
     <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>
 
-  <div className='option9'>
+  <div className='tools'>
     <br />
     <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
   </div>

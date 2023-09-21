@@ -38,8 +38,9 @@ function Modems(props) {
     <div>
 
 
-      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Modems</button>
-
+<button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Modems <span className="plus-sign">+</span>
+      </button> 
       
     </div>
   );

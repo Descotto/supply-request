@@ -36,8 +36,9 @@ function Accessories(props) {
   return (
     
     <div>
-      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Wall Plates & Accessories</button>
-    
+  <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Wallplates & Accessories <span className="plus-sign">+</span>
+      </button>     
     </div>
   );
 }
