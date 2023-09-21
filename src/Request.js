@@ -188,6 +188,7 @@ function Request(props) {
 
 
             </div >
+            <div className='request-options'>
             <br />
             <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
@@ -206,6 +207,7 @@ function Request(props) {
             <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
             <br />
             <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            </div>
 
 
             <br />
