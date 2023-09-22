@@ -36,6 +36,7 @@
 .navbar {
   background-color: rgb(0, 0, 0);
   width: 100vw;
+  overflow: scroll;
 }
 
 
@@ -46,7 +47,7 @@
 
 .nav-container {
   background-color: #f0f0f0;
-  width: 100%;
+  width: 100vw;
   display: inline;
 }
 
@@ -208,16 +209,17 @@
 */
 
 .custom-nav-link {
-  margin-left: 5px;
+  margin-left: auto;
   border: 1px solid black;
   border-radius: 20px;
   background-color: white;
   width: fit-content;
   padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-decoration: none;
   color: rgb(0, 30, 255);
+  font-size: smaller;
 }
 
 .custom-nav-link a {
@@ -228,6 +230,10 @@
 .custom-nav-link a:hover {
   color: #007bff;
 } 
+
+.Navbar-page-text{
+  color: white;
+}
 
 /* Medium screens (e.g., iPads) */
 @media (max-width: 992px) {
@@ -371,8 +377,8 @@
 
 button.complete-order {
   position: fixed;
-  bottom: 5%;
-  width: 90px;
+  bottom: 1%;
+  width: 95vw;
   left: 10px;
 }
 
@@ -492,10 +498,26 @@ button.complete-order {
   background-color: #ccc;
   border: 1px solid black;
   border-radius: 10px;
-  border-top: none;
   margin-top: 10px;
   padding: 5px;
   font-weight: bolder;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.items-container::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.items-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 20px;
+  border: 1px solid black;
+  border-right: none;
+}
+
+.items-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the scrollbar thumb on hover */
 }
 
 .items-title {

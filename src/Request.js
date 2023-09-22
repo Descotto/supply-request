@@ -155,7 +155,6 @@ function Request(props) {
 
     return (
         <div className="App">
-            <h1>Supply Request</h1>
             <div>
                 <form id="info">
                     <div>
