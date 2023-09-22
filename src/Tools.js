@@ -36,8 +36,9 @@ function Tools(props) {
   return (
     <div>
 
-      <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>Tools</button>
-    </div>
+<button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Tools <span className="plus-sign">+</span>
+      </button>     </div>
   );
 }
 

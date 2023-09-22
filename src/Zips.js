@@ -39,8 +39,9 @@ function Zips(props) {
   return (
     <div>
 
-      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Zip Ties & Accessories</button>
-    </div>
+<button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Zip Ties & Accessories <span className="plus-sign">+</span>
+      </button>     </div>
   );
 }
 

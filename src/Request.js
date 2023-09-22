@@ -155,7 +155,6 @@ function Request(props) {
 
     return (
         <div className="App">
-            <h1>Supply Request</h1>
             <div>
                 <form id="info">
                     <div>
@@ -188,27 +187,55 @@ function Request(props) {
 
 
             </div >
-            <br />
-            <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Secondary setModalDisplay={setModalDisplay} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Brentwood setModalDisplay={setModalDisplay} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Modems setModalDisplay={setModalDisplay} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Zips setModalDisplay={setModalDisplay} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Accessories setModalDisplay={setModalDisplay} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Copper setModalDisplay={setModalDisplay} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-            <br />
-            <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+            <div className='request-options'>
+  <div className='essentials'>
+    <br />
+    <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
 
+  <div className='secondary'>
+    <br />
+    <Secondary setModalDisplay={setModalDisplay} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
 
-            <br />
+  <div className='brentwood'>
+    <br />
+    <Brentwood setModalDisplay={setModalDisplay} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='modems'>
+    <br />
+    <Modems setModalDisplay={setModalDisplay} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='zips'>
+    <br />
+    <Zips setModalDisplay={setModalDisplay} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='accessories'>
+    <br />
+    <Accessories setModalDisplay={setModalDisplay} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='copper'>
+    <br />
+    <Copper setModalDisplay={setModalDisplay} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='enterprise'>
+    <br />
+    <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+
+  <div className='tools'>
+    <br />
+    <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
+  </div>
+</div>
+
+<br />
+
 
             <props.Link to="/display">
                 <button

@@ -36,8 +36,9 @@ function Brentwood(props) {
 
   return (
     <div>
-      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Brentwood</button>
-  
+  <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Brentwood <span className="plus-sign">+</span>
+      </button>   
     </div>
   );
 }

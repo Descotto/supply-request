@@ -38,7 +38,9 @@ function Copper(props) {
 
   return (
     <div>
-      <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>Copper</button>
+      <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Copper <span className="plus-sign">+</span>
+      </button> 
     </div>
   );
 }

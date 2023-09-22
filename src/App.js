@@ -51,8 +51,8 @@ function App() {
 
 
       <Router >
-        <header className="left-component">
-          <div className='sidebar'>
+        <header className="nav-container">
+          <div className='navbar'>
             <LeftSidebarNavbar Link={Link} />
           </div>
         </header>

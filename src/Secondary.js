@@ -36,8 +36,9 @@ function Secondary(props) {
   return (
     <div>
 
-      <button className="btn btn-secondary custom-width btn-color1" onClick={setDisplay}>Secondary Jumpers</button>
-
+<button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+        Secondary Jumpers <span className="plus-sign">+</span>
+      </button> 
     </div>
   );
 }
