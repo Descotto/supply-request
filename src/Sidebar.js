@@ -16,17 +16,17 @@ const LeftSidebarNavbar = (props) => {
 
   return (
     <div>
-      <Navbar>
-        <div className="navbar-top">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleNavbar} />
-          <Navbar.Brand href="/" className={expanded ? 'expanded-home-link' : ''}></Navbar.Brand>
-        </div>
+      <Navbar expand="lg">
+        <Navbar.Brand href="/" className={expanded ? 'expanded-home-link' : ''} style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+          {!expanded ? 'Supply Request' : ''}
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleNavbar} style={{ marginRight: '10px' }} />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="custom-nav">
+          <Nav className="ml-auto" style={{ display: 'flex', flexDirection: 'row' }}>
             <props.Link
               to="/"
               className="custom-nav-link"
-              onClick={() => handleLinkClick('Supply Request')}
+              onClick={() => handleLinkClick('Home')}
             >
               Home
             </props.Link>
