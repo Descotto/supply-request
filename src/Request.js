@@ -160,12 +160,12 @@ function Request(props) {
                     <div>
                         <label>Name</label>
                         <br />
-                        <input placeholder='Required' type="text" name="name" onChange={(e) => setName(e.target.value)} />
+                        <input placeholder='Required' type="text" name="name" onChange={(e) => setName(e.target.value)}  className='request-input'/>
                     </div>
                     <div>
                         <label>Lead</label>
                         <br />
-                        <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} />
+                        <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} className='request-input'/>
                     </div>
                 </form>
                 <div>

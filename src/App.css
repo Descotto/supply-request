@@ -34,7 +34,7 @@
 
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.044);
+  background-color: rgba(0, 0, 0, 0);
   width: 100vw;
   overflow: scroll;
 }
@@ -434,6 +434,10 @@ button.complete-order {
   background-position: center;
   animation: bounce 5s infinite; 
   border: 2px solid black;
+}
+
+.request-input{
+  width: 300px;
 }
 
 @keyframes bounce {
