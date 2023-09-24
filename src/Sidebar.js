@@ -22,7 +22,7 @@ const LeftSidebarNavbar = (props) => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleNavbar} style={{ marginRight: '10px' }} />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto" style={{ display: 'flex', flexDirection: 'row' }}>
+          <Nav >
             <props.Link
               to="/"
               className="custom-nav-link"

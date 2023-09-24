@@ -210,9 +210,9 @@
 .custom-nav-link {
   margin-left: auto;
   margin-top: 5px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 20px;
-  background-color: white;
+  /* background-color: rgba(255, 255, 255, 0.225); */
   width: fit-content;
   padding: 5px;
   padding-left: 5px;
@@ -547,18 +547,7 @@ h2 {
 
 /* Small screens (e.g., iPhones) */
 @media (max-width: 576px) {
-  /* .custom-navbar {
-    padding: 0.5rem;
-    max-width: 138px;
-  }
-
-  .custom-navbar a {
-    margin-right: 0.3rem;
-  }
-
-  .navbar-toggler {
-    margin-right: 0.5rem;
-  } */
+  
   .btn-color1 {
     background-color: rgba(255, 255, 255, 0.599);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.45);
