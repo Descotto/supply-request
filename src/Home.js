@@ -6,7 +6,7 @@ function Home() {
     return (
 
         <div className='home-container'>
-            <h1 className='home-title'>Supply Request</h1>
+            {/* <h1 className='home-title'>Supply Request</h1> */}
 
             <h4 className='home-subtitle'>News</h4>
             <div className='news-container'>

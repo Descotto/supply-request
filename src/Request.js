@@ -154,7 +154,7 @@ function Request(props) {
     }
 
     return (
-        <div className="App">
+        <div className="request-page">
             <div>
                 <form id="info">
                     <div>

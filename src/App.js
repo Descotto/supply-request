@@ -56,6 +56,9 @@ function App() {
             <LeftSidebarNavbar Link={Link} />
           </div>
         </header>
+        <div className='title'>
+          <h1>Supply Request</h1>
+        </div>
 
         <Routes className="right-components">
           <Route path='/' element={<Home />} />
