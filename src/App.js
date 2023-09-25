@@ -18,8 +18,8 @@ import LeftSidebarNavbar from './Sidebar';
 import NotFound from './NotFound';
 import Results from './Results';
 import ByName from './ByName';
-import ByDate from './SearchDate';
 import DateResults from './DateResults';
+import SearchCalendar from './SearchCalendar';
 
 
 
@@ -32,6 +32,8 @@ function App() {
   const [orderTable, setOrderTable] = useState([]);
   const [order, setOrder] = useState([]);
   const [siteData, setSiteData] = useState()
+
+
 
   
   //====siteData
@@ -69,7 +71,7 @@ function App() {
           <Route path='/displayorder' element={<DisplayOrder order={order} />} />
           <Route path='/results' element={<Results order={order} setOrder={setOrder} />} />
           <Route path='/dateresults' element={<DateResults order={order} setOrder={setOrder} />} />
-          <Route path='/bydate' element={<ByDate setOrder={setOrder} />} />
+          <Route path='/date' element={<SearchCalendar />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
