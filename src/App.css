@@ -10,6 +10,32 @@
   margin-top: 50px;
 }
 
+/* modal */
+
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(9, 29, 255); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the modal content */
+.ReactModal__Content {
+  position: relative;
+  background-color: #000dff; /* Background color of the modal */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80vw; /* Adjust the width as needed */
+  max-height: 80%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow to the modal */
+}
+
+
 .title{
     margin-right:auto;
     margin-left: 20px;
@@ -460,13 +486,13 @@ button.complete-order {
 }
 
 .items-container {
-  background-color: #ccc;
+  background-color: #a4a4a4;
   border: 1px solid black;
   border-radius: 10px;
   margin-top: 10px;
   padding: 5px;
   font-weight: bolder;
-  max-height: 600px;
+  max-height: 500px;
   overflow-y: scroll;
 }
 
@@ -491,7 +517,6 @@ button.complete-order {
 
 .items-list {
   text-decoration: underline;
-
   font-size: smaller;
 
 }
