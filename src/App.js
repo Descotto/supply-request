@@ -57,7 +57,7 @@ function App() {
           </div>
         </header>
         <div className='title'>
-          <h1>Supply Request</h1>
+          <h2>Supply Request</h2>
         </div>
 
         <Routes className="right-components">
