@@ -155,6 +155,7 @@ function Request(props) {
 
     return (
         <div className="request-page">
+            <h1 className='request-title'>New Request Form</h1>
             <div>
                 <form id="info">
                     <div>

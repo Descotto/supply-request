@@ -8,6 +8,8 @@
 
 .request-page{
   margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* modal */
@@ -37,6 +39,10 @@
     100% {
       opacity: 1;
     }
+  }
+
+  .request-title{
+    font-family: cursive;
   }
 
 .App-logo {
@@ -75,6 +81,8 @@
   text-align: left;
   padding: 20px;
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-title {
@@ -220,14 +228,7 @@
 
 /* Medium screens (e.g., iPads) */
 @media (max-width: 992px) {
-  /* .custom-navbar {
-    padding: 0.5rem 1rem;
-    max-width: 160px;
-  }
-
-  .custom-navbar a {
-    margin-right: 0.5rem;
-  } */
+  
 }
 
 
@@ -238,6 +239,7 @@
   padding: 20px;
   background-color: #ffffffce;
   margin-right: auto;
+  margin-left: auto;
   margin-top: 80px;
   border-radius: 10px;
   box-shadow: -10px 5px 20px rgba(0, 131, 50, 0.624);
@@ -305,7 +307,7 @@
 
 .order-container {
   text-align: center;
-  margin-top: 40%;
+  margin-top: 20%;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -565,6 +567,7 @@ h2 {
   .order-container{
     width: 90%;
     animation: none;
+    margin-top: 40%;
   }
   
   .btn-color1 {
