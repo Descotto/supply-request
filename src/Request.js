@@ -237,7 +237,7 @@ function Request(props) {
 
 <br />
 
-
+        <div className='request-btn-container'>
             <props.Link to="/display">
                 <button
                     type="submit"
@@ -249,6 +249,8 @@ function Request(props) {
                 </button>
 
             </props.Link>
+        </div>
+
 
         </div >
 
