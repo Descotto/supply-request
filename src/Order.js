@@ -34,7 +34,7 @@ function Order(props) {
     <div className="order-container">
       <form onSubmit={handleSubmit}>
 
-        <h4 className='order-search-title'>Search by Order Number</h4>
+        <h1 className='order-search-title'>Search by Order Number</h1>
         <input autoComplete='off' name='order' type="text" placeholder="Order Number"  className='order-input'/>
         <button type='button submit' className='btn btn-primary order-btn'>Search</button>
       </form>

@@ -9,52 +9,58 @@ const LeftSidebarNavbar = (props) => {
     setExpanded(!expanded);
   };
 
-  const handleLinkClick = (linkText) => {
-    setExpanded(false);
-    setSelectedLinkText(linkText);
+
+  const handleLinkClick = () => {
+    setExpanded(false); // Close the Navbar when a link is clicked
+
   };
 
   return (
     <div>
-      <Navbar>
-        <div className="navbar-top">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleNavbar} />
-          <Navbar.Brand href="/" className={expanded ? 'expanded-home-link' : ''}></Navbar.Brand>
-        </div>
+
+      <Navbar expand="lg" expanded={expanded}>
+        <Navbar.Brand href="/" className={expanded ? 'expanded-home-link' : ''} style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white' }}>
+        </Navbar.Brand>
+        <Navbar.Toggle className='nav-toggler' aria-controls="basic-navbar-nav" onClick={toggleNavbar} />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="custom-nav">
+          <Nav className="ml-auto">
             <props.Link
               to="/"
               className="custom-nav-link"
-              onClick={() => handleLinkClick('Supply Request')}
+              onClick={handleLinkClick}
             >
               Home
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/request"
               className="custom-nav-link"
-              onClick={() => handleLinkClick('New Request')}
+              onClick={handleLinkClick}
             >
               New Request
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/lookup"
               className="custom-nav-link"
-              onClick={() => handleLinkClick('Searching by ID')}
+              onClick={handleLinkClick}
             >
               Search ID
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/byname"
               className="custom-nav-link"
-              onClick={() => handleLinkClick('Searching by Name')}
+              onClick={handleLinkClick}
             >
               Search Name
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/about"
               className="custom-nav-link"
-              onClick={() => handleLinkClick('About Supply Request')}
+              onClick={handleLinkClick}
+
             >
               About
             </props.Link>
@@ -62,8 +68,10 @@ const LeftSidebarNavbar = (props) => {
         </Navbar.Collapse>
       </Navbar>
 
+
       {/* Display the selected link text */}
       <h1 className='Navbar-page-text'>{selectedLinkText}</h1>
+
     </div>
   );
 };

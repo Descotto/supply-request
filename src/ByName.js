@@ -32,12 +32,13 @@ function ByName(props) {
     <div className="order-container">
 
       <form onSubmit={handleSubmitName}>
-        <h4>Search by Name</h4>
-        <input autoComplete='off' name='order' type="text" placeholder="Enter Name" />
-        <button type='button submit' className='btn btn-primary'>Search</button>
+        <h1 className='order-search-title'>Search by Name</h1>
+        <input autoComplete='off' name='order' type="text" placeholder="Enter Name" className='order-input'/>
+        <button type='button submit' className='btn btn-primary order-btn'>Search</button>
       </form>
       <br />
-      <h5>{showResult}</h5>
+      {!showResult}
+      <h5 className='results'>{showResult}</h5>
 
     </div>
   );

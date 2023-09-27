@@ -154,18 +154,23 @@ function Request(props) {
     }
 
     return (
+
+        <div className="request-page">
+            <h1 className='request-title'>New Request Form</h1>
+
         <div className="App">
+
             <div>
                 <form id="info">
                     <div>
                         <label>Name</label>
                         <br />
-                        <input placeholder='Required' type="text" name="name" onChange={(e) => setName(e.target.value)} />
+                        <input placeholder='Required' type="text" name="name" onChange={(e) => setName(e.target.value)}  className='request-input'/>
                     </div>
                     <div>
                         <label>Lead</label>
                         <br />
-                        <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} />
+                        <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} className='request-input'/>
                     </div>
                 </form>
                 <div>
@@ -236,6 +241,7 @@ function Request(props) {
 
 <br />
 
+        <div className='request-btn-container'>
 
             <props.Link to="/display">
                 <button
@@ -248,6 +254,8 @@ function Request(props) {
                 </button>
 
             </props.Link>
+        </div>
+
 
         </div >
 
