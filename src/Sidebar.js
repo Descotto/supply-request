@@ -27,6 +27,7 @@ const LeftSidebarNavbar = (props) => {
             >
               Home
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/request"
               className="custom-nav-link"
@@ -34,6 +35,7 @@ const LeftSidebarNavbar = (props) => {
             >
               New Request
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/lookup"
               className="custom-nav-link"
@@ -41,6 +43,7 @@ const LeftSidebarNavbar = (props) => {
             >
               Search ID
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/byname"
               className="custom-nav-link"
@@ -48,6 +51,7 @@ const LeftSidebarNavbar = (props) => {
             >
               Search Name
             </props.Link>
+            {/* <div className='navline'></div> */}
             <props.Link
               to="/about"
               className="custom-nav-link"

@@ -33,7 +33,7 @@
     text-align: center;
     text-transform: uppercase; 
     letter-spacing: 5px; 
-    text-shadow: 0 0 10px #d96417, 0 0 20px #d96417, 0 0 30px #d96417; 
+    text-shadow: 0 0 10px #3e5bff, 0 0 20px #3e5bff, 0 0 30px #3e5bff; 
     animation: neon 3s infinite alternate; /* Neon flickering animation */
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
@@ -212,6 +212,8 @@
   padding-right: 5px;
   color: rgb(0, 0, 0);
   font-size: smaller;
+  font-weight: bolder;
+  /* text-shadow: 0 0 10px #d96417;  */
 }
 
 .custom-nav-link a {
@@ -258,6 +260,13 @@
   background-color: black;
   margin: auto;
 }
+
+/* .navline{
+  width: 80%;
+  height: 1px;
+  background-color: black;
+  margin-right: 100%;
+} */
 
 .about-container h1 {
   font-size: 2rem;
