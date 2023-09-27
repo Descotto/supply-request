@@ -29,11 +29,11 @@
     margin-top: 20px;
     margin-right:auto;
     margin-left: 20px;
-    color: #2e55ff; 
+    color: #040101; 
     text-align: center;
     text-transform: uppercase; 
     letter-spacing: 5px; 
-    text-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db; 
+    text-shadow: 0 0 10px #d96417, 0 0 20px #d96417, 0 0 30px #d96417; 
     animation: neon 3s infinite alternate; /* Neon flickering animation */
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
