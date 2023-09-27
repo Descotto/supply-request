@@ -24,7 +24,9 @@ function About() {
         <small>David's Email: Davidescotto05@gmail.com</small>
 
         <br />
+
         <div className='line'></div>
+
         <a href="https://www.linkedin.com/in/calvin-moldenhauer/" className="linkedin"><i className="bi bi-linkedin">linkedin</i></a><br />
         <small>Calvin's Email: Calvickauer@gmail.com</small>
         <div className='line'></div>

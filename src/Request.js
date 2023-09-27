@@ -154,8 +154,12 @@ function Request(props) {
     }
 
     return (
+
         <div className="request-page">
             <h1 className='request-title'>New Request Form</h1>
+
+        <div className="App">
+
             <div>
                 <form id="info">
                     <div>
@@ -238,6 +242,7 @@ function Request(props) {
 <br />
 
         <div className='request-btn-container'>
+
             <props.Link to="/display">
                 <button
                     type="submit"

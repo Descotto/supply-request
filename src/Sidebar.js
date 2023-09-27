@@ -3,17 +3,21 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const LeftSidebarNavbar = (props) => {
   const [expanded, setExpanded] = useState(false);
+  const [selectedLinkText, setSelectedLinkText] = useState('');
 
   const toggleNavbar = () => {
     setExpanded(!expanded);
   };
 
+
   const handleLinkClick = () => {
     setExpanded(false); // Close the Navbar when a link is clicked
+
   };
 
   return (
     <div>
+
       <Navbar expand="lg" expanded={expanded}>
         <Navbar.Brand href="/" className={expanded ? 'expanded-home-link' : ''} style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white' }}>
         </Navbar.Brand>
@@ -56,12 +60,18 @@ const LeftSidebarNavbar = (props) => {
               to="/about"
               className="custom-nav-link"
               onClick={handleLinkClick}
+
             >
               About
             </props.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+
+
+      {/* Display the selected link text */}
+      <h1 className='Navbar-page-text'>{selectedLinkText}</h1>
+
     </div>
   );
 };
