@@ -252,6 +252,13 @@
 
 }
 
+.line{
+  width: 80%;
+  height: 1px;
+  background-color: black;
+  margin: auto;
+}
+
 .about-container h1 {
   font-size: 2rem;
   margin-bottom: 20px;
