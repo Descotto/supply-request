@@ -56,9 +56,7 @@ function App() {
 
       <Router >
         <header className="nav-container">
-          <div className='navbar'>
             <LeftSidebarNavbar Link={Link} />
-          </div>
         </header>
         <div className='title'>
           <h2>Supply Request</h2>

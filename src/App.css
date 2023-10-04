@@ -2,18 +2,25 @@
   text-align: center;
   margin:auto;
   display: grid;
-
   place-items: end;
   padding-top: 15px;
+}
+
+.results-container{
+  margin-top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e991ffc6;
+  padding: 40px;
+  font-weight: bolder;
+  border-radius: 10px;
+  border: .5px solid black;
 }
 
 .request-page{
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-
-  place-items: center;
-
 }
 
 /* .request-btn-container{
@@ -80,33 +87,6 @@
 .App-link {
   color: #61dafb;
 }
-
-
-
-.navbar {
-  background-color: rgb(0, 0, 0);
-  width: 100vw;
-  overflow: scroll;
-}
-
-
-/* App.css */
-/* .app-container {
-  display: flex;
-} */
-
-.nav-container {
-  background-color: #f0f0f0;
-  width: 100vw;
-  display: inline;
-}
-
-/* .right-components {
-  display: flex;
-  flex-direction: column;
-  flex: 2;
-} */
-
 
 .right-component {
   background-color: #e0e0e0;
@@ -208,7 +188,6 @@
   color: crimson;
 }
 
-
 /* navbar */
 
 .nav-container {
@@ -225,97 +204,27 @@
 .navbar {
   background-color: rgba(0, 0, 0, 0);
   width: fit-content;
-  overflow: scroll;
+  
   padding: 10px;
 }
 
-
-.nav-toggler {
+.nav-toggler{
   color:rgba(0, 0, 0, 0.519);
   margin-left: auto;
 }
 
-
-/* Default styles for large screens */
-/* .custom-navbar {
-  background-color: #f8f9fa;
-  padding: 0.5rem 1rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* .left-component {
-  background-color: transparent;
-} */
-/* .custom-navbar.expanded .expanded-home-link {
-  color: #007bff;
-} */
-
-/* .custom-navbar a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-} */
-
-/* .custom-navbar a:hover {
-  color: #007bff;
-} */
-
-/* Navbar Toggler styles */
-/* .navbar-toggler {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-} */
-
-/* .navbar-toggler-icon {
-  background-color: #333;
-  border-radius: 2px;
-  display: inline-block;
-  width: 1.5rem;
-  height: 0.125rem;
-} */
-
-/* Navbar Collapse styles */
-/* .collapse {
-  flex-basis: 100%;
-}
-
-.custom-nav {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-
-}
-*/
-
 .custom-nav-link {
-
   margin-right: auto;
   margin-bottom: 20px;
   border-radius: 20px;
-
-  margin-left: auto;
-  border: 1px solid black;
-  border-radius: 20px;
-  background-color: white;
-
   width: fit-content;
   padding: 5px;
   padding-left: 5px;
   padding-right: 5px;
-
   color: rgb(0, 0, 0);
   font-size: smaller;
   font-weight: bolder;
   /* text-shadow: 0 0 10px #d96417;  */
-
-  text-decoration: none;
-  color: rgb(0, 30, 255);
-  font-size: smaller;
-
 }
 
 .custom-nav-link a {
@@ -328,30 +237,17 @@
 } 
 
 .Navbar-page-text{
-
   color: rgb(255, 255, 255);
   background-color: rgb(0, 102, 255);
   padding: 20px;
   width: 100%;
   margin: auto;
   border-radius: 20px;
-
-  color: white;
-
 }
 
 /* Medium screens (e.g., iPads) */
 @media (max-width: 992px) {
-
-  /* .custom-navbar {
-    padding: 0.5rem 1rem;
-    max-width: 160px;
-  }
-
-  .custom-navbar a {
-    margin-right: 0.5rem;
-  } */
-
+  
 }
 
 
@@ -371,7 +267,7 @@
 
 .line{
   width: 80%;
-  height: 1px;
+  height: .5px;
   background-color: black;
   margin: auto;
 }
@@ -543,6 +439,7 @@ button.complete-order {
   margin: 20px;
   background-color: white;
   border: 2px solid rgb(93, 26, 26);
+  margin-top: 80px;
 }
 
 .order-number {
@@ -659,9 +556,7 @@ button.complete-order {
   margin-top: 10px;
   padding: 5px;
   font-weight: bolder;
-
   max-height: 500px;
-
   overflow-y: scroll;
 }
 
@@ -703,27 +598,12 @@ h2 {
 /* Small screens (e.g., iPhones) */
 @media (max-width: 576px) {
 
-
   .order-container{
     width: 90%;
     animation: none;
     margin-top: 40%;
   }
   
-
-  /* .custom-navbar {
-    padding: 0.5rem;
-    max-width: 138px;
-  }
-
-  .custom-navbar a {
-    margin-right: 0.3rem;
-  }
-
-  .navbar-toggler {
-    margin-right: 0.5rem;
-  } */
-
   .btn-color1 {
     background-color: rgba(255, 255, 255, 0.599);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.45);
@@ -791,3 +671,4 @@ h2 {
   }
 
 }
+
