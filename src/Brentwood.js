@@ -3,10 +3,9 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 function Brentwood(props) {
+  
   const { handleChange,
-    renderDropdownOptions,
-    openModal,
-    setModalDisplay } = props;
+    renderDropdownOptions } = props;
 
 
   const displayData = props.brentwoodData.map((i, idx) => {
@@ -20,25 +19,22 @@ function Brentwood(props) {
     )
   })
 
-  function setDisplay() {
-    setModalDisplay(<div className='brentwood items-container'>
-      <h2 className='items-title'>Brentwood</h2>
-      <div className='items-list'>
-
-        {displayData}
-
-      </div>
-
-    </div>)
-    openModal()
-  }
-
+ 
 
   return (
     <div>
-  <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+      <button className="btn btn-secondary custom-width btn-color2" >
         Brentwood <span className="plus-sign">+</span>
-      </button>   
+      </button>
+      <div className='brentwood items-container'>
+        <h2 className='items-title'>Brentwood</h2>
+        <div className='items-list'>
+
+          {displayData}
+
+        </div>
+
+      </div>
     </div>
   );
 }

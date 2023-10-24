@@ -3,11 +3,9 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 function Accessories(props) {
-  const { handleChange,
-    renderDropdownOptions,
-    openModal,
-    setModalDisplay } = props;
 
+  const { handleChange,
+    renderDropdownOptions } = props;
 
 
   const displayData = props.wallplatesData.map((i, idx) => {
@@ -20,25 +18,23 @@ function Accessories(props) {
       </div>
     )
   })
-  function setDisplay() {
-    setModalDisplay(<div className='accessories items-container'>
-    <h2 className='items-title'>Wall Plates & Accessories</h2>
-    <div className='items-list'>
 
-      {displayData}
-
-    </div>
-  </div>)
-    openModal()
-  }
 
 
   return (
-    
+
     <div>
-  <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+      <button className="btn btn-secondary custom-width btn-color2">
         Wallplates & Accessories <span className="plus-sign">+</span>
-      </button>     
+      </button>
+      <div className='accessories items-container'>
+        <h2 className='items-title'>Wall Plates & Accessories</h2>
+        <div className='items-list'>
+
+          {displayData}
+
+        </div>
+      </div>
     </div>
   );
 }

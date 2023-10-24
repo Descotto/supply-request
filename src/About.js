@@ -30,10 +30,18 @@ function About() {
         <a href="https://www.linkedin.com/in/calvin-moldenhauer/" className="linkedin"><i className="bi bi-linkedin">linkedin</i></a><br />
         <small>Calvin's Email: Calvickauer@gmail.com</small>
         <div className='line'></div>
+
+      
+
+        
+
+        <a href="https://www.linkedin.com/in/calvin-moldenhauer/" className="linkedin"><i className="bi bi-linkedin">linkedin</i></a><br />
+        <small>Christian's Email: Christianmarquezcastro@gmail.com</small>
+        <div className='line'></div>
       </div>
 
       <footer>
-        <small>Created by David Escotto and Calvin Moldenhauer</small>
+        <small>Created by David Escotto, Calvin Moldenhauer and Christian Marquez</small>
       </footer>
     </div>
   );

@@ -3,11 +3,9 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 function Copper(props) {
-  const { handleChange,
-    renderDropdownOptions,
-    openModal,
-    setModalDisplay } = props;
 
+  const { handleChange,
+    renderDropdownOptions } = props;
 
 
   const displayData = props.copperData.map((i, idx) => {
@@ -21,26 +19,22 @@ function Copper(props) {
     )
   })
 
-  function setDisplay() {
-    setModalDisplay(<div className='copper items-container'>
-    <h2 className='items-title'>Copper</h2>
-
-    <div className='items-list'>
-
-      {displayData}
-
-    </div>
-
-  </div>)
-    openModal()
-  }
 
 
   return (
+
     <div>
-      <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+      <button className="btn btn-secondary custom-width btn-color2">
         Copper <span className="plus-sign">+</span>
-      </button> 
+      </button>
+      <div className='copper items-container'>
+        <h2 className='items-title'>Copper</h2>
+        <div className='items-list'>
+
+          {displayData}
+
+        </div>
+      </div>
     </div>
   );
 }

@@ -14,6 +14,8 @@ import Zips from './Zips';
 import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
+
+
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function Request(props) {
@@ -22,7 +24,10 @@ function Request(props) {
     const [lead, setLead] = useState('');
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isButtonGlowing, setIsButtonGlowing] = useState(false);
-    const [modalDisplay, setModalDisplay] = useState('')
+
+    const [selectedComponent, setSelectedComponent] = useState(null);
+
+
 
 
     const {
@@ -59,14 +64,13 @@ function Request(props) {
     }, [isButtonDisabled]);
 
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
 
     const closeModal = () => {
-        setIsModalOpen(false);
+        setSelectedComponent(null);
+    };
+
+    const handleShowComponent = (componentName) => {
+        setSelectedComponent(componentName);
     };
 
 
@@ -82,6 +86,11 @@ function Request(props) {
 
 
     function handleChange(e) {
+
+
+
+        e.preventDefault();
+        console.log("Change ==>", order);
         let item = { itemCode: '', description: '', requested: 0 };
         item.itemCode = e.target.id;
         item.description = e.target.name;
@@ -90,7 +99,12 @@ function Request(props) {
             ...props.orderTable,
             { itemCode: item.itemCode, description: item.description, requested: item.requested },
         ]);
+
         setOrder([...order, `\n${item.description}, count: ${item.requested}`]);
+        console.log("After", order);
+
+
+
     }
 
     function handleClick(e) {
@@ -153,111 +167,109 @@ function Request(props) {
         });
     }
 
+    function check() {
+        console.log("Checking...", order);
+    }
+
+
     return (
 
         <div className="request-page">
             <h1 className='request-title'>New Request Form</h1>
 
-        <div className="App">
+            <div className="App">
 
-            <div>
-                <form id="info">
-                    <div>
-                        <label>Name</label>
-                        <br />
-                        <input placeholder='Required' type="text" name="name" onChange={(e) => setName(e.target.value)}  className='request-input'/>
-                    </div>
-                    <div>
-                        <label>Lead</label>
-                        <br />
-                        <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} className='request-input'/>
-                    </div>
-                </form>
                 <div>
+                    <form id="info">
+                        <div>
+                            <label>Name</label>
+                            <br />
+                            <input placeholder='Required' type="text" name="name" onChange={(e) => setName(e.target.value)} className='request-input' />
+                        </div>
+                        <div>
+                            <label>Lead</label>
+                            <br />
+                            <input placeholder='Required' type="text" name="lead" onChange={(e) => setLead(e.target.value)} className='request-input' />
+                        </div>
+                    </form>
+                    <button onClick={check}>check</button>
+                    <div>
 
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-      >
-        
 
-            {modalDisplay}
 
-             
-        <button onClick={closeModal}>Close</button>
-      </Modal>
-    </div>
-                
+                        <div>
+
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Essentials')}>Essentials <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Secondary')}>Secondary Jumpers <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Brentwood')}>Brentwood <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Modems')}>Modems <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Zips')}>Zip Ties & Accessories <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Accessories')}>Wallplates & Accessories <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Copper')}>Copper <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Enterprise')}>Enterprise <span className="plus-sign">+</span></button>
+                            <button className="btn btn-secondary custom-width btn-color2" onClick={() => handleShowComponent('Tools')}>Tools <span className="plus-sign">+</span></button>
+
+                            <Modal
+                                isOpen={selectedComponent !== null}
+                                onRequestClose={closeModal}
+                                contentLabel="Selected Component Modal"
+                            >
+                                {selectedComponent === 'Essentials' && <Essentials essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Secondary' && <Secondary secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Brentwood' && <Brentwood brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Modems' && <Modems modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Zips' && <Zips ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Accessories' && <Accessories wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Copper' && <Copper copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Enterprise' && <Enterprise enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                {selectedComponent === 'Tools' && <Tools toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Essentials')}>Essentials <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Secondary')}>Secondary Jumpers <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Brentwood')}>Brentwood <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Modems')}>Modems <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Zips')}>Zip Ties & Accessories <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Accessories')}>Wallplates & Accessories <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Copper')}>Copper <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Enterprise')}>Enterprise <span className="plus-sign">+</span></button>
+                                <button className="btn btn-secondary  btn-color2" onClick={() => handleShowComponent('Tools')}>Tools <span className="plus-sign">+</span></button>
+
+                                <button className='btn btn-success complete-order' onClick={closeModal}>Close</button>
+                            </Modal>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div >
+
+
+                <br />
+
+                <div className='request-btn-container'>
+
+                    <props.Link to="/display">
+                        <button
+                            type="submit"
+                            className={`btn btn-primary complete-order ${isButtonGlowing ? 'glowing' : ''}`}
+                            onClick={handleClick}
+                            disabled={isButtonDisabled}
+                        >
+                            Complete Order
+                        </button>
+
+                    </props.Link>
+                </div>
 
 
             </div >
-            <div className='request-options'>
-  <div className='essentials'>
-    <br />
-    <Essentials setModalDisplay={setModalDisplay} openModal={openModal} essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='secondary'>
-    <br />
-    <Secondary setModalDisplay={setModalDisplay} openModal={openModal} secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='brentwood'>
-    <br />
-    <Brentwood setModalDisplay={setModalDisplay} openModal={openModal} brentwoodData={brentwoodData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='modems'>
-    <br />
-    <Modems setModalDisplay={setModalDisplay} openModal={openModal} modemsData={modemsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='zips'>
-    <br />
-    <Zips setModalDisplay={setModalDisplay} openModal={openModal} ziptiesData={ziptiesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='accessories'>
-    <br />
-    <Accessories setModalDisplay={setModalDisplay} openModal={openModal} wallplatesData={wallplatesData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='copper'>
-    <br />
-    <Copper setModalDisplay={setModalDisplay} openModal={openModal} copperData={copperData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='enterprise'>
-    <br />
-    <Enterprise setModalDisplay={setModalDisplay} openModal={openModal} enterpriseData={enterpriseData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-
-  <div className='tools'>
-    <br />
-    <Tools setModalDisplay={setModalDisplay} openModal={openModal} toolsData={toolsData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />
-  </div>
-</div>
-
-<br />
-
-        <div className='request-btn-container'>
-
-            <props.Link to="/display">
-                <button
-                    type="submit"
-                    className={`btn btn-primary complete-order ${isButtonGlowing ? 'glowing' : ''}`}
-                    onClick={handleClick}
-                    disabled={isButtonDisabled}
-                >
-                    Complete Order
-                </button>
-
-            </props.Link>
-        </div>
-
-
-        </div >
         </div>
 
 

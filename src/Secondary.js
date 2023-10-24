@@ -2,13 +2,11 @@ import React from 'react';
 import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
-
-
 function Secondary(props) {
+
   const { handleChange,
-    renderDropdownOptions,
-    openModal,
-    setModalDisplay } = props;
+    renderDropdownOptions } = props;
+
 
   const displayData = props.secondaryData.map((i, idx) => {
     return (
@@ -21,24 +19,22 @@ function Secondary(props) {
     )
   })
 
-  function setDisplay() {
-    setModalDisplay(<div className='Secondary items-container'>
-    <h2 className='items-title'>Secondary Jumps</h2>
-    <div className='items-list'>
 
-      {displayData}
-
-    </div>
-  </div>)
-    openModal()
-  }
 
   return (
-    <div>
 
-<button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+    <div>
+      <button className="btn btn-secondary custom-width btn-color2">
         Secondary Jumpers <span className="plus-sign">+</span>
-      </button> 
+      </button>
+      <div className='Secondary items-container'>
+        <h2 className='items-title'>Secondary Jumps</h2>
+        <div className='items-list'>
+
+          {displayData}
+
+        </div>
+      </div>
     </div>
   );
 }

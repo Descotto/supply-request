@@ -2,13 +2,11 @@ import React from 'react';
 import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
-
-
 function Essentials(props) {
+
   const { handleChange,
-    renderDropdownOptions,
-    openModal,
-    setModalDisplay } = props;
+    renderDropdownOptions } = props;
+
 
   const displayData = props.essentialData.map((i, idx) => {
     return (
@@ -21,28 +19,22 @@ function Essentials(props) {
     )
   })
 
-  function setDisplay() {
-    setModalDisplay(<div className='Essentials items-container'>
-      <h2 className='items-title'>Fiber Essentials</h2>
-
-      <div className='items-list'>
-
-        {displayData}
-
-      </div>
-    </div>)
-    openModal()
-  }
-
 
 
   return (
 
-
     <div>
-  <button className="btn btn-secondary custom-width btn-color2" onClick={setDisplay}>
+      <button className="btn btn-secondary custom-width btn-color2">
         Essentials <span className="plus-sign">+</span>
-      </button> 
+      </button>
+      <div className='Essentials items-container'>
+        <h2 className='items-title'>Fiber Essentials</h2>
+        <div className='items-list'>
+
+          {displayData}
+
+        </div>
+      </div>
     </div>
   );
 }
