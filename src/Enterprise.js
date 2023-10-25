@@ -24,8 +24,8 @@ function Enterprise(props) {
   return (
     <div>
 
-      <button className="btn btn-secondary custom-width btn-color2">
-        Enterprise <span className="plus-sign">+</span>
+      <button className="selected-btn">
+        Enterprise <span className="plus-sign">↓</span>
       </button>
       <div className='enterprise items-container'>
         <h2 className='items-title'>Enterprise</h2>

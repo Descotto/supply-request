@@ -24,8 +24,8 @@ function Essentials(props) {
   return (
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color2">
-        Essentials <span className="plus-sign">+</span>
+   <button className="selected-btn">
+        Essentials <span className="plus-sign">↓</span>
       </button>
       <div className='Essentials items-container'>
         <h2 className='items-title'>Fiber Essentials</h2>

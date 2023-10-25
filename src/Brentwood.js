@@ -23,8 +23,8 @@ function Brentwood(props) {
 
   return (
     <div>
-      <button className="btn btn-secondary custom-width btn-color2" >
-        Brentwood <span className="plus-sign">+</span>
+        <button className="selected-btn">
+        Brentwood <span className="plus-sign">↓</span>
       </button>
       <div className='brentwood items-container'>
         <h2 className='items-title'>Brentwood</h2>

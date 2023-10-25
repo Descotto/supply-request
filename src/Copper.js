@@ -24,8 +24,8 @@ function Copper(props) {
   return (
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color2">
-        Copper <span className="plus-sign">+</span>
+        <button className="selected-btn">
+        Copper <span className="plus-sign">↓</span>
       </button>
       <div className='copper items-container'>
         <h2 className='items-title'>Copper</h2>

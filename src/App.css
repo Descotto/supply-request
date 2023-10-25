@@ -550,14 +550,16 @@ button.complete-order {
 }
 
 .items-container {
-  background-color: #a4a4a4;
+  background-color: #2eeaff;
   border: 1px solid black;
   border-radius: 10px;
+  margin-left: 10px;
   margin-top: 10px;
   padding: 5px;
   font-weight: bolder;
-  max-height: 500px;
+  height: 500px;
   overflow-y: scroll;
+  text-align: center;
 }
 
 .items-container::-webkit-scrollbar {
@@ -642,6 +644,16 @@ h2 {
   color: rgb(255, 255, 255);
 }
 
+.selected-btn{
+  width: 100%;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: rgb(37, 190, 6);
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
 
 /* Small screens (e.g., iPhones) */
 @media (max-width: 576px) {

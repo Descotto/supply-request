@@ -24,8 +24,8 @@ function Accessories(props) {
   return (
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color2">
-        Wallplates & Accessories <span className="plus-sign">+</span>
+        <button className="selected-btn">
+        Wallplates & Accessories <span className="plus-sign">↓</span>
       </button>
       <div className='accessories items-container'>
         <h2 className='items-title'>Wall Plates & Accessories</h2>

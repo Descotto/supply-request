@@ -24,8 +24,8 @@ function Secondary(props) {
   return (
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color2">
-        Secondary Jumpers <span className="plus-sign">+</span>
+      <button className="selected-btn">
+        Secondary Jumpers <span className="plus-sign">↓</span>
       </button>
       <div className='Secondary items-container'>
         <h2 className='items-title'>Secondary Jumps</h2>

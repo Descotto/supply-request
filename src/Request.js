@@ -68,27 +68,10 @@ function Request(props) {
     setSelectedComponent(null);
   };
 
-  const handleShowComponent = (componentName, buttonName) => {
-    if (lastClicked[componentName] !== buttonName) {
-      const previousButton = document.querySelector(`.${lastClicked[componentName]}`);
-      if (previousButton) {
-        previousButton.classList.remove('active');
-      }
-  
-      const currentButton = document.querySelector(`.${buttonName}`);
-      if (currentButton) {
-        currentButton.classList.add('active');
-      }
-  
-      setLastClicked((prevLastClicked) => ({
-        ...prevLastClicked,
-        [componentName]: buttonName,
-      }));
-  
-      setSelectedComponent(componentName);
-    }
-  };
-  
+  const handleShowComponent = (componentName,buttonName) => {
+    setLastClicked(buttonName);
+    setSelectedComponent(componentName);
+};
   
   
 

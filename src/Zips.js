@@ -24,8 +24,8 @@ function Zips(props) {
 
   return (
     <div>
-      <button className="btn btn-secondary custom-width btn-color2">
-        Zip Ties & Accessories <span className="plus-sign">+</span>
+         <button className="selected-btn">
+        Zip Ties & Accessories <span className="plus-sign">↓</span>
       </button>
       <div className='zips items-container'>
         <h2 className='items-title'>Zip Ties & Flex Clips</h2>

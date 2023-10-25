@@ -24,8 +24,8 @@ function Tools(props) {
   return (
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color2">
-        Tools <span className="plus-sign">+</span>
+        <button className="selected-btn">
+        Tools <span className="plus-sign">↓</span>
       </button>
       <div className='tools items-container'>
         <h2 className='items-title'>Tools</h2>
