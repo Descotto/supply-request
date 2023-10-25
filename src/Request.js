@@ -207,31 +207,32 @@ function Request(props) {
 
               <Modal className="modal-int" isOpen={selectedComponent !== null} onRequestClose={closeModal} contentLabel="Selected Component Modal">
                 <div className="interior-sidebar">
-                  <button className={`interior-btn ${lastClicked['Essentials'] === 'Essentials' ? 'active' : ''}`} onClick={() => handleShowComponent('Essentials', 'Essentials')}>
+                    <h3 className='TT options-title'>Select a Category:</h3>
+                  <button className={`Es interior-btn ${lastClicked['Essentials'] === 'Essentials' ? 'active' : ''}`} onClick={() => handleShowComponent('Essentials', 'Essentials')}>
                     Essentials
                   </button>
-                  <button className={`interior-btn ${lastClicked['Secondary'] === 'Secondary' ? 'active' : ''}`} onClick={() => handleShowComponent('Secondary', 'Secondary')}>
-                    Secondary Jumpers
+                  <button className={`Se interior-btn ${lastClicked['Secondary'] === 'Secondary' ? 'active' : ''}`} onClick={() => handleShowComponent('Secondary', 'Secondary')}>
+                    Secondary
                   </button>
-                  <button className={`interior-btn ${lastClicked['Brentwood'] === 'Brentwood' ? 'active' : ''}`} onClick={() => handleShowComponent('Brentwood', 'Brentwood')}>
+                  <button className={`Br interior-btn ${lastClicked['Brentwood'] === 'Brentwood' ? 'active' : ''}`} onClick={() => handleShowComponent('Brentwood', 'Brentwood')}>
                     Brentwood
                   </button>
-                  <button className={`interior-btn ${lastClicked['Modems'] === 'Modems' ? 'active' : ''}`} onClick={() => handleShowComponent('Modems', 'Modems')}>
+                  <button className={`Mo interior-btn ${lastClicked['Modems'] === 'Modems' ? 'active' : ''}`} onClick={() => handleShowComponent('Modems', 'Modems')}>
                     Modems
                   </button>
-                  <button className={`interior-btn ${lastClicked['Zips'] === 'Zips' ? 'active' : ''}`} onClick={() => handleShowComponent('Zips', 'Zips')}>
-                    Zip Ties & Accessories
+                  <button className={`Zi interior-btn ${lastClicked['Zips'] === 'Zips' ? 'active' : ''}`} onClick={() => handleShowComponent('Zips', 'Zips')}>
+                    Zips
                   </button>
-                  <button className={`interior-btn ${lastClicked['Accessories'] === 'Accessories' ? 'active' : ''}`} onClick={() => handleShowComponent('Accessories', 'Accessories')}>
-                    Wallplates & Accessories
+                  <button className={`Wa interior-btn ${lastClicked['Accessories'] === 'Accessories' ? 'active' : ''}`} onClick={() => handleShowComponent('Accessories', 'Accessories')}>
+                    Wallplates
                   </button>
-                  <button className={`interior-btn ${lastClicked['Copper'] === 'Copper' ? 'active' : ''}`} onClick={() => handleShowComponent('Copper', 'Copper')}>
+                  <button className={`Co interior-btn ${lastClicked['Copper'] === 'Copper' ? 'active' : ''}`} onClick={() => handleShowComponent('Copper', 'Copper')}>
                     Copper
                   </button>
-                  <button className={`interior-btn ${lastClicked['Enterprise'] === 'Enterprise' ? 'active' : ''}`} onClick={() => handleShowComponent('Enterprise', 'Enterprise')}>
+                  <button className={`En interior-btn ${lastClicked['Enterprise'] === 'Enterprise' ? 'active' : ''}`} onClick={() => handleShowComponent('Enterprise', 'Enterprise')}>
                     Enterprise
                   </button>
-                  <button className={`interior-btn ${lastClicked['Tools'] === 'Tools' ? 'active' : ''}`} onClick={() => handleShowComponent('Tools', 'Tools')}>
+                  <button className={`To interior-btn ${lastClicked['Tools'] === 'Tools' ? 'active' : ''}`} onClick={() => handleShowComponent('Tools', 'Tools')}>
                     Tools
                   </button>
                 </div>

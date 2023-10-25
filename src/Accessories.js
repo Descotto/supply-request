@@ -10,7 +10,7 @@ function Accessories(props) {
 
   const displayData = props.wallplatesData.map((i, idx) => {
     return (
-      <div key={idx} >
+      <div key={idx} className='cat-opt'>
         <p onChange={handleChange}>{i.description} - <select id={i.itemCode} name={i.description}>
           {renderDropdownOptions(10)}
         </select></p>
@@ -28,7 +28,7 @@ function Accessories(props) {
         Wallplates & Accessories <span className="plus-sign">↓</span>
       </button>
       <div className='accessories items-container'>
-        <h2 className='items-title'>Wall Plates & Accessories</h2>
+        {/* <h2 className='items-title'>Wall Plates & Accessories</h2> */}
         <div className='items-list'>
 
           {displayData}
