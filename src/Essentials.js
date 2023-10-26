@@ -24,9 +24,9 @@ function Essentials(props) {
   return (
 
     <div>
-   <button className="selected-btn">
+   {/* <button className="selected-btn">
         Essentials <span className="plus-sign">↓</span>
-      </button>
+      </button> */}
       <div className='Essentials items-container'>
         <h2 className='items-title'>Fiber Essentials</h2>
         <div className='items-list'>

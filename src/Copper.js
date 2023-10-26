@@ -24,9 +24,9 @@ function Copper(props) {
   return (
 
     <div>
-        <button className="selected-btn">
+        {/* <button className="selected-btn">
         Copper <span className="plus-sign">↓</span>
-      </button>
+      </button> */}
       <div className='copper items-container'>
         <h2 className='items-title'>Copper</h2>
         <div className='items-list'>

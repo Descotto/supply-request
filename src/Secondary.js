@@ -24,9 +24,9 @@ function Secondary(props) {
   return (
 
     <div>
-      <button className="selected-btn">
+      {/* <button className="selected-btn">
         Secondary Jumpers <span className="plus-sign">↓</span>
-      </button>
+      </button> */}
       <div className='Secondary items-container'>
         <h2 className='items-title'>Secondary Jumps</h2>
         <div className='items-list'>

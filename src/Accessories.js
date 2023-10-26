@@ -24,11 +24,11 @@ function Accessories(props) {
   return (
 
     <div>
-        <button className="selected-btn">
+        {/* <button className="selected-btn">
         Wallplates & Accessories <span className="plus-sign">↓</span>
-      </button>
+      </button> */}
       <div className='accessories items-container'>
-        {/* <h2 className='items-title'>Wall Plates & Accessories</h2> */}
+        <h2 className='items-title'>Wall Plates & Accessories</h2>
         <div className='items-list'>
 
           {displayData}

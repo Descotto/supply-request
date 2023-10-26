@@ -207,7 +207,7 @@ function Request(props) {
 
               <Modal className="modal-int" isOpen={selectedComponent !== null} onRequestClose={closeModal} contentLabel="Selected Component Modal">
                 <div className="interior-sidebar">
-                    <h3 className='TT options-title'>Select a Category:</h3>
+                    {/* <h3 className='TT options-title'>Select a Category:</h3> */}
                   <button className={`Es interior-btn ${lastClicked['Essentials'] === 'Essentials' ? 'active' : ''}`} onClick={() => handleShowComponent('Essentials', 'Essentials')}>
                     Essentials
                   </button>
