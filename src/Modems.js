@@ -24,9 +24,9 @@ function Modems(props) {
   return (
 
     <div>
-      <button className="btn btn-secondary custom-width btn-color2">
-        Modems <span className="plus-sign">+</span>
-      </button>
+         {/* <button className="selected-btn">
+        Modems <span className="plus-sign">↓</span>
+      </button> */}
       <div className='modems items-container'>
         <h2 className='items-title'>Modems</h2>
         <div className='items-list'>

@@ -550,14 +550,17 @@ button.complete-order {
 }
 
 .items-container {
-  background-color: #a4a4a4;
-  border: 1px solid black;
+  background-color: #ffffffdf;
+  border: 3px solid black;
   border-radius: 10px;
+  margin-left: 10px;
   margin-top: 10px;
-  padding: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
   font-weight: bolder;
-  max-height: 500px;
+  height: 500px;
   overflow-y: scroll;
+  text-align: center;
 }
 
 .items-container::-webkit-scrollbar {
@@ -582,21 +585,206 @@ button.complete-order {
 .items-list {
   text-decoration: underline;
   font-size: smaller;
-
 }
 
 h2 {
   text-decoration: none !important;
 }
 
+.request-btn{
+  background-color: black;
+  color: white;
+  width: fit-content;
+  border-radius: 10px;
+  margin: 10px;
+}
+.vertical-nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+}
 
-/* 
-.modal {
-  display: block;
+.interior-btn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: fit-content;
+  text-decoration: underline;
+  height: fit-content;
+  border-radius: 10px;
+  margin-right: 10px;
+  /* border: 1px solid rgb(255, 255, 255); */
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.interior-btn:hover{
+  background-color: #6c6c6c;
+}
+
+.options-title{
+  color: white;
+}
+
+.plus__sign{
+  margin-left: auto;
+}
+
+.modal-ctn {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  margin-top: 30px;
+
+}
+
+/* .cat-opt{
+  background-color: #ffffff;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px dashed rgb(3, 155, 0);
+  margin-bottom: 2px;
+  padding-top: 5px;
+  border-left: 3px solid black;
+
 } */
+
+.modal-int {
+  width: fit-content;
+  margin: auto;
+  margin-top: 15%;
+  background-color: #69caff;
+  padding: 20px;
+  display: flex;
+  border: 3px solid black;
+}
+
+.interior-sidebar{
+  width: fit-content;
+  height: 100%;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* background-color: #00000098; */
+  padding: 10px;
+  /* border: 1px solid #ffffff; */
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-template-areas:
+    'TT TT'
+    'Es Mo' 
+    'Se Co' 
+    'En To'
+    'Br Zi' 
+    'Wa Wa';
+}
+
+.Es { grid-area: Es; }
+.Se { grid-area: Se; }
+.Br { grid-area: Br; }
+.Mo { grid-area: Mo; }
+.Zi { grid-area: Zi; }
+.Wa { grid-area: Wa; }
+.Co { grid-area: Co; }
+.En { grid-area: En; }
+.To { grid-area: To; }
+.TT { grid-area: TT; }
+
+.active {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.selected-btn{
+  width: 100%;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: rgb(134, 48, 48);
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
 
 /* Small screens (e.g., iPhones) */
 @media (max-width: 576px) {
+
+  .interior-sidebar{
+    grid-template-columns: repeat(1, 20px);
+    max-width: 80px;
+    grid-row-gap: 1px;
+    max-height: 50vh;
+    min-width: 80px;
+    border-right: 1px solid black;
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 12px;
+    grid-template-areas:
+      'TT'
+      'Se' 
+      'Br' 
+      'Wa' 
+      'En' 
+      'Es'
+      'Mo' 
+      'Co' 
+      'To'
+      'Zi';
+  }
+
+  .modal-int {
+    width: 100vw;
+    margin: 0;
+    margin-top: 30%;
+    background-color: lightgrey;
+    padding: 5px;
+    border: none;
+    height: 80vh;
+  }
+ .selected-btn{
+  font-size: large;
+  width: fit-content;
+ }
+
+ .items-list{
+  font-size: 9px;
+  margin-top: 60px;
+  font-weight: bold;
+
+ }
+
+ .modal-ctn {
+  width: 400px;
+  height: 500px;
+  margin-top: 50px;
+
+}
+
+.items-container{
+  padding: 5px;
+  /* border: 1px solid black; */
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  margin-left: none;
+  text-align: left;
+  padding-left: 0px;
+  /* background-color: #0077b5; */
+}
+
+  .interior-btn{
+    margin-bottom: 0px;
+    border: none;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+  }
+  
 
   .order-container{
     width: 90%;
