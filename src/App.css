@@ -2,8 +2,9 @@
   text-align: center;
   margin:auto;
   display: grid;
-  place-items: end;
+  place-items: center;
   padding-top: 15px;
+  max-height: 100vh;
 }
 
 .results-container{
@@ -19,8 +20,14 @@
 
 .request-page{
   margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100vw;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.NL-input{
+  margin-right: 10%;
 }
 
 /* .request-btn-container{
@@ -427,9 +434,9 @@
 
 button.complete-order {
   position: fixed;
-  bottom: 1%;
-  width: 95vw;
-  left: 10px;
+  bottom: 5%;
+  width: 80vw;
+  left: 10%;
 }
 
 /* DisplayOrder.css */
@@ -550,21 +557,27 @@ button.complete-order {
 }
 
 .items-container {
-  background-color: #ffffffdf;
-  border: 3px solid black;
-  border-radius: 10px;
+
+  /* background-color: #ffffffdf; */
+  border-left: 3px solid black;
+  /* border-radius: 10px; */
   margin-left: 10px;
-  margin-top: 10px;
+
   padding-left: 10px;
   padding-top: 10px;
   font-weight: bolder;
   height: 500px;
   overflow-y: scroll;
   text-align: center;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+
 }
 
 .items-container::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
+  display: none; /* Webkit (Safari, Chrome, etc.) */
 }
 
 .items-container::-webkit-scrollbar-thumb {
@@ -606,20 +619,24 @@ h2 {
 }
 
 .interior-btn {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+
+  background-color: transparent;
+  font-size: larger;
+  border: none;
   width: fit-content;
-  text-decoration: underline;
+  text-decoration: none;
   height: fit-content;
   border-radius: 10px;
   margin-right: 10px;
-  /* border: 1px solid rgb(255, 255, 255); */
+
   border-radius: 20px;
   margin-bottom: 10px;
 }
 
+
 .interior-btn:hover{
   background-color: #6c6c6c;
+
 }
 
 .options-title{
@@ -633,9 +650,8 @@ h2 {
 .modal-ctn {
   width: 500px;
   height: 500px;
-  margin: auto;
+  margin-left: auto;
   margin-top: 30px;
-
 }
 
 /* .cat-opt{
@@ -653,10 +669,11 @@ h2 {
   width: fit-content;
   margin: auto;
   margin-top: 15%;
-  background-color: #69caff;
+  background-color: #cccbcb;
   padding: 20px;
   display: flex;
-  border: 3px solid black;
+  border: 2px solid black;
+
 }
 
 .interior-sidebar{
@@ -694,10 +711,12 @@ h2 {
 .To { grid-area: To; }
 .TT { grid-area: TT; }
 
-.active {
+
+/* .active {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-}
+} */
+
 
 .selected-btn{
   width: 100%;
@@ -712,6 +731,11 @@ h2 {
 
 /* Small screens (e.g., iPhones) */
 @media (max-width: 576px) {
+
+
+  .App {
+  place-items: end;
+  }
 
   .interior-sidebar{
     grid-template-columns: repeat(1, 20px);
@@ -743,7 +767,9 @@ h2 {
     background-color: lightgrey;
     padding: 5px;
     border: none;
-    height: 80vh;
+
+    height: 70vh;
+
   }
  .selected-btn{
   font-size: large;
@@ -759,8 +785,11 @@ h2 {
 
  .modal-ctn {
   width: 400px;
-  height: 500px;
-  margin-top: 50px;
+
+  height: fit-content;
+  /* margin-top: 50px; */
+  padding-right: 10%;
+
 
 }
 
@@ -792,21 +821,21 @@ h2 {
     margin-top: 40%;
   }
   
-  .btn-color1 {
+  /* .btn-color1 {
     background-color: rgba(255, 255, 255, 0.599);
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.45);
     width: fit-content;
     border-radius: 30px;
     color: black;
-  }
+  } */
 
-  .btn-color2 {
+  /* .btn-color2 {
     background-color: rgba(130, 130, 130, 0.253);
     box-shadow: 3px 3px 5px 0px rgba(2, 4, 83, 0.673);
     width: fit-content;
     border-radius: 30px;
     color: rgb(8, 3, 3);
-  }
+  } */
 
   .request-options{
     background-color: rgba(255, 0, 0, 0);

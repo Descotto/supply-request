@@ -68,11 +68,17 @@ function Request(props) {
     setSelectedComponent(null);
   };
 
-  const handleShowComponent = (componentName,buttonName) => {
-    setLastClicked(buttonName);
+
+  const handleShowComponent = (componentName, buttonName) => {
+    const updatedLastClicked = { ...lastClicked }; // Create a copy of the lastClicked state
+    // Set all buttons to null, except the clicked button, which is set to its respective name
+    for (const key in updatedLastClicked) {
+      updatedLastClicked[key] = (key === buttonName) ? buttonName : null;
+    }
+    setLastClicked(updatedLastClicked);
     setSelectedComponent(componentName);
-};
-  
+  };
+
   
 
   const renderDropdownOptions = (count) => {
@@ -117,8 +123,10 @@ function Request(props) {
           console.log('error', err);
         });
 
+
       generateTable(table, props.orderTable);
       generateTableHead(table, props.orderTable);
+
 
       container.appendChild(table);
       props.setDisplay(container);
@@ -162,7 +170,9 @@ function Request(props) {
 
       <div className="App">
         <div>
-          <form id="info">
+
+          <form className='NL-input' id="info">
+
             <div>
               <label>Name</label>
               <br />
@@ -206,35 +216,35 @@ function Request(props) {
               </button>
 
               <Modal className="modal-int" isOpen={selectedComponent !== null} onRequestClose={closeModal} contentLabel="Selected Component Modal">
-                <div className="interior-sidebar">
-                    {/* <h3 className='TT options-title'>Select a Category:</h3> */}
-                  <button className={`Es interior-btn ${lastClicked['Essentials'] === 'Essentials' ? 'active' : ''}`} onClick={() => handleShowComponent('Essentials', 'Essentials')}>
+                            <div className="interior-sidebar">
+                    <button className={`Es interior-btn ${lastClicked['Essentials'] === 'Essentials' ? 'active' : ''}`} onClick={() => handleShowComponent('Essentials', 'Essentials')}>
                     Essentials
-                  </button>
-                  <button className={`Se interior-btn ${lastClicked['Secondary'] === 'Secondary' ? 'active' : ''}`} onClick={() => handleShowComponent('Secondary', 'Secondary')}>
+                    </button>
+                    <button className={`Se interior-btn ${lastClicked['Secondary'] === 'Secondary' ? 'active' : ''}`} onClick={() => handleShowComponent('Secondary', 'Secondary')}>
                     Secondary
-                  </button>
-                  <button className={`Br interior-btn ${lastClicked['Brentwood'] === 'Brentwood' ? 'active' : ''}`} onClick={() => handleShowComponent('Brentwood', 'Brentwood')}>
+                    </button>
+                    <button className={`Br interior-btn ${lastClicked['Brentwood'] === 'Brentwood' ? 'active' : ''}`} onClick={() => handleShowComponent('Brentwood', 'Brentwood')}>
                     Brentwood
-                  </button>
-                  <button className={`Mo interior-btn ${lastClicked['Modems'] === 'Modems' ? 'active' : ''}`} onClick={() => handleShowComponent('Modems', 'Modems')}>
+                    </button>
+                    <button className={`Mo interior-btn ${lastClicked['Modems'] === 'Modems' ? 'active' : ''}`} onClick={() => handleShowComponent('Modems', 'Modems')}>
                     Modems
-                  </button>
-                  <button className={`Zi interior-btn ${lastClicked['Zips'] === 'Zips' ? 'active' : ''}`} onClick={() => handleShowComponent('Zips', 'Zips')}>
+                    </button>
+                    <button className={`Zi interior-btn ${lastClicked['Zips'] === 'Zips' ? 'active' : ''}`} onClick={() => handleShowComponent('Zips', 'Zips')}>
                     Zips
-                  </button>
-                  <button className={`Wa interior-btn ${lastClicked['Accessories'] === 'Accessories' ? 'active' : ''}`} onClick={() => handleShowComponent('Accessories', 'Accessories')}>
+                    </button>
+                    <button className={`Wa interior-btn ${lastClicked['Accessories'] === 'Accessories' ? 'active' : ''}`} onClick={() => handleShowComponent('Accessories', 'Accessories')}>
                     Wallplates
-                  </button>
-                  <button className={`Co interior-btn ${lastClicked['Copper'] === 'Copper' ? 'active' : ''}`} onClick={() => handleShowComponent('Copper', 'Copper')}>
+                    </button>
+                    <button className={`Co interior-btn ${lastClicked['Copper'] === 'Copper' ? 'active' : ''}`} onClick={() => handleShowComponent('Copper', 'Copper')}>
                     Copper
-                  </button>
-                  <button className={`En interior-btn ${lastClicked['Enterprise'] === 'Enterprise' ? 'active' : ''}`} onClick={() => handleShowComponent('Enterprise', 'Enterprise')}>
+                    </button>
+                    <button className={`En interior-btn ${lastClicked['Enterprise'] === 'Enterprise' ? 'active' : ''}`} onClick={() => handleShowComponent('Enterprise', 'Enterprise')}>
                     Enterprise
-                  </button>
-                  <button className={`To interior-btn ${lastClicked['Tools'] === 'Tools' ? 'active' : ''}`} onClick={() => handleShowComponent('Tools', 'Tools')}>
+                    </button>
+                    <button className={`To interior-btn ${lastClicked['Tools'] === 'Tools' ? 'active' : ''}`} onClick={() => handleShowComponent('Tools', 'Tools')}>
                     Tools
-                  </button>
+                    </button>
+
                 </div>
                 {selectedComponent === 'Essentials' && <Essentials essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
                 {selectedComponent === 'Secondary' && <Secondary secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
