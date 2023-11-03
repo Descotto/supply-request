@@ -68,6 +68,7 @@ function Request(props) {
     setSelectedComponent(null);
   };
 
+
   const handleShowComponent = (componentName, buttonName) => {
     const updatedLastClicked = { ...lastClicked }; // Create a copy of the lastClicked state
     // Set all buttons to null, except the clicked button, which is set to its respective name
@@ -77,6 +78,7 @@ function Request(props) {
     setLastClicked(updatedLastClicked);
     setSelectedComponent(componentName);
   };
+
   
 
   const renderDropdownOptions = (count) => {
@@ -121,8 +123,10 @@ function Request(props) {
           console.log('error', err);
         });
 
+
       generateTable(table, props.orderTable);
       generateTableHead(table, props.orderTable);
+
 
       container.appendChild(table);
       props.setDisplay(container);
@@ -166,7 +170,9 @@ function Request(props) {
 
       <div className="App">
         <div>
+
           <form className='NL-input' id="info">
+
             <div>
               <label>Name</label>
               <br />
@@ -208,6 +214,7 @@ function Request(props) {
               <button className={`request-btn ${lastClicked['Tools'] === 'Tools' ? 'active' : ''}`} onClick={() => handleShowComponent('Tools', 'Tools')}>
                 Tools <span className="plus-sign">+</span>
               </button>
+
               <Modal className="modal-int" isOpen={selectedComponent !== null} onRequestClose={closeModal} contentLabel="Selected Component Modal">
                             <div className="interior-sidebar">
                     <button className={`Es interior-btn ${lastClicked['Essentials'] === 'Essentials' ? 'active' : ''}`} onClick={() => handleShowComponent('Essentials', 'Essentials')}>
@@ -237,6 +244,7 @@ function Request(props) {
                     <button className={`To interior-btn ${lastClicked['Tools'] === 'Tools' ? 'active' : ''}`} onClick={() => handleShowComponent('Tools', 'Tools')}>
                     Tools
                     </button>
+
                 </div>
                 {selectedComponent === 'Essentials' && <Essentials essentialData={essentialData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}
                 {selectedComponent === 'Secondary' && <Secondary secondaryData={secondaryData} handleChange={handleChange} renderDropdownOptions={renderDropdownOptions} />}

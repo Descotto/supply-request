@@ -557,18 +557,22 @@ button.complete-order {
 }
 
 .items-container {
+
   /* background-color: #ffffffdf; */
   border-left: 3px solid black;
   /* border-radius: 10px; */
   margin-left: 10px;
+
   padding-left: 10px;
   padding-top: 10px;
   font-weight: bolder;
   height: 500px;
   overflow-y: scroll;
   text-align: center;
+
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
+
 }
 
 .items-container::-webkit-scrollbar {
@@ -615,6 +619,7 @@ h2 {
 }
 
 .interior-btn {
+
   background-color: transparent;
   font-size: larger;
   border: none;
@@ -623,14 +628,15 @@ h2 {
   height: fit-content;
   border-radius: 10px;
   margin-right: 10px;
+
   border-radius: 20px;
   margin-bottom: 10px;
 }
 
-.interior-btn.active {
-  font-weight: bolder;
-  color: #040101;
-  font-size: larger;
+
+.interior-btn:hover{
+  background-color: #6c6c6c;
+
 }
 
 .options-title{
@@ -646,8 +652,6 @@ h2 {
   height: 500px;
   margin-left: auto;
   margin-top: 30px;
-  
-  
 }
 
 /* .cat-opt{
@@ -669,6 +673,7 @@ h2 {
   padding: 20px;
   display: flex;
   border: 2px solid black;
+
 }
 
 .interior-sidebar{
@@ -706,10 +711,12 @@ h2 {
 .To { grid-area: To; }
 .TT { grid-area: TT; }
 
+
 /* .active {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 } */
+
 
 .selected-btn{
   width: 100%;
@@ -724,6 +731,7 @@ h2 {
 
 /* Small screens (e.g., iPhones) */
 @media (max-width: 576px) {
+
 
   .App {
   place-items: end;
@@ -759,7 +767,9 @@ h2 {
     background-color: lightgrey;
     padding: 5px;
     border: none;
+
     height: 70vh;
+
   }
  .selected-btn{
   font-size: large;
@@ -775,9 +785,11 @@ h2 {
 
  .modal-ctn {
   width: 400px;
+
   height: fit-content;
   /* margin-top: 50px; */
   padding-right: 10%;
+
 
 }
 
